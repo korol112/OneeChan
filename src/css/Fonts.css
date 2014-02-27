@@ -104,3 +104,6 @@ a.current {
 a.quotelink.forwardlink {
   border-bottom: 1px dashed;
 }
+a.backlink.forwardlink {
+  border-bottom: 1px dashed;
+}
