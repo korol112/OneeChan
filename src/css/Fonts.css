@@ -98,7 +98,7 @@ a.current {
 
 /* Font Style */
 .summary {
-  font-style: italic;
+  font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
 }
 
 a.quotelink.forwardlink {
