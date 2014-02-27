@@ -101,9 +101,6 @@ a.current {
   font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
 }
 
-a.quotelink.forwardlink {
-  border-bottom: 1px dashed;
-}
-a.backlink.forwardlink {
+a.quotelink.forwardlink, a.backlink.forwardlink {
   border-bottom: 1px dashed;
 }
