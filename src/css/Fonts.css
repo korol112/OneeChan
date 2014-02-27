@@ -100,3 +100,7 @@ a.current {
 .summary {
   font-style: italic;
 }
+
+a.quotelink.forwardlink {
+  border-bottom: 1px dashed;
+}
