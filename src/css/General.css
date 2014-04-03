@@ -1,4 +1,4 @@
-/* Side Margins */
+﻿/* Side Margins */
 body {
   margin-left: " + $SS.conf["Margin Left"] + "px;
   margin-right: " + $SS.conf["Margin Right"] + "px;
@@ -8,6 +8,7 @@ body {
 .postInfo {
   padding:4px 12px 2px;
   display: block !important;
+  
 }
 .fileText {
   margin-left: 20px;

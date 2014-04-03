@@ -1,11 +1,10 @@
-### v5.0.30
-*2014-02-27*
-
-### v5.0.29
-*2014-02-27*
-
 ### v5.0.28
-*2014-02-27*
+*2014-04-03*
+
+**Nebukazar**:
+- Fix QR being hidden by bottom header
+- Fix Backlink-icons placement
+- Fix OP post padding
 
 ### v5.0.27
 *2014-01-10*

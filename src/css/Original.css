@@ -4,7 +4,7 @@ div.post div.file .fileThumb {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 3px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 .postContainer {
   display: block;
@@ -21,6 +21,7 @@ div.post {
 div.thread {
   margin: 0px;
   clear: both;
+  padding-top: 15px;
 }
 table.flashListing {
   border-spacing: 1px;

@@ -1,1 +1,7 @@
-#[Install](https://github.com/Spittie/OneeChan/raw/master/builds/OneeChan.user.js)
+Personal fork of Seaweed's OneeChan.
+
+### Maximum rice for Seadweed's 4chan X
+
+##[Install](../../raw/master/builds/OneeChan.user.js)
+
+## If you have any problems, try resetting your 4chan X settings
