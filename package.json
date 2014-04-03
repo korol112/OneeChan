@@ -4,7 +4,7 @@
   "description": "Customizable rice and themes for 4chan and 4chan X.",
   "meta": {
     "name": "OneeChan",
-    "repo": "https://github.com/spittie/OneeChan/",
+    "repo": "https://github.com/Nebukazar/OneeChan/",
     "page": "http://seaweedchan.github.io/OneeChan/",
     "mainBranch": "master",
     "matches": [
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/spittie/OneeChan.git"
+    "url": "https://github.com/Nebukazar/OneeChan.git"
   },
   "author": "seaweedchan",
   "namespace": "seaweedchan.github.com",
