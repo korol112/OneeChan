@@ -6,4 +6,4 @@ Personal fork of Seaweed's OneeChan.
 
 ## If you have any problems, try resetting your 4chan X settings
 
-## THESE ARE JUST A BUNCH OF DIRTY FIXES BUT "IT WERKS"
+#### THESE ARE JUST A BUNCH OF DIRTY FIXES BUT "IT WERKS"
