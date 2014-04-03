@@ -1,9 +1,9 @@
 Personal fork of Seaweed's OneeChan.
 
-### Maximum rice for Seadweed's 4chan X
+### Maximum rice for Seadweed's [4chan X](https://github.com/Nebukazar/4chan-x)
 
 ##[Install](../../raw/master/builds/OneeChan.user.js)
 
 #### 1. If you have any problems, try resetting your 4chan X settings
 
-#### 2. THESE ARE JUST A BUNCH OF DIRTY FIXES BUT "IT WERKS"
+#### 2. These are a bunch of dirty fixes but it "just werks"
