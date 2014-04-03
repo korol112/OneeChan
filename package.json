@@ -5,7 +5,7 @@
   "meta": {
     "name": "OneeChan",
     "repo": "https://github.com/Nebukazar/OneeChan/",
-    "page": "http://seaweedchan.github.io/OneeChan/",
+    "page": "https://github.com/Nebukazar/OneeChan/",
     "mainBranch": "master",
     "matches": [
       "*://www.4chan.org/",
