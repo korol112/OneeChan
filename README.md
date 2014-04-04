@@ -9,7 +9,7 @@ Personal fork of Seaweedchan's OneeChan.
 (Updated 2014-04-04)
 
 - [Seaweedchan](https://github.com/seaweedchan/4chan-x) /// ```Compatible```
-- [Spittie](https://github.com/Spittie/4chan-x) /// No
+- [Spittie](https://github.com/Spittie/4chan-x) /// ```Compatible```
 - [ccd0](https://github.com/ccd0/4chan-x) /// ```Compatible```
 - [Nebukazar](https://github.com/Nebukazar/4chan-x) /// ```Compatible```
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// No
