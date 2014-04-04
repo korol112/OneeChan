@@ -413,7 +413,7 @@ hr {
   border-radius: 3px;
 }
 .pagelist {
-  margin: 5px 10px 20px 12px;
+  margin: 5px 10px 20px 1px;
   padding-bottom: inherit;
 }
 .pages a {
@@ -472,13 +472,7 @@ hr {
 }
 .cataloglink {
   margin-left: 12px;
-  border-style: solid;
-  border-left: 1px solid #B7C5D9 !important;
-  background: linear-gradient(rgb(229,233,255),rgb(214,218,240))!important;
-  border-width: 1px;
-  border-color: rgb(199,203,225) rgb(199,203,225) rgb(184,188,210)!important;
-  border-radius: 3px;
-  color: #000000!important;
+  border-left: 1px solid !important;
 }
 
 /* /f/ */

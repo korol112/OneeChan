@@ -927,7 +927,7 @@
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
             "<p class='buttons-container'>" +
             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
-            "<span id=oneechan-version>OneeChan v" + VERSION + "</span>" +
+            "<span id=oneechan-version><a href='https://github.com/Nebukazar/OneeChan/' title='Thanks to Seaweed!'>OneeChan</a> v" + VERSION + "<span class=link-delim> | </span>" +
             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
             key, val, des;

@@ -1,3 +1,11 @@
+### v5.0.33
+*2014-04-04*
+
+**Nebukazar**
+- Removed Previous/Next buttons in bottom page navigation (css/Cleanup.css/.prev + .next)
+- Fixed Catalog button style (not quite there yet)
+- Added subtle URL link to the Github page in Menu (probably redundant)
+
 ### v5.0.32
 *2014-04-04*
 
