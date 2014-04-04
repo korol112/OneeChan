@@ -261,7 +261,7 @@ margin-bottom: 20px !important;
 :root.vertical-qr #qr {
   position: fixed !important;
   right: 0px !important;
-  bottom: 0px !important;
+  bottom: 26px !important;
   left: auto !important;
   top: auto !important;
 }
@@ -410,23 +410,33 @@ hr {
 
 /* Pages */
 .pages strong>a {
-  border-radius: 3px; 
+  border-radius: 3px;
 }
 .pagelist {
-  margin: 0px 10px 20px 100px;
+  margin: 5px 10px 20px 12px;
+  padding-bottom: inherit;
 }
 .pages a {
   padding: 5px 10px;
   margin-left: -1px;
 }
 .next {
-  position: relative;
-  float: right !important;
-  width: 10px;
+  padding: 1px 4px 1px 1px;
+  border: none !important;
+  background: linear-gradient(rgb(229,233,255),rgb(214,218,240))!important;
+  border-width: 1px;
+  border-color: rgb(199,203,225) rgb(199,203,225) rgb(184,188,210)!important;
+  border-radius: 3px;
+  color: #000000!important;
 }
 .prev {
+  border: none !important;
   position: relative;
-  width: 10px;
+  background: linear-gradient(rgb(229,233,255),rgb(214,218,240))!important;
+  border-width: 1px;
+  border-color: rgb(199,203,225) rgb(199,203,225) rgb(184,188,210)!important;
+  border-radius: 3px;
+  color: #000000!important;
 }
 .prev a {
   position: relative;
@@ -461,7 +471,14 @@ hr {
   opacity: 0.2;
 }
 .cataloglink {
-  margin-left: -10px;
+  margin-left: 12px;
+  border-style: solid;
+  border-left: 1px solid #B7C5D9 !important;
+  background: linear-gradient(rgb(229,233,255),rgb(214,218,240))!important;
+  border-width: 1px;
+  border-color: rgb(199,203,225) rgb(199,203,225) rgb(184,188,210)!important;
+  border-radius: 3px;
+  color: #000000!important;
 }
 
 /* /f/ */

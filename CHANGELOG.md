@@ -1,3 +1,14 @@
+### v5.0.32
+*2014-04-04*
+
+**Nebukazar**:
+- Added Chrom* auto-updating
+- Remove Update menu link because useless (see above)
+- Minor CSS fix with bottom header hiding QR in "Vertical Tabbed" style
+- Fixed bottom pages navigation buttons overlapping numbers (no idea how to fix the button style yet) 
+
+- Added 3 new mascots (Purple Heart, Rei Ayanami, Motoko Kusanagi)
+
 ### v5.0.31
 *2014-04-03*
 

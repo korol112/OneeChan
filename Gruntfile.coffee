@@ -31,6 +31,7 @@ module.exports = (grunt) ->
       crx:
         options: concatOptions
         files:
+          'builds/updates.xml': 'src/meta/updates.xml'
           'builds/crx/manifest.json': 'src/meta/manifest.json'
           'builds/crx/script.js': [
             'src/meta/botproc.js'
