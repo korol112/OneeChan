@@ -927,9 +927,10 @@
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
             "<p class='buttons-container'>" +
             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
-            "<span id=oneechan-version><a href='https://github.com/Nebukazar/OneeChan/' title='Thanks to Seaweed!'>OneeChan</a> v" + VERSION + "<span class=link-delim> | </span>" +
+            "<span id=oneechan-version><a title='Thanks to Seaweed!'>OneeChan</a> v" + VERSION + "<span class=link-delim> | </span>" +
+            "<a href='" + ($SS.browser.gecko ? "https://github.com/Nebukazar/OneeChan/raw/master/builds/OneeChan.user.js" : "https://seaweedchan.github.io/OneeChan/") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
-            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
+            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md' id=issues-link target='_blank'>Issues</a></p>",
             key, val, des;
 
           for (key in defaultConfig)
@@ -2428,6 +2429,7 @@
         { img: "https://i.minus.com/iiEOIF7u05fIr.png",        "default":   true, name: "Akiyama Mio" },
         { img: "https://i.minus.com/iboIUPbZAbNRiz.png",       "default":   true, name: "Ali Baba" },
         { img: "https://i.minus.com/iortvyiEFHVQi.png",        "default":   true, name: "Asuka Langley Soryu" },
+        { img: "https://i.minus.com/ifbmhOBaK5DAh.png",        "default":   true, name: "Ayanami Rei", hoffset:"-50" },
         { img: "https://i.minus.com/ibc2GhW4AW6tYy.png",       "default":   true, name: "Fubuki Atsuya" },
         { img: "https://i.minus.com/ixEW2qpW09BuX.png",        "default":   true, name: "Gasai Yuno", hoffset:"25" },
         { img: "https://i.minus.com/ibhc1YdPCHjxb5.png",       "default":   true, name: "Gasai Yuno", height:"460px", hoffset:"40" },
@@ -2441,6 +2443,7 @@
         { img: "https://i7.minus.com/iRBpkeBt5JaS9.png",       "default":   true, name: "Kirisame Marisa" },
         { img: "https://i2.minus.com/ikPgsoC0DBeuP.png",       "default":   true, name: "Kousaka Kirino" },
         { img: "https://i.minus.com/iwp3zHABdUZn9.png",        "default":   true, name: "Kuroko no Basuke", hoffset:"25" },
+        { img: "https://i2.minus.com/ivKEIV0mbO1na.png",       "default":   true, name: "Kusanagi Motoko", voffset:"-22" },
         { img: "https://i.minus.com/ibwkO6nLTS8aQW.png",       "default":   true, name: "Mashiro Shiina" },
         { img: "https://i.minus.com/iHnv6bBdH3ElF.png",        "default":   true, name: "Megurine Luka" },
         { img: "https://i.minus.com/irUUuK1WcX8X8.png",        "default":   true, name: "Miyamoto Konatsu" },
@@ -2449,6 +2452,7 @@
         { img: "https://i.minus.com/ijJber6Ts4www.png",        "default":   true, name: "Nagato Yuki", hoffset:"25" },
         { img: "https://i.minus.com/ibtRMzjF9MS6oy.png",       "default":   true, name: "Nakano Azusa" },
         { img: "https://i.minus.com/iZmUFk9hKgNGZ.png",        "default":   true, name: "Poko Fox" },
+        { img: "https://i.minus.com/ibewnKH8wXWaXC.png",       "default":   true, name: "Purple Heart", voffset:"225" },
         { img: "https://i.minus.com/ibdeMvwnCdYqPX.png",       "default":   true, name: "Remilia Scarlet" },
         { img: "https://i.minus.com/ilYueyo9s91ex.png",        "default":   true, name: "Saber", height:"500px", hoffset:"25" },
         { img: "https://i.minus.com/izQNQ4akphZWn.png",        "default":   true, name: "Shana", hoffset:"25" },
@@ -2459,10 +2463,7 @@
         { img: "https://i.minus.com/i2Fal4QJDcucB.png",        "default":   true, name: "Yin" },
         { img: "https://i.minus.com/ibkuPHnJCOVF5y.png",       "default":   true, name: "Yoko", height:"450px", hoffset:"25" },
         { img: "https://i.minus.com/iGxFTTdgRFHPi.png",        "default":   true, name: "Yuuki Asuna" },
-        { img: "https://i.minus.com/i0v2fCxA6msfB.png",        "default":   true, name: "Yuzuki Yukari", hoffset:"10" },
-		{ img: "https://i.minus.com/ibewnKH8wXWaXC.png",       "default":   true, name: "Purple Heart (Neptune)", voffset:"225" },
-		{ img: "https://i.minus.com/ifbmhOBaK5DAh.png",        "default":   true, name: "Ayanami Rei", hoffset:"-50" },
-		{ img: "https://i2.minus.com/ivKEIV0mbO1na.png",	   "default":	true, name: "Kusanagi Motoko", voffset:"-22" }
+        { img: "https://i.minus.com/i0v2fCxA6msfB.png",        "default":   true, name: "Yuzuki Yukari", hoffset:"10" }
       ],
 
       init: function()

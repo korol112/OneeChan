@@ -1,3 +1,10 @@
+### v5.0.35
+*2014-04-05*
+
+**Nebukazar**
+- Quick Reply (QR) is now able to move freely in the Sidebar (Sidebar.css)
+- Fixed the Banner being hidden by the Header when "Bottom header" disabled
+
 ### v5.0.34
 *2014-04-05*
 

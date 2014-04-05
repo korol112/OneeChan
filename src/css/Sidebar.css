@@ -11,7 +11,7 @@
 }
 .boardBanner {
   position: fixed;
-  top: 0px;
+  top: auto;
 }
 :root.left-sidebar .boardBanner {
   left: 1px;
@@ -20,7 +20,7 @@
   right: 1px;
 }
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
-  margin-top: 24px;
+  margin-top: auto;
 }
 #banner {
   width: 100%;
@@ -35,8 +35,7 @@
   margin-top: -15px;
 }
 #qr {
-  bottom: 26px !important;
-  top: auto !important;
+
   min-width: 297px !important;
 }
 :root.left-sidebar #qr {

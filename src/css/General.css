@@ -6,9 +6,8 @@ body {
 
 /* Replies */
 .postInfo {
-  padding:4px 12px 2px;
+  padding: 4px 12px 2px;
   display: block !important;
-  
 }
 .fileText {
   margin-left: 20px;
@@ -261,7 +260,7 @@ margin-bottom: 20px !important;
 :root.vertical-qr #qr {
   position: fixed !important;
   right: 0px !important;
-  bottom: 26px !important;
+  bottom: auto !important;
   left: auto !important;
   top: auto !important;
 }
@@ -285,9 +284,6 @@ margin-bottom: 20px !important;
   left: -244px !important;
   bottom: 50px !important;
   right: auto !important;
-}
-#qr {
-
 }
 :root.left-sidebar #qr {
   left: 0px !important;
