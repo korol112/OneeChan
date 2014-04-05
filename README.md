@@ -10,8 +10,7 @@ Personal fork of Seaweedchan's OneeChan.
 
 - [Seaweedchan](https://github.com/seaweedchan/4chan-x) /// ```Compatible```
 - [Spittie](https://github.com/Spittie/4chan-x) /// ```Compatible```
-- [ccd0](https://github.com/ccd0/4chan-x) /// ```Compatible```
-- [Nebukazar](https://github.com/Nebukazar/4chan-x) /// ```Compatible```
+- [ccd0](https://github.com/ccd0/4chan-x) /// ```Compatible``` (Recommended)
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// No
 - [ihavenoface](https://github.com/ihavenoface/4chan-x) /// No
 
