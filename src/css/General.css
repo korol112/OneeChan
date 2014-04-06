@@ -260,7 +260,7 @@ margin-bottom: 20px !important;
 :root.vertical-qr #qr {
   position: fixed !important;
   right: 0px !important;
-  bottom: auto !important;
+  bottom: 26px;
   left: auto !important;
   top: auto !important;
 }
