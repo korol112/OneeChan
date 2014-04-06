@@ -41,21 +41,22 @@
       999,
       true
     ],
-    "Underline Links":    [ false, "Underlines links" ],
-    "Show Banner":              [ true,  "Toggle visibility of the logo banner", null, true ],
-    "Show Banner Reflection":     [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
-    "Reduce Banner Opacity":       [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
-    "Show Board Name":          [ true,  "Toggle visibility of the board name", null, true ],
-    "Show Text Board":          [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
-    "Show Reply to Thread Button": [ false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
-    "Show Checkboxes":          [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
-    "Show Header Background Gradient": [ true, "Gives the header bar a gradient background to be prettier" ],
+    "Underline Links":                     [ false, "Underlines links" ],
+    "Show Banner":                         [ true,  "Toggle visibility of the logo banner", null, true ],
+    "Show Banner Reflection":              [ true,  "Toggle visibility of the logo banner reflection", "Show Banner", true, true ],
+    "Reduce Banner Opacity":               [ false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true ],
+    "Show Board Name":                     [ true,  "Toggle visibility of the board name", null, true ],
+    "Show Text Board":                     [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
+    "Show Reply to Thread Button":         [ false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
+    "Show Checkboxes":                     [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Show Header Background Gradient":     [ true, "Gives the header bar a gradient background to be prettier" ],
+    "Show Blotter":                        [ false, "Toggle visibility of the 4chan news blotter" ],
     "Show 4chan Ads":                      [ false, "Opts into 4chan\'s banner ads", null, true ],
-    "Show Top Ad":       [ true, "Show the top 4chan banner ad", "Show 4chan Ads", true, true ],
-    "Show Middle Ad":       [ true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true ],
-    "Show Bottom Ad":       [ true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true ],
-    "Reduce Ad Opacity":       [ false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true ],
-    "--Sidebar--":                     [ "header",  "" ],
+    "Show Top Ad":                         [ true, "Show the top 4chan banner ad", "Show 4chan Ads", true, true ],
+    "Show Middle Ad":                      [ true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true ],
+    "Show Bottom Ad":                      [ true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true ],
+    "Reduce Ad Opacity":                   [ false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true ],
+    "--Sidebar--":                         [ "header",  "" ],
     "Sidebar Position":
     [
       1, "Change the position of the sidebar",
@@ -930,7 +931,7 @@
             "<span id=oneechan-version><a title='Thanks to Seaweed!'>OneeChan</a> v" + VERSION + "<span class=link-delim> | </span>" +
             "<a href='" + ($SS.browser.gecko ? "https://github.com/Nebukazar/OneeChan/raw/master/builds/OneeChan.user.js" : "https://seaweedchan.github.io/OneeChan/") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
-            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md' id=issues-link target='_blank'>Issues</a></p>",
+            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
             key, val, des;
 
           for (key in defaultConfig)
@@ -2532,6 +2533,7 @@
         $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
         $("html").optionClass("Secret Name Field",              true,   "hide-name" );
         $("html").optionClass("Show Header Background Gradient", true, "header-gradient" );
+        $("html").optionClass("Show Blotter",                 false,   "hide-blotter");
         $("html").optionClass("Show 4chan Ads", true, "show-ads" );
         $("html").optionClass("Show Top Ad", false, "hide-top" );
         $("html").optionClass("Show Middle Ad", false, "hide-middle" );

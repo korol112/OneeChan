@@ -1,3 +1,9 @@
+## v5.1.0
+*2014-04-07*
+
+**Nebukazar**
+- Added option to show/hide the news blotter
+
 ### v5.0.35
 *2014-04-05*
 
