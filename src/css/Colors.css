@@ -130,6 +130,7 @@ body {
 }
 .options-button,
 .qr-link,
+.cataloglink,
 .pages strong>a {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
@@ -206,23 +207,34 @@ fieldset,
 .flashListing td:not(:last-of-type):not(.postblock) {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
-input,
 textarea,
 .riceCheck,
-#qr-filename-container {
-  border:1px solid " + $SS.theme.inputbColor.hex + " !important;
+#qr-filename-container,
+#search-box,
+#index-search {
+  border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
+}
+input {
+  border: none " + $SS.theme.inputbColor.hex + " !important;
+  background: none !important;
 }
 .options-button,
 .qr-link,
+.cataloglink,
 .pages strong>a {
   border-style: solid;
   border-width: 1px;
   border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;
 }
+}
 input:focus,
 textarea:focus,
 #qr-filename-container:focus {
-  border:1px solid " + $SS.theme.linkColor.hex + " !important;
+  border: 1px solid " + $SS.theme.linkColor.hex + " !important;
+}
+#search-box:hover,
+#index-search:hover {
+  border-color: " + $SS.theme.linkColor.hex + " !important;
 }
 #header-bar {
   border: none !important;

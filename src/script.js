@@ -1,4 +1,4 @@
-﻿(function()
+(function()
 {
   var defaultConfig =
   {
@@ -48,7 +48,7 @@
     "Show Board Name":                     [ true,  "Toggle visibility of the board name", null, true ],
     "Show Text Board":                     [ true,  "Toggle visibility of the text board link", "Show Board Name", true, true ],
     "Show Reply to Thread Button":         [ false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
-    "Show Checkboxes":                     [ false,  "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
+    "Show Checkboxes":                     [ false, "Hides checkboxes and deleteform to be replaced by 4chan X menus" ],
     "Show Header Background Gradient":     [ true, "Gives the header bar a gradient background to be prettier" ],
     "Show Blotter":                        [ false, "Toggle visibility of the 4chan news blotter" ],
     "Show 4chan Ads":                      [ false, "Opts into 4chan\'s banner ads", null, true ],
@@ -56,6 +56,7 @@
     "Show Middle Ad":                      [ true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true ],
     "Show Bottom Ad":                      [ true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true ],
     "Reduce Ad Opacity":                   [ false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true ],
+    "Show Previous/Next":                  [ false, "Hides the Previous/Next buttons in page navigation mode" ],
     "--Sidebar--":                         [ "header",  "" ],
     "Sidebar Position":
     [
@@ -927,7 +928,7 @@
             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
             "<p class='buttons-container'>" +
-            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
+            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetS>Reset</a>" +
             "<span id=oneechan-version><a title='Thanks to Seaweed!'>OneeChan</a> v" + VERSION + "<span class=link-delim> | </span>" +
             "<a href='" + ($SS.browser.gecko ? "https://github.com/Nebukazar/OneeChan/raw/master/builds/OneeChan.user.js" : "https://seaweedchan.github.io/OneeChan/") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
@@ -1059,6 +1060,16 @@
               return;
             var exportalert = $("<a class='options-button'download='OneeChan Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions)) + "'>Save me!").bind("click", $SS.options.close);
             return $(this).replace(exportalert);
+          });
+          // Reset settings
+          $("a[name=resetS]", tOptions).bind("click", function() 
+          {
+            if (!confirm('This does nothing yet.')){
+              return;
+            }
+            if (confirm('You pressed OK but nothing happened.')) {
+              return window.location.reload();
+            }
           });
           // options window
           $(".tab-label", tOptions).bind("click", function(e)
@@ -2083,9 +2094,9 @@
           brderColor:  "d9bFb7",
           inputColor:  "ffffff",
           inputbColor: "aaaaaa",
-          blinkColor:  "0000ee",
-          unreadColor:  "0000ee",
-          linkColor:   "0000ee",
+          blinkColor:  "000080",
+          unreadColor:  "000080",
+          linkColor:   "000080",
           linkHColor:  "dd0000",
           nameColor:   "117743",
           quoteColor:  "789922",
@@ -2093,7 +2104,7 @@
           tripColor:   "228854",
           titleColor:  "cc1105",
           headerColor: "800000",
-          headerLColor: "0000ee",
+          headerLColor: "800000",
           headerLHColor: "dd0000",
           headerBGColor: "f0e0d6",
           boardColor:  "800000"
@@ -2507,40 +2518,41 @@
       {
         /* Function arguments: ("Option Name", value, "class-name") */
         $("html").addClass("oneechan");
-        $("html").optionClass("Underline Links",              false,  "underline-disabled" );
-        $("html").optionClass("Rounded Corners",              true,   "rounded-corners" );
-        $("html").optionClass("Show Checkboxes",              false,  "hide-checkboxes" );
-        $("html").optionClass("Show Board Name",              false,  "hide-board-name" );
-        $("html").optionClass("Fit Width",                    true,   "reply-fit-width" );
-        $("html").optionClass("Show Text Board",              false,  "hide-text-board" );
-        $("html").optionClass("Show Banner",                  false,  "hide-banner" );
-        $("html").optionClass("Show Banner Reflection",       true,   "banner-reflect" );
-        $("html").optionClass("Reduce Banner Opacity",        true,   "banner-opacity" );
-        $("html").optionClass("Show Reply to Thread Button",  false,  "hide-button" );
-        $("html").optionClass("Style Post Info",              true,   "post-info" );
-        $("html").optionClass("Borders",                      2,      "borders-all" );
-        $("html").optionClass("Borders",                      3,      "borders-none" );
-        $("html").optionClass("Sidebar Position",             1,      "right-sidebar" );
-        $("html").optionClass("Sidebar Position",             2,      "left-sidebar" );
-        $("html").optionClass("Recolor Even Replies",         true,   "recolor-even" );
-        $("html").optionClass("Backlink Icons",               true,   "backlink-icon" );
-        $("html").optionClass("Backlinks on Bottom",          true,   "backlink-bottom" );
-        $("html").optionClass("Expanded Images Cover QR",     true,   "expand-cover" );
-        $("html").optionClass("Autohide Style",               2,      "vertical-qr" );
-        $("html").optionClass("Autohide Style",               3,      "fade-qr" );
-        $("html").optionClass("SS-like Sidebar",              true,   "ss-sidebar" );
-        $("html").optionClass("Allow Wrapping Around OP",     false,   "force-op" );
-        $("html").optionClass("Expanding Form Inputs",        true,   "expand-inputs" );
-        $("html").optionClass("Secret Name Field",              true,   "hide-name" );
-        $("html").optionClass("Show Header Background Gradient", true, "header-gradient" );
-        $("html").optionClass("Show Blotter",                 false,   "hide-blotter");
-        $("html").optionClass("Show 4chan Ads", true, "show-ads" );
-        $("html").optionClass("Show Top Ad", false, "hide-top" );
-        $("html").optionClass("Show Middle Ad", false, "hide-middle" );
-        $("html").optionClass("Show Bottom Ad", false, "hide-bottom" );
-        $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity" );
-        $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity" );
-        $("html").optionClass("Style Emails as Links", false, "email-color" );
+        $("html").optionClass("Underline Links",                 false,  "underline-disabled" );
+        $("html").optionClass("Rounded Corners",                 true,   "rounded-corners" );
+        $("html").optionClass("Show Checkboxes",                 false,  "hide-checkboxes" );
+        $("html").optionClass("Show Board Name",                 false,  "hide-board-name" );
+        $("html").optionClass("Fit Width",                       true,   "reply-fit-width" );
+        $("html").optionClass("Show Text Board",                 false,  "hide-text-board" );
+        $("html").optionClass("Show Banner",                     false,  "hide-banner" );
+        $("html").optionClass("Show Banner Reflection",          true,   "banner-reflect" );
+        $("html").optionClass("Reduce Banner Opacity",           true,   "banner-opacity" );
+        $("html").optionClass("Show Reply to Thread Button",     false,  "hide-button" );
+        $("html").optionClass("Style Post Info",                 true,   "post-info" );
+        $("html").optionClass("Borders",                         2,      "borders-all" );
+        $("html").optionClass("Borders",                         3,      "borders-none" );
+        $("html").optionClass("Sidebar Position",                1,      "right-sidebar" );
+        $("html").optionClass("Sidebar Position",                2,      "left-sidebar" );
+        $("html").optionClass("Recolor Even Replies",            true,   "recolor-even" );
+        $("html").optionClass("Backlink Icons",                  true,   "backlink-icon" );
+        $("html").optionClass("Backlinks on Bottom",             true,   "backlink-bottom" );
+        $("html").optionClass("Expanded Images Cover QR",        true,   "expand-cover" );
+        $("html").optionClass("Autohide Style",                  2,      "vertical-qr" );
+        $("html").optionClass("Autohide Style",                  3,      "fade-qr" );
+        $("html").optionClass("SS-like Sidebar",                 true,   "ss-sidebar" );
+        $("html").optionClass("Allow Wrapping Around OP",        false,  "force-op" );
+        $("html").optionClass("Expanding Form Inputs",           true,   "expand-inputs" );
+        $("html").optionClass("Secret Name Field",               true,   "hide-name" );
+        $("html").optionClass("Show Header Background Gradient", true,   "header-gradient" );
+        $("html").optionClass("Show Blotter",                    false,  "hide-blotter" );
+        $("html").optionClass("Show 4chan Ads",                  true,   "show-ads" );
+        $("html").optionClass("Show Top Ad",                     false,  "hide-top" );
+        $("html").optionClass("Show Middle Ad",                  false,  "hide-middle" );
+        $("html").optionClass("Show Bottom Ad",                  false,  "hide-bottom" );
+        $("html").optionClass("Show Previous/Next",              false,  "hide-prevnext" );
+        $("html").optionClass("Reduce Ad Opacity",               true,   "ad-opacity" );
+        $("html").optionClass("Reduce Mascot Opacity",           true,   "mascot-opacity" );
+        $("html").optionClass("Style Emails as Links",           false,  "email-color" );
       }
     },
 
@@ -3422,9 +3434,6 @@
         return div;
       }
     },
-
-
-
 
     /* HELPER METHODS */
     formatFont: function(font)

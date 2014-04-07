@@ -2,6 +2,7 @@
 body {
   margin-left: " + $SS.conf["Margin Left"] + "px;
   margin-right: " + $SS.conf["Margin Right"] + "px;
+  margin-top: 1px;
 }
 
 /* Replies */
@@ -392,8 +393,8 @@ hr {
   margin: auto !important;
   pointer-events: none;
 }
-:root.banner-reflect.webkit:not(.hide-banner) #banner {
-  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(65%, transparent), to(rgba(250, 250, 250, 0.1)));
+#banner {
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(55%, transparent), to(rgba(250, 250, 250, 0.1)));
 }
 :root.banner-opacity #banner {
   opacity: 0.5;
@@ -408,6 +409,10 @@ hr {
 .pages strong>a {
   border-radius: 3px;
 }
+.pages strong>a:hover {
+  opacity: 0.7 !important;
+  transition: opacity .3s ease-in 0s;
+}
 .pagelist {
   margin: 5px 10px 20px 1px;
   padding-bottom: inherit;
@@ -417,22 +422,18 @@ hr {
   margin-left: -1px;
 }
 .next {
-  padding: 1px 4px 1px 1px;
   border: none !important;
-  background: linear-gradient(rgb(229,233,255),rgb(214,218,240))!important;
-  border-width: 1px;
-  border-color: rgb(199,203,225) rgb(199,203,225) rgb(184,188,210)!important;
-  border-radius: 3px;
-  color: #000000!important;
+  background: none !important;
+  position: relative;
+}
+.next a {
+  position: relative;
+  right: 5px;
 }
 .prev {
   border: none !important;
+  background: none !important;
   position: relative;
-  background: linear-gradient(rgb(229,233,255),rgb(214,218,240))!important;
-  border-width: 1px;
-  border-color: rgb(199,203,225) rgb(199,203,225) rgb(184,188,210)!important;
-  border-radius: 3px;
-  color: #000000!important;
 }
 .prev a {
   position: relative;
@@ -440,14 +441,14 @@ hr {
 }
 .prev a::after, .prev a::after {
   content: '<';
-  position: absolute;
+  position: inherit;
   top: 4px;
   left: 1px;
   pointer-events: none;
 }
 .next a::after, .next a::after {
   content: '>';
-  position: absolute;
+  position: inherit;
   top: 4px;
   right: 2px;
   pointer-events: none;
@@ -466,9 +467,20 @@ hr {
 .pagelist span {
   opacity: 0.2;
 }
+
+/* Catalog Link */
 .cataloglink {
   margin-left: 12px;
-  border-left: 1px solid !important;
+  border-radius: 3px;
+}
+.cataloglink a {
+  color: " + $SS.theme.textColor.hex + " !important;
+  font-weight: bold;
+}
+
+.cataloglink a:hover {
+  opacity: 0.7 !important;
+  transition: opacity .3s ease-in 0s;
 }
 
 /* /f/ */
@@ -565,8 +577,7 @@ table.flashListing .highlightPost::after {
 
 /* Navlinks */
 :root.index div.navLinks {
-  position: relative;
-  bottom: 12px;
+  padding: 12px;
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: auto;
 }

@@ -1,5 +1,20 @@
+### v5.1.2
+*2014-04-07*
+
+**Nebukazar**
+- Gave the bottom Catalog link some styling back to be more in line with the rest of navpages
+- Fixed the Banner not interacting properly with the top header
+- Fixed Banner reflection in Chrom* (doesn't play nice with "Reduce Banner Opacity")
+
+**New:**
+- Added option to show/hide Previous and Next buttons in Paged navigation mode
+
 ### v5.1.1
 *2014-04-07*
+
+**Nebukazar**
+- Fixed vertical tabbed QR going all over the place on mouse hover (General.css)
+
 
 ## v5.1.0
 *2014-04-07*
