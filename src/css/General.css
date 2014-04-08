@@ -423,8 +423,7 @@ hr {
 }
 .next {
   border: none !important;
-  background: none !important;
-  position: relative;
+  position: relative;  
 }
 .next a {
   position: relative;
@@ -432,7 +431,6 @@ hr {
 }
 .prev {
   border: none !important;
-  background: none !important;
   position: relative;
 }
 .prev a {
@@ -477,12 +475,10 @@ hr {
   color: " + $SS.theme.textColor.hex + " !important;
   font-weight: bold;
 }
-
 .cataloglink a:hover {
   opacity: 0.7 !important;
   transition: opacity .3s ease-in 0s;
 }
-
 /* /f/ */
 table.flashListing {
   margin: auto !important;

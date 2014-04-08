@@ -1,3 +1,10 @@
+### v5.1.3
+*2014-04-08*
+
+**Nebukazar**
+- Hidding the Blotter no longer cuts off the Banner/board title in the Sidebar
+- Script doesn't play nice with Chromium 35+, Chrome stable (33) is recommended, updated the readme to reflect this
+
 ### v5.1.2
 *2014-04-07*
 

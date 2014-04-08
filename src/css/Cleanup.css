@@ -17,7 +17,6 @@ iframe[src='about:blank'],
 .boardBanner>img~div,
 :root.hide-prevnext .prev,
 :root.hide-prevnext .next,
-:root.hide-blotter #blotter,
 :root.hide-checkboxes #delform .post input[type=checkbox],
 :root.hide-checkboxes #delform .post .riceCheck,
 :root.hide-checkboxes #qp .post input[type=checkbox],
@@ -29,6 +28,8 @@ iframe[src='about:blank'],
 :root.hide-banner .bBanner,
 :root.hide-button .qr-link-container,
 :root.reply-fit-width .sideArrows,
+:root:not(.oneechan) body,
+:root:not(.fourchan-x) body::before,
 #postForm,
 .forwarded,
 body>hr,
@@ -50,4 +51,9 @@ a
 #delform>hr,
 .board>hr:last-of-type {
   background: none !important;
+}
+/*Toggle visibility, keep space*/
+:root.hide-blotter #blotter{
+  visibility: hidden !important;
+  font-size: 0.1px;
 }

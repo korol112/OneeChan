@@ -4,7 +4,7 @@ OneeChan
 Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x). These are a bunch of dirty fixes but it "just werks", thank you for your understanding.
 
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
-##[Install](../../raw/master/builds/crx.crx) (Chrom*)
+##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
 
 #### Compatibility with 4chan X forks:
 (Updated 2014-04-04)
@@ -27,10 +27,14 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 #### Known Issues
 
-Chrom*:
+- Show Ads doesn't show any ads (?)
+
+Chromium:
 
 - Banner opacity breaks the banner reflection
 
-- OneeChan's header link sometimes doesn't get drawn when viewing the catalog
+- OneeChan's header link/icon sometimes doesn't get drawn when viewing the catalog
 
-- Navigation links need styling
+Firefox:
+
+- Nothing yet
