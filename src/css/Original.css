@@ -1,9 +1,9 @@
 /* Some original Yotsuba CSS */
 div.post div.file .fileThumb {
   float: left;
-  margin-left: 20px;
+  margin-left: 10px;
   margin-right: 20px;
-  margin-top: 3px;
+  margin-top: 5px;
   margin-bottom: 1px;
 }
 .postContainer {

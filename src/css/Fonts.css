@@ -2,57 +2,65 @@
 
 /* Anything we need 0px */
 .deleteform,
-.pages, 
+.pages,
 .pagelist button,
-#full-board-list {
-  font-size: 0px !important;
+#full-board-list
+{
+    font-size: 0 !important;
 }
 
 /* Anything we need small */
 .fileText,
-.summary {
-  font-size: " + (($SS.conf["Font Size"] < 13) ? 11 : ($SS.conf["Font Size"] - 2)) + "px !important;
+.summary
+{
+    font-size: ' + (($SS.conf['Font Size'] < 13) ? 11 : ($SS.conf['Font Size'] - 2)) + 'px !important;
 }
 /* Anything we need !important */
-.qr-link {
-  font-size: 14px !important;
+.qr-link
+{
+    font-size: 14px !important;
 }
 /* Options */
-.tab-label, 
-.options-button, 
+.tab-label,
+.options-button,
 .theme-preview,
 #oneechan-options input,
 #oneechan-options textarea,
 .hide-reply-button,
-.hide-thread-button {
-  font-family:sans-serif !important;
-  font-size:12px !important;
+.hide-thread-button
+{
+    font-family: sans-serif !important;
+    font-size: 12px !important;
 }
 /* Board Title */
-.boardBanner .boardTitle {
-  font-weight: 400 !important;
-  font-size:28px !important;
+.boardBanner .boardTitle
+{
+    font-size: 28px !important;
+    font-weight: 400 !important;
 }
 
 /* Code Tags */
-.prettyprint span {
-  font-family:monospace!important;
-  font-size:medium!important;
+.prettyprint span
+{
+    font-family: monospace!important;
+    font-size: medium!important;
 }
 
 /* Full board list */
-#full-board-list {
-  font-size: 0px !important;
+#full-board-list
+{
+    font-size: 0 !important;
 }
 #full-board-list a,
-body>#header-bar,
-#full-board-list .fourchanx-link {
-  font-size: " + (($SS.conf["Font Size"] < 13) ? 12 : ($SS.conf["Font Size"] - 1)) + "px !important;
+body > #header-bar,
+#full-board-list .fourchanx-link
+{
+    font-size: ' + (($SS.conf['Font Size'] < 13) ? 12 : ($SS.conf['Font Size'] - 1)) + 'px !important;
 }
 
 /* Everything else */
 body,
-.prev span::after, 
+.prev span::after,
 .prev form::after,
 .next span::after,
 .next form::after,
@@ -62,45 +70,54 @@ body,
 #qr span.field,
 #qr [type=submit],
 #menu .entry,
-.boardBanner .boardTitle {
-  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
-  font-size:" + $SS.conf["Font Size"] + "px;
+.boardBanner .boardTitle
+{
+    font-family: ' + $SS.formatFont($SS.conf['Font Family']) + ';
+    font-size: ' + $SS.conf['Font Size'] + 'px;
 }
 #qr .field::-moz-placeholder,
-::-moz-placeholder {
-  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
-  font-size:" + $SS.conf["Font Size"] + "px !important;
+::-moz-placeholder
+{
+    font-family: ' + $SS.formatFont($SS.conf['Font Family']) + ' !important;
+    font-size: ' + $SS.conf['Font Size'] + 'px !important;
 }
 #qr .field::webkit-input-placeholder,
-::webkit-input-placeholder {
-  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
-  font-size:" + $SS.conf["Font Size"] + "px !important;
+::webkit-input-placeholder
+{
+    font-family: ' + $SS.formatFont($SS.conf['Font Family']) + ' !important;
+    font-size: ' + $SS.conf['Font Size'] + 'px !important;
 }
 
 /* Text decoration */
-:root.underline-disabled a {
-  text-decoration: none !important;
+:root.underline-disabled a
+{
+    text-decoration: none !important;
 }
-:root.underline-disabled .filtered {
-  text-decoration: line-through !important;
+:root.underline-disabled .filtered
+{
+    text-decoration: line-through !important;
 }
 
 /* Font weight */
 .name,
 .subject,
 .option.header .option-title,
-a.current {
-  font-weight: " + ($SS.conf["Bitmap Font"] ? 4 : 7) + "00 !important;
+a.current
+{
+    font-weight: ' + ($SS.conf['Bitmap Font'] ? 4 : 7) + '00 !important;
 }
-.qr-link {
-  font-weight: normal;
+.qr-link
+{
+    font-weight: normal;
 }
 
 /* Font Style */
-.summary {
-  font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
+.summary
+{
+    font-style: ' + ($SS.conf['Bitmap Font'] ? \'none\' : \'italic\') + ';
 }
 
-a.quotelink.forwardlink, a.backlink.forwardlink {
-  border-bottom: 1px dashed;
+a.quotelink.forwardlink, a.backlink.forwardlink
+{
+    border-bottom: 1px dashed;
 }

@@ -55,5 +55,6 @@ a
 /*Toggle visibility, keep space*/
 :root.hide-blotter #blotter{
   visibility: hidden !important;
-  font-size: 0.1px;
+  font-size: 0.1px !important;
+  line-height: 0.1px !important;
 }

@@ -27,14 +27,4 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 #### Known Issues
 
-- Show Ads doesn't show any ads (?)
-
-Chromium:
-
-- Banner opacity breaks the banner reflection
-
 - OneeChan's header link/icon sometimes doesn't get drawn when viewing the catalog
-
-Firefox:
-
-- Nothing yet

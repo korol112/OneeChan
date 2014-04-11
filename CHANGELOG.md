@@ -1,3 +1,17 @@
+### v5.1.4
+*2014-04-11*
+
+- Fix Chrome autoupdate after I borked it
+- Chrome banner opacity should now be working correctly
+- General CSS margin/padding changes to posts, post images and thread expansion
+- Reduced the space taken by the Blotter when hidden in the options
+- Default theme is now Photon
+- Added some more mascots (taken from Appchan X <3)
+
+**New:**
+- ```Show Navigation links as Icons``` (still in beta, might need a rewrite)
+- This option will turn navigation links at the top (catalog, search, filters) into icons
+
 ### v5.1.3
 *2014-04-08*
 

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
-  <app appid='OneeChan'>
-    <updatecheck codebase='https://github.com/Nebukazar/OneeChan/raw/master/builds/OneeChan.crx' version='5.1.3' prodversionmin='30' />
+  <app appid='cnbankbnhjiakpmcjbecinckfbceeacf'>
+    <updatecheck codebase='https://github.com/Nebukazar/OneeChan/raw/master/builds/OneeChan.crx' version='5.1.4' prodversionmin='30' />
   </app>
 </gupdate>

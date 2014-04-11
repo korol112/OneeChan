@@ -19,13 +19,14 @@ body {
   display: inline-block;
 }
 .summary {
-  margin-left: 20px;
+  margin-left: 2px;
 }
 .expanded-image {
   position: relative;
 }
 .fileThumb img {
   border-radius: 2px;
+  padding: 2px 0px 10px 10px;
 }
 :root.expand-cover #qr {
   z-index: 8 !important;
@@ -121,7 +122,7 @@ body {
   margin-left: -2px !important;
 }
 .reply>.postInfo>.menu-button + .container:not(:empty) {
-  margin-left: 2px !important;
+  margin-left: -2px !important;
 }
 :root:not(.reply-fit-width) .container {
   margin-left: 0px !important;
@@ -394,13 +395,15 @@ hr {
   pointer-events: none;
 }
 #banner {
-  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(55%, transparent), to(rgba(250, 250, 250, 0.1)));
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(45%, transparent), to(rgba(250, 250, 250, 0.1)));
 }
-:root.banner-opacity #banner {
+:root.banner-opacity #banner,
+.bBanner {
   opacity: 0.5;
   transition: opacity .3s ease-out 0s;
 }
-:root.banner-opacity #banner:hover {
+:root.banner-opacity #banner:hover,
+.bBanner:hover {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
@@ -576,4 +579,13 @@ table.flashListing .highlightPost::after {
   padding: 12px;
   margin-left: 15px;
   margin-top: auto;
+}
+
+/* Navigation Icons */
+.catNip-ok fa fa-search,
+.catNip-btn fa fa-eraser,
+.catNip-ctrl fa fa-tags,
+.catNip-qf fa fa-search,
+.catNip-cata fa fa-book {
+  font-size: 13px !important;
 }
