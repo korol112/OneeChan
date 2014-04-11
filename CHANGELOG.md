@@ -2,6 +2,7 @@
 *2014-04-11*
 
 - Fix Fonts.css
+- Fix poor Ruri in mascots tab
 - I'm dumb
 
 ### v5.1.4

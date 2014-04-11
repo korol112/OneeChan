@@ -2574,7 +2574,7 @@
                 "default": true,
                 name: "Remilia Scarlet"
             }, {
-                img: "i.minus.com/ibtZo1fdOk8NCB.png",
+                img: "https://i.minus.com/ibtZo1fdOk8NCB.png",
                 "default": true,
                 name: "Ruri Gokou"
             }, {
