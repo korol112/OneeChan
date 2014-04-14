@@ -51,7 +51,6 @@
             999,
             true
         ],
-        "Show Navigation links as Icons": [false, "Toggle Icons for certain links (beta)"],
         "Underline Links": [false, "Underlines links"],
         "Show Banner": [true, "Toggle visibility of the logo banner", null, true],
         "Show Banner Reflection": [true, "Toggle visibility of the logo banner reflection", "Show Banner", true, true],
@@ -186,8 +185,8 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font"],
         "Themes": [],
         "Hidden Themes": [],
-        "Selected Theme": 8,
-        "NSFW Theme": 8,
+        "Selected Theme": 16,
+        "NSFW Theme": 16,
         "Selected Mascots": 1,
         "Mascots": [],
         "Hidden Mascots": []
@@ -278,31 +277,25 @@
             property: "color"
         }],
         $lib, $SS;
-
     if (!Array.isArray)
         Array.isArray = function(arg) {
             return Object.prototype.toString.call(arg) === "[object Array]";
         };
-
     Number.prototype.toHexStr = function() {
         var s = "",
             v;
-
         for (var i = 7; i >= 0; i--) {
             v = (this >>> (i * 4)) & 0xf;
             s += v.toString(16);
         }
-
         return s;
     };
-
     /* STYLE SCRIPT LIBRARY */
     /* More or less based off jQuery */
     $lib = window.$ = function(selector, root) {
         return this instanceof $lib ?
             this.init(selector, root) : new $lib(selector, root);
     };
-
     /* From 4chan X, unchainable */
     /* https://github.com/seaweedchan/4chan-x/blob/master/LICENSE */
     $.asap = function(test, cb) {
@@ -312,7 +305,6 @@
             return setTimeout($.asap, 25, test, cb);
         }
     };
-
     $lib.prototype = {
         constructor: $lib,
         elems: [],
@@ -796,7 +788,6 @@
 
             $SS.insertMascot();
             $SS.pages.init();
-            $SS.newClasses.init()
             $SS.riceInputs.init();
 
         },
@@ -967,7 +958,7 @@
         options: {
             saveAndClose: false,
             init: function() {
-                var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan").bind("click", $SS.options.show);
+                var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
                 return $("#shortcuts>.shortcut:last-of-type").before(a);
             },
             show: function() {
@@ -1366,8 +1357,7 @@
                 // Save Themes
                 $("#oneechan-options #themes-section>div").each(function(index) {
                     var oldIndex = parseInt(this.id.substr(5));
-                    if (!$SS.conf["Themes"][oldIndex].
-                        default)
+                    if (!$SS.conf["Themes"][oldIndex].default)
                         themes.push($SS.conf["Themes"][oldIndex]);
                 });
 
@@ -1388,8 +1378,7 @@
                     if ($(this).hasClass("selected"))
                         selectedMascots.push(index);
 
-                    if (!$SS.conf["Mascots"][oldIndex].
-                        default)
+                    if (!$SS.conf["Mascots"][oldIndex].default)
                         mascots.push($SS.conf["Mascots"][oldIndex]);
                 });
 
@@ -1530,8 +1519,7 @@
                     } else if (this.name === "name") {
                         val = this.value;
 
-                        if (bEdit && tEdit.
-                            default && tEdit.name === val)
+                        if (bEdit && tEdit.default && tEdit.name === val)
                             val += " [Modded]"
                     } else
                         val = this.value;
@@ -1568,9 +1556,7 @@
                 return overlay.remove();
             },
             deleteTheme: function(tIndex) {
-                if ($SS.conf["Themes"][tIndex].
-                    default &&
-                    $SS.conf["Hidden Themes"].push(tIndex) === 1)
+                if ($SS.conf["Themes"][tIndex].default && $SS.conf["Hidden Themes"].push(tIndex) === 1)
                     $("#themes-section a[name=restoreThemes]").show();
 
                 return $SS.conf["Themes"][tIndex].
@@ -2659,7 +2645,6 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
-                $("html").optionClass("Show Navigation links as Icons", true, "navilinks");
                 $("html").optionClass("Underline Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
                 $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
@@ -2695,20 +2680,6 @@
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Style Emails as Links", false, "email-color");
-            }
-        },
-
-        /* Prototype */
-        newClasses: {
-            hasInit: true,
-            init: function() {
-                if ($SS.Config.get("Show Navigation links as Icons") == true) {
-                    $("#search-ok").addClass("catNip-ok fa fa-search");
-                    $("#search-btn").addClass("catNip-btn fa fa-eraser");
-                    $("#filters-ctrl").addClass("catNip-ctrl fa fa-tags");
-                    $("#qf-ctrl").addClass("catNip-qf fa fa-search");
-                    $('a[href$="./catalog"]').addClass("catNip-cata fa fa-book");
-                } else this.hasInit = false;
             }
         },
 
@@ -3026,7 +2997,7 @@
                             padM: document.createElement("div"),
                             sld: document.createElement("div"),
                             sldB: document.createElement("div"),
-                            sldM: document.createElement("div"),
+                            sldM: document.createElement("div")
                         };
 
                         for (var i = 0, segSize = 4; i < $SS.jscolor.images.sld[1]; i += segSize) {
@@ -3458,8 +3429,7 @@
                 threadWatcher: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='20' width='20' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.headerColor.rgb + ")' d='M16,8.286C8.454,8.286,2.5,16,2.5,16s5.954,7.715,13.5,7.715c5.771,0,13.5-7.715,13.5-7.715S21.771,8.286,16,8.286zM16,20.807c-2.649,0-4.807-2.157-4.807-4.807s2.158-4.807,4.807-4.807s4.807,2.158,4.807,4.807S18.649,20.807,16,20.807zM16,13.194c-1.549,0-2.806,1.256-2.806,2.806c0,1.55,1.256,2.806,2.806,2.806c1.55,0,2.806-1.256,2.806-2.806C18.806,14.451,17.55,13.194,16,13.194z'/></svg>",
                 gallery: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='20' width='20' xmlns='http://www.w3.org/2000/svg'>" +
-                    "<path fill='rgb(" + this.headerColor.rgb + ")' d='M2.5,4.833v22.334h27V4.833H2.5zM25.25,25.25H6.75V6.75h18.5V25.25zM11.25,14c1.426,0,2.583-1.157,2.583-2.583c0-1.427-1.157-2.583-2.583-2.583c-1.427,0-2.583,1.157-2.583,2.583C8.667,12.843,9.823,14,11.25,14zM24.251,16.25l-4.917-4.917l-6.917,6.917L10.5,16.333l-2.752,2.752v5.165h16.503V16.25z'/></svg>",
-
+                    "<path fill='rgb(" + this.headerColor.rgb + ")' d='M2.5,4.833v22.334h27V4.833H2.5zM25.25,25.25H6.75V6.75h18.5V25.25zM11.25,14c1.426,0,2.583-1.157,2.583-2.583c0-1.427-1.157-2.583-2.583-2.583c-1.427,0-2.583,1.157-2.583,2.583C8.667,12.843,9.823,14,11.25,14zM24.251,16.25l-4.917-4.917l-6.917,6.917L10.5,16.333l-2.752,2.752v5.165h16.503V16.25z'/></svg>"
             };
 
             if (theme.customCSS) {
@@ -3607,6 +3577,5 @@
         }
     };
     /* END STYLE SCRIPT CLASSES */
-
     $SS.init();
 })();

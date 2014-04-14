@@ -1,9 +1,16 @@
+### v5.1.6
+*2014-04-14*
+
+- Small board title fix in threads
+- Changed default theme to 4chan Rewired
+- Removed ```Show Navigation links as Icons```
+- Starting to clean up the code and minifying
+
 ### v5.1.5
 *2014-04-11*
 
 - Fix Fonts.css
 - Fix poor Ruri in mascots tab
-- I'm dumb
 
 ### v5.1.4
 *2014-04-11*

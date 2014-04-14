@@ -11,7 +11,7 @@
 }
 .boardBanner {
   position: fixed;
-  top: auto;
+  top: 0px;
 }
 :root.left-sidebar .boardBanner {
   left: 1px;
@@ -32,7 +32,7 @@
   width: 100% !important;
 }
 .qr-link-container {
-  margin-top: -15px;
+  margin-top: 0px;
 }
 #qr {
 
