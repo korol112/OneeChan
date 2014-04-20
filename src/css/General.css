@@ -29,7 +29,7 @@ body {
   padding: 2px 0px 10px 10px;
 }
 :root.expand-cover #qr {
-  z-index: 8 !important;
+  z-index: 50 !important;
 }
 :root.expand-cover .expanded-image {
   z-index: 9 !important;
@@ -565,7 +565,7 @@ table.flashListing .highlightPost::after {
   margin-left: auto;
   margin-top: auto;
 }
-.desktop {
+.desktop:not(.postInfo) {
   margin-bottom: 5px;
 }
 .navLinks.navLinksBot.desktop {

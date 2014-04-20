@@ -1,3 +1,11 @@
+### v5.1.11
+*2014-04-20*
+
+- Fixed the QR box being hidden by the top header when OneeChan first starts
+- Fixed input elements not having borders in Themes tab
+- Reduced margins around fileThumb and fileInfo
+- Default theme is now Yotsuba B (sigh)
+
 ### v5.1.10
 *2014-04-20*
 

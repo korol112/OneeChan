@@ -186,8 +186,8 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font"],
         "Themes": [],
         "Hidden Themes": [],
-        "Selected Theme": 13,
-        "NSFW Theme": 13,
+        "Selected Theme": 12,
+        "NSFW Theme": 12,
         "Selected Mascots": 1,
         "Mascots": [],
         "Hidden Mascots": []
@@ -954,7 +954,7 @@
 
         /* OPTIONS */
         options: {
-            saveAndClose: false,
+            saveAndClose: true,
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
                 return $(".shortcut.brackets-wrap").prepend(a);
