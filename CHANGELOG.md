@@ -1,3 +1,9 @@
+### v5.1.12
+*2014-04-21*
+
+- HoverUI will now draw over the QR box
+- Remove the QR shadow to be more inline with the header
+
 ### v5.1.11
 *2014-04-20*
 

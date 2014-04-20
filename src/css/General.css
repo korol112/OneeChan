@@ -29,7 +29,7 @@ body {
   padding: 2px 0px 10px 10px;
 }
 :root.expand-cover #qr {
-  z-index: 50 !important;
+  z-index: 11 !important;
 }
 :root.expand-cover .expanded-image {
   z-index: 9 !important;
@@ -252,6 +252,9 @@ margin-bottom: 20px !important;
 }
 
 /* Quick Reply */
+#qr {
+  box-shadow: none !important;
+}
 #qr .close {
   padding: 2px 3px 2px 4px !important;
 }
@@ -571,4 +574,7 @@ table.flashListing .highlightPost::after {
 .navLinks.navLinksBot.desktop {
   margin-top: 10px;
   margin-bottom: 5px;
+}
+#hoverUI {
+  z-index: 12 !important;
 }
