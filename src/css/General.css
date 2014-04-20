@@ -5,6 +5,11 @@ body {
   margin-top: 1px;
 }
 
+/* Thread */
+div.thread {
+padding-top: none !important;
+}
+
 /* Replies */
 .postInfo {
   padding: 4px 12px 2px;
