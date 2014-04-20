@@ -34,7 +34,7 @@ body>hr,
 :root.catalog hr,
 :root.hide-navlinks .navLinks.navLinksBot.desktop,
 :root.hide-navlinks .navLinks,
-:root.hide-navlinks body > .desktop,
+:root.hide-navlinks body > .desktop:not(.pagelist),
 .ad-plea,
 #mascot img[src=''],
 .exif:not([style]) {

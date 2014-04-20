@@ -1,5 +1,12 @@
+### v5.1.9
+*2014-04-20*
+
+- Fix hiding navigation links in non-JSON hiding bottom pages
+
 ### v5.1.8
 *2014-04-20*
+
+- Fix hiding navigation links
 
 ### v5.1.7
 *2014-04-20*
