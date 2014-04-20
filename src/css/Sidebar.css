@@ -11,7 +11,6 @@
 }
 .boardBanner {
   position: fixed;
-  top: 0px;
 }
 :root.left-sidebar .boardBanner {
   left: 1px;
