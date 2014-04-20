@@ -237,9 +237,9 @@ input[type=checkbox]:checked+.riceCheck::before
 }
 
 /* Delform */
-:root.fixed:not(.autohide):not(.bottom) #delform {
+/*:root.fixed:not(.autohide):not(.bottom) #delform {
   margin-top: -15px;
-}
+}*/
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
 margin-bottom: 20px !important;
 }
@@ -367,6 +367,13 @@ hr {
 }
 
 /* Banner */
+#bannerCnt {
+border: 0px !important;
+margin: 0px auto;
+width: 300px;
+max-height: 100px !important;
+max-width: 100%;
+}
 .boardBanner {
   width: 300px;
   margin: auto;
@@ -375,34 +382,12 @@ hr {
 .boardBanner>img {
   border: none !important;
 }
-:root.banner-reflect.gecko:not(.hide-banner) .bBanner {
-    position: relative !important;
-}
-:root.banner-reflect.gecko:not(.hide-banner) .bBanner::after
-{
-  background-image:-moz-element(#banner);
-  bottom:-93%;
-  content:'';
-  left:0;
-  mask:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxzdmcgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KCTxkZWZzPg0KCQk8bGluZWFyR3JhZGllbnQgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIGlkPSJncmFkaWVudCIgeDI9IjAiIHkyPSIxIj4NCgkJCTxzdG9wIHN0b3Atb2Zmc2V0PSIwIi8+DQoJCQk8c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgb2Zmc2V0PSIxIi8+DQoJCTwvbGluZWFyR3JhZGllbnQ+DQoJCTxtYXNrIGlkPSJtYXNrIiBtYXNrVW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiBtYXNrQ29udGVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+DQoJCQk8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIvPg0KCQk8L21hc2s+DQoJPC9kZWZzPg0KPC9zdmc+#mask');
-  opacity: .1;
-  position:absolute;
-  right:0;
-  top:97%;
-  -moz-transform:scaleY(-1);
-  width: 300px;
-  margin: auto !important;
-  pointer-events: none;
-}
-#banner {
-  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(45%, transparent), to(rgba(250, 250, 250, 0.1)));
-}
-:root.banner-opacity #banner,
+:root.banner-opacity #bannerCnt,
 .bBanner {
   opacity: 0.5;
   transition: opacity .3s ease-out 0s;
 }
-:root.banner-opacity #banner:hover,
+:root.banner-opacity #bannerCnt:hover,
 .bBanner:hover {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
@@ -576,7 +561,12 @@ table.flashListing .highlightPost::after {
 
 /* Navlinks */
 :root.index div.navLinks {
-  padding: 12px;
-  margin-left: 15px;
+  padding: 5px;
+  margin-left: auto;
   margin-top: auto;
+}
+.navLinks.navLinksBot.desktop,
+.desktop {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

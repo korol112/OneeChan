@@ -6,6 +6,14 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
 ##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
 
+
+#### Install instructions
+
+- Firefox: Requires the Greasemonkey addon.
+
+- Chrome: Open the extensions page and drag and drop the downloaded ```.crx``` to install.
+
+
 #### Compatibility with 4chan X forks:
 (Updated 2014-04-04)
 

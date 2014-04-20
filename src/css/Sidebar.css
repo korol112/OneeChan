@@ -22,9 +22,6 @@
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
   margin-top: auto;
 }
-#banner {
-  width: 100%;
-}
 .bBanner {
   margin-bottom: 40px;
 }

@@ -1,6 +1,17 @@
+### v5.1.7
+*2014-04-20*
+
+**Nebukazar**
+- Fixes for the new 4chan html
+- Removed banner reflection option for now as it was only causing problems
+
+**New:**
+- Added ```Show Navigation Links``` option
+
 ### v5.1.6
 *2014-04-14*
 
+**Nebukazar**
 - Small board title fix in threads
 - Changed default theme to 4chan Rewired
 - Removed ```Show Navigation links as Icons```

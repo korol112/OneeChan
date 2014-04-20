@@ -53,7 +53,6 @@
         ],
         "Underline Links": [false, "Underlines links"],
         "Show Banner": [true, "Toggle visibility of the logo banner", null, true],
-        "Show Banner Reflection": [true, "Toggle visibility of the logo banner reflection", "Show Banner", true, true],
         "Reduce Banner Opacity": [false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true],
         "Show Board Name": [true, "Toggle visibility of the board name", null, true],
         "Show Text Board": [true, "Toggle visibility of the text board link", "Show Board Name", true, true],
@@ -66,6 +65,7 @@
         "Show Middle Ad": [true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true],
         "Show Bottom Ad": [true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true],
         "Reduce Ad Opacity": [false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true],
+        "Show Navigation Links": [false, "Hides the navigation links at the top and bottom of the reply threads"],
         "Show Previous/Next": [false, "Hides the Previous/Next buttons in page navigation mode"],
         "--Sidebar--": ["header", ""],
         "Sidebar Position": [
@@ -185,8 +185,8 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font"],
         "Themes": [],
         "Hidden Themes": [],
-        "Selected Theme": 16,
-        "NSFW Theme": 16,
+        "Selected Theme": 6,
+        "NSFW Theme": 6,
         "Selected Mascots": 1,
         "Mascots": [],
         "Hidden Mascots": []
@@ -750,9 +750,6 @@
                         for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
                             if (nodes[j].nodeType !== 3)
                                 $("input[type=checkbox]", nodes[j]).riceCheck();
-
-                        $SS.logoReflect.init();
-
                     }
                 });
 
@@ -959,7 +956,7 @@
             saveAndClose: false,
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
-                return $("#shortcuts>.shortcut:last-of-type").before(a);
+                return $(".shortcut.brackets-wrap").prepend(a);
             },
             show: function() {
                 if ($("#overlay").exists())
@@ -2652,7 +2649,6 @@
                 $("html").optionClass("Fit Width", true, "reply-fit-width");
                 $("html").optionClass("Show Text Board", false, "hide-text-board");
                 $("html").optionClass("Show Banner", false, "hide-banner");
-                $("html").optionClass("Show Banner Reflection", true, "banner-reflect");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
                 $("html").optionClass("Show Reply to Thread Button", false, "hide-button");
                 $("html").optionClass("Style Post Info", true, "post-info");
@@ -2676,13 +2672,13 @@
                 $("html").optionClass("Show Top Ad", false, "hide-top");
                 $("html").optionClass("Show Middle Ad", false, "hide-middle");
                 $("html").optionClass("Show Bottom Ad", false, "hide-bottom");
+                $("html").optionClass("Show Navigation Links", false, "hide-navlinks");
                 $("html").optionClass("Show Previous/Next", false, "hide-prevnext");
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Style Emails as Links", false, "email-color");
             }
         },
-
         pages: {
             hasInit: false,
             init: function() {
@@ -2692,7 +2688,6 @@
                 }
             }
         },
-
         riceInputs: {
             hasInit: false,
             init: function() {
@@ -2707,19 +2702,6 @@
                 }
             }
         },
-
-        logoReflect: {
-            hasInit: false,
-            init: function() {
-                if (this.hasInit) return;
-
-                var div = $("<div class=bBanner>").append($(".boardBanner>img").attr("id", "banner"));
-                $(".boardBanner").prepend(div);
-
-                return this.hasInit = true;
-            }
-        },
-
         jscolor: {
             getElementPos: function(e) {
                 var e1 = e,
