@@ -1,3 +1,12 @@
+### v5.1.10
+*2014-04-20*
+
+- Removed bottom property from mascots for not interacting with the header (thanks to @sikmo)
+- Blotter now no longer displays when hidden instead of just being invisible
+
+**New:**
+- ```Show bottom Navigation Link``` allows to hide the bottom navigation in reply mode
+
 ### v5.1.9
 *2014-04-20*
 

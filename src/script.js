@@ -65,7 +65,8 @@
         "Show Middle Ad": [true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true],
         "Show Bottom Ad": [true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true],
         "Reduce Ad Opacity": [false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true],
-        "Show Navigation Links": [false, "Hides the navigation links at the top and bottom of the reply threads"],
+        "Show Navigation Links": [true, "Hides the navigation links at the top and bottom of the reply threads", null, true],
+        "Show bottom Navigation Link": [true, "Hides the bottom navigation link in reply mode", "Show Navigation Links", true, true],
         "Show Previous/Next": [false, "Hides the Previous/Next buttons in page navigation mode"],
         "--Sidebar--": ["header", ""],
         "Sidebar Position": [
@@ -2673,6 +2674,7 @@
                 $("html").optionClass("Show Middle Ad", false, "hide-middle");
                 $("html").optionClass("Show Bottom Ad", false, "hide-bottom");
                 $("html").optionClass("Show Navigation Links", false, "hide-navlinks");
+                $("html").optionClass("Show bottom Navigation Link", false, "hide-navlinkbot");
                 $("html").optionClass("Show Previous/Next", false, "hide-prevnext");
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");

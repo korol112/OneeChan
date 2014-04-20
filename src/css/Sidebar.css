@@ -69,19 +69,3 @@
   left: 0px;
   right: auto !Important;
 }
-
-/* Mascot overriding */
-:root.fade-qr #mascot img, 
-:root.fade-qr #mascotprev img {
-  bottom: 260px !important;
-}
-.bottom:not(.autohide):not(.fade-qr) #mascot img,
-:root:not(.fade-qr):not(.vertical-qr) #mascot img, 
-.bottom:not(.autohide):not(.fade-qr) #mascotprev img,
-:root:not(.fade-qr):not(.vertical-qr) #mascotprev img  {
-  bottom: 22px !important;
-}
-:root.bottom:not(.autohide):not(.fade-qr):not(.vertical-qr) #mascot img, 
-:root.bottom:not(.autohide):not(.fade-qr):not(.vertical-qr) #mascotprev img  {
-  bottom: 48px !important;
-}
