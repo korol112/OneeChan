@@ -1,5 +1,4 @@
 /* Text Colors */
-
 /* Anything we need transparent */
 div[style='float: right;'] {
   color: transparent !important;
@@ -31,7 +30,6 @@ textarea,
 .tag {
   color: " + $SS.theme.tripColor.hex + " !important;
 }
-
 /* Links */
 a,
 .typ, 

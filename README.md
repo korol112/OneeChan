@@ -35,5 +35,5 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 #### Known Issues
 
-- OneeChan's settings icon sometimes doesn't get drawn (especially bad on Chrome)
+- OneeChan's settings icon sometimes doesn't render (especially bad on Chrome)
 - **Fix:** Load a new tab, refresh the page or navigate to another thread until it shows up
