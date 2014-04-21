@@ -4,9 +4,7 @@ body {
   margin-right: " + $SS.conf["Margin Right"] + "px;
   margin-top: 1px;
 }
-body.hasDropDownNav {
-    margin-top: 0px !important;
-}
+
 /* Replies */
 .postInfo {
   padding: 4px 12px 2px;
@@ -84,6 +82,7 @@ body.hasDropDownNav {
 :root.reply-hide .thread>.hasInline>.reply {
    margin-left: 12px !important;
 }
+
 /* Quote Threading */
 .threadContainer {
   margin-left: 0px !important;
@@ -92,11 +91,13 @@ body.hasDropDownNav {
 :root.reply-hide .thread>.threadContainer {
    margin-left: 13px !important;
 }
+
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {
   box-shadow: inset rgba(0,0,0,.05) 0px -1px 2px;
   padding-top: 2px !important;
 }
+
 /* Backlinks */
 :root.backlink-bottom .post {
   position: relative;
@@ -108,6 +109,7 @@ body.hasDropDownNav {
   bottom:2px;
   right:6px;
 }
+
 /* Menu button */
 .reply .menu-button i {
   position: relative;
@@ -141,6 +143,7 @@ body.hasDropDownNav {
   opacity: 1;
   transition: opacity .3s ease-in .1s !important;
 }
+
 /* Code Tags */
 .prettyprint {
   padding: 5px !important;
@@ -150,6 +153,7 @@ body.hasDropDownNav {
   max-width: 100%;
   vertical-align:middle;
 }
+
 /* Checkboxes */
 input[type=checkbox],
 input[type=submit],
@@ -197,6 +201,7 @@ input[type=checkbox]:checked+.riceCheck::before
 {
   background: " + $SS.theme.checkMark.get() + " !important;
 }
+
 /* Header */
 #header-bar {
   padding: 4px 4px 5px !important;
@@ -230,6 +235,7 @@ input[type=checkbox]:checked+.riceCheck::before
 .navSmall>a {
   margin-left: 2px;
 }
+
 /* Delform */
 /*:root.fixed:not(.autohide):not(.bottom) #delform {
   margin-top: -15px;
@@ -237,12 +243,14 @@ input[type=checkbox]:checked+.riceCheck::before
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
 margin-bottom: 20px !important;
 }
+
 /* QR link */
 .qr-link {
   border-radius: 3px;
   vertical-align: middle;
   padding: 7px 12px 6px;
 }
+
 /* Quick Reply */
 #qr {
   box-shadow: none !important;
@@ -318,6 +326,7 @@ margin-bottom: 20px !important;
   height: 8.6em;
   min-height: 0.6em !important;
 }
+
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
@@ -353,11 +362,13 @@ hr {
   margin-top: -3px !important;
   margin-bottom: -3px !important;
 }
+
 /* Board Title */
 .boardBanner .boardTitle {
   cursor:default;
   letter-spacing:-2px;
 }
+
 /* Banner */
 #bannerCnt {
 border: 0px !important;
@@ -384,6 +395,7 @@ max-width: 100%;
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
+
 /* Pages */
 .pages strong>a {
   border-radius: 3px;
@@ -444,6 +456,7 @@ max-width: 100%;
 .pagelist span {
   opacity: 0.2;
 }
+
 /* Catalog Link */
 .cataloglink {
   margin-left: 12px;
@@ -484,6 +497,7 @@ table.flashListing .highlightPost::after {
   border: none !important;
   box-shadow: none !important;
 }
+
 /* Mascot */
 #mascot img, #mascotprev img {
   position:fixed;
@@ -532,10 +546,12 @@ table.flashListing .highlightPost::after {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
+
 /* Scroll Marker */
 :root:not(.autohide) #scroll-marker {
   pointer-events: none !important;
 }
+
 /* Ads */
 :root.ad-opacity .center img {
   opacity: 0.5;
@@ -545,6 +561,7 @@ table.flashListing .highlightPost::after {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
+
 /* Navlinks */
 :root.index div.navLinks {
   padding: 5px;

@@ -954,10 +954,10 @@
 
         /* OPTIONS */
         options: {
-            saveAndClose: false,
+            saveAndClose: true,
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
-                $(".shortcut.brackets-wrap").prepend(a);
+                return $(".shortcut.brackets-wrap").prepend(a);
             },
             show: function() {
                 if ($("#overlay").exists())
