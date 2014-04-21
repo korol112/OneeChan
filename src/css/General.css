@@ -4,15 +4,10 @@ body {
   margin-right: " + $SS.conf["Margin Right"] + "px;
   margin-top: 1px;
 }
-
 /* Replies */
 .postInfo {
   padding: 4px 12px 2px;
   display: block !important;
-}
-.fileText {
-  margin-left: 20px;
-  margin-right: 10px;
 }
 .useremail::before {
   margin-bottom: -20px;
@@ -546,12 +541,10 @@ table.flashListing .highlightPost::after {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
-
 /* Scroll Marker */
 :root:not(.autohide) #scroll-marker {
   pointer-events: none !important;
 }
-
 /* Ads */
 :root.ad-opacity .center img {
   opacity: 0.5;
@@ -561,7 +554,6 @@ table.flashListing .highlightPost::after {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
-
 /* Navlinks */
 :root.index div.navLinks {
   padding: 5px;

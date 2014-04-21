@@ -1,3 +1,10 @@
+### v5.1.13
+*2014-04-21*
+
+- OneeChan will no longer apply on ```sys.4chan.org``` (report/auth window)
+- Fix top margin when Show Ads is enabled
+- Fix input borders and Themes color input backgrounds
+
 ### v5.1.12
 *2014-04-21*
 

@@ -1,6 +1,6 @@
 {
   "name": "OneeChan",
-  "version": "5.1.12",
+  "version": "5.1.13",
   "description": "Customizable rice and themes for 4chan and 4chan X.",
   "meta": {
     "name": "OneeChan",
@@ -10,7 +10,8 @@
     "matches": [
       "*://www.4chan.org/",
       "*://boards.4chan.org/*",
-      "*://sys.4chan.org/*"
+      "*://a.4cdn.org/*",
+      "*://i.4cdn.org/*"
     ],
     "files": {
       "metajs": "OneeChan.meta.js",

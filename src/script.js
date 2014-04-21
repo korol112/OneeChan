@@ -51,23 +51,23 @@
             999,
             true
         ],
-        "Underline Links": [false, "Underlines links"],
-        "Show Banner": [true, "Toggle visibility of the logo banner", null, true],
-        "Reduce Banner Opacity": [false, "Reduce the opacity of the logo for easier viewing", "Show Banner", true, true],
-        "Show Board Name": [true, "Toggle visibility of the board name", null, true],
-        "Show Text Board": [true, "Toggle visibility of the text board link", "Show Board Name", true, true],
-        "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button"],
-        "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus"],
-        "Show Header Background Gradient": [true, "Gives the header bar a gradient background to be prettier"],
-        "Show Blotter": [false, "Toggle visibility of the 4chan news blotter"],
-        "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads", null, true],
-        "Show Top Ad": [true, "Show the top 4chan banner ad", "Show 4chan Ads", true, true],
-        "Show Middle Ad": [true, "Show the middle 4chan banner ad", "Show 4chan Ads", true, true],
-        "Show Bottom Ad": [true, "Show the bottom 4chan banner ad", "Show 4chan Ads", true, true],
-        "Reduce Ad Opacity": [false, "Reduce the opacity of the ads until hover for easier viewing", "Show 4chan Ads", true, true],
-        "Show Navigation Links": [true, "Hides the navigation links at the top and bottom of the reply threads", null, true],
-        "Show bottom Navigation Link": [true, "Hides the bottom navigation link in reply mode", "Show Navigation Links", true, true],
-        "Show Previous/Next": [false, "Hides the Previous/Next buttons in page navigation mode"],
+        "Underline Links": [false, "Underlines links."],
+        "Show Banner": [true, "Toggle visibility of the logo banner.", null, true],
+        "Reduce Banner Opacity": [false, "Reduce the opacity of the logo for easier viewing.", "Show Banner", true, true],
+        "Show Board Name": [true, "Toggle visibility of the board name.", null, true],
+        "Show Text Board": [true, "Toggle visibility of the text board link.", "Show Board Name", true, true],
+        "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
+        "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus."],
+        "Show Header Background Gradient": [true, "Gives the header bar a gradient background to be prettier."],
+        "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
+        "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
+        "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
+        "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
+        "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
+        "Reduce Ad Opacity": [false, "Reduce the opacity of the ads until hover for easier viewing.", "Show 4chan Ads", true, true],
+        "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads in reply mode.", null, true],
+        "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link in reply mode.", "Show Navigation Links", true, true],
+        "Show Previous/Next buttons": [false, "Hides the Previous/Next buttons in page navigation mode."],
         "--Sidebar--": ["header", ""],
         "Sidebar Position": [
             1, "Change the position of the sidebar", [{
@@ -81,20 +81,20 @@
                 value: 3
             }], true
         ],
-        "SS-like Sidebar": [true, "Optionally darkens the sidebar and adds a border like 4chan Style Script"],
+        "SS-like Sidebar": [true, "Optionally darkens the sidebar and adds a border like 4chan Style Script."],
         "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
         "--Replies--": ["header", ""],
-        "Fit Width": [true, "Makes the replies stretch to the width of the page"],
-        "Style Post Info": [true, "Separate the post info by the post info colors defined in themes"],
+        "Fit Width": [true, "Makes the replies stretch to the width of the page."],
+        "Style Post Info": [true, "Separate the post info by the post info colors defined in Themes."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
-        "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of forced onto their own line. "],
-        "Rounded Corners": [false, "Styles a few elements to have subtly rounded coreners"],
+        "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
+        "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
         "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
-        "Backlinks on Bottom": [false, "Move backlinks to the bottom right of replies."],
+        "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
-            2, "Changes which sides of replies have borders", [{
+            2, "Changes which sides of replies have borders.", [{
                 name: "Normal",
                 value: 1
             }, {
@@ -105,7 +105,7 @@
                 value: 3
             }]
         ],
-        "Margin Between Replies": [-2, "Change the size of the spacing in between replies", [{
+        "Margin Between Replies": [-2, "Change the size of the spacing in between replies.", [{
             name: "Large",
             value: 6
         }, {
@@ -122,7 +122,7 @@
             value: -5
         }]],
         "Post Message Margin": [
-            2, "Change the size of the margin around the post message", [{
+            2, "Change the size of the margin around the post message.", [{
                 name: "Small",
                 value: 1
             }, {
@@ -146,11 +146,11 @@
                 value: 3
             }]
         ],
-        "Expanding Form Inputs": [false, "Makes certain form elements expand on focus"],
+        "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
         "Secret Name Field": [false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling."],
         "--Font--": ["header", ""],
         "Font Family": [
-            "sans-serif", "Set the default font family", [{
+            "sans-serif", "Set the default font family.", [{
                 name: "Default",
                 value: "sans-serif"
             }, {
@@ -182,8 +182,8 @@
                 value: "Helvetica"
             }]
         ],
-        "Font Size": [13, "Set the general size of text (Pixels)"],
-        "Bitmap Font": [false, "Check this if you are using a bitmap font"],
+        "Font Size": [13, "Set the general size of text (Pixels)."],
+        "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         "Themes": [],
         "Hidden Themes": [],
         "Selected Theme": 12,
@@ -1141,7 +1141,7 @@
                     p = $("<p class='buttons-container'>");
 
                 p.append($("<a class='options-button' name=addTheme>Add", tOptions).bind("click", $SS.options.showTheme));
-                p.append($("<a class='options-button' href='https://github.com/seaweedchan/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
+                p.append($("<a class='options-button' href='https://github.com/Nebukazar/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
                 p.append($("<div id='import-link'>").append($("<input type=file class='import-input' riced=true>")
                     .bind("change", function() {
                         var file = this.files[0],
@@ -2105,7 +2105,7 @@
                 brderColor: "b7c5d9",
                 inputColor: "ffffff",
                 inputbColor: "aaaaaa",
-                blinkColor: "34345C",
+                blinkColor: "66182d",
                 unreadColor: "34345C",
                 linkColor: "34345c",
                 linkHColor: "dd0000",
@@ -2118,7 +2118,7 @@
                 headerLColor: "34345c",
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
-                boardColor: "000000"
+                boardColor: "34345c"
             }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
@@ -2681,6 +2681,7 @@
                 $("html").optionClass("Style Emails as Links", false, "email-color");
             }
         },
+
         pages: {
             hasInit: false,
             init: function() {

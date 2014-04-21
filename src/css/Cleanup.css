@@ -51,3 +51,7 @@ a
 .board>hr:last-of-type {
   background: none !important;
 }
+/* Fix margin top when ads are shown */
+:root.show-ads .ad-cnt {
+  margin-top: auto !important;
+}

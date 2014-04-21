@@ -207,16 +207,13 @@ fieldset,
 .flashListing td:not(:last-of-type):not(.postblock) {
   border-color: " + $SS.theme.brderColor.hex + " !important;
 }
+input,
 textarea,
 .riceCheck,
 #qr-filename-container,
 #search-box,
 #index-search {
   border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
-}
-input {
-  border: 1px solid " + $SS.theme.inputbColor.hex + " !important;
-  background: none !important;
 }
 .options-button,
 .qr-link,

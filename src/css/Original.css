@@ -5,6 +5,10 @@ div.post div.file .fileThumb {
   margin-right: 20px;
   margin-bottom: 1px;
 }
+.fileText {
+  margin-left: 20px;
+  margin-right: 10px;
+}
 .postContainer {
   display: block;
 }
