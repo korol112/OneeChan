@@ -4,6 +4,9 @@ body {
   margin-right: " + $SS.conf["Margin Right"] + "px;
   margin-top: 1px;
 }
+body.hasDropDownNav {
+    margin-top: auto !important;
+}
 /* Replies */
 .postInfo {
   padding: 4px 12px 2px;
@@ -138,7 +141,6 @@ body {
   opacity: 1;
   transition: opacity .3s ease-in .1s !important;
 }
-
 /* Code Tags */
 .prettyprint {
   padding: 5px !important;
@@ -148,7 +150,6 @@ body {
   max-width: 100%;
   vertical-align:middle;
 }
-
 /* Checkboxes */
 input[type=checkbox],
 input[type=submit],
@@ -196,7 +197,6 @@ input[type=checkbox]:checked+.riceCheck::before
 {
   background: " + $SS.theme.checkMark.get() + " !important;
 }
-
 /* Header */
 #header-bar {
   padding: 4px 4px 5px !important;
@@ -230,7 +230,6 @@ input[type=checkbox]:checked+.riceCheck::before
 .navSmall>a {
   margin-left: 2px;
 }
-
 /* Delform */
 /*:root.fixed:not(.autohide):not(.bottom) #delform {
   margin-top: -15px;
@@ -238,14 +237,12 @@ input[type=checkbox]:checked+.riceCheck::before
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
 margin-bottom: 20px !important;
 }
-
 /* QR link */
 .qr-link {
   border-radius: 3px;
   vertical-align: middle;
   padding: 7px 12px 6px;
 }
-
 /* Quick Reply */
 #qr {
   box-shadow: none !important;

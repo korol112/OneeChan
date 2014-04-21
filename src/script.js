@@ -974,7 +974,7 @@
                             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
                             "<p class='buttons-container'>" +
                             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
-                            "<span id=oneechan-version><span title='Thanks to Seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
+                            "<span id=oneechan-version><span title='Thanks to ahodesuka, Seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
                             "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
@@ -2675,7 +2675,7 @@
                 $("html").optionClass("Show Bottom Ad", false, "hide-bottom");
                 $("html").optionClass("Show Navigation Links", false, "hide-navlinks");
                 $("html").optionClass("Show bottom Navigation Link", false, "hide-navlinkbot");
-                $("html").optionClass("Show Previous/Next", false, "hide-prevnext");
+                $("html").optionClass("Show Previous/Next buttons", false, "hide-prevnext");
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Style Emails as Links", false, "email-color");

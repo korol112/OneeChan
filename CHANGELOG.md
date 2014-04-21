@@ -1,3 +1,10 @@
+## v5.2.0
+*2014-04-22*
+
+- Fix stuff I broke (prev/next option, i.4cdn.org)
+- Corrected margins for Add theme window
+- Adjusted boardBanner in the Catalog
+
 ### v5.1.13
 *2014-04-21*
 
