@@ -15,13 +15,14 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 
 #### Compatibility with 4chan X forks:
-(Updated 2014-04-04)
+(Updated 2014-04-25)
 
 - [Seaweedchan](https://github.com/seaweedchan/4chan-x) /// ```Compatible```
 - [Spittie](https://github.com/Spittie/4chan-x) /// ```Compatible```
 - [ccd0](https://github.com/ccd0/4chan-x) /// ```Compatible``` (Recommended)
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// No
 - [ihavenoface](https://github.com/ihavenoface/4chan-x) /// No
+- [loadletter] (https://github.com/loadletter/4chan-x) /// No
 
 
 #### Troubleshooting

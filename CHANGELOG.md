@@ -1,3 +1,10 @@
+### v5.2.2
+*2014-04-25*
+
+- Highlighted You/Own posts are now more noticeable when enabled in 4chan X
+- OneeChan settings button should now appear on MayhemYDG forks, although compatibility is dodgy at best
+- Reduced post highlighting border size as fixed in previous version
+
 ### v5.2.1
 *2014-04-25*
 
@@ -117,7 +124,6 @@
 
 **Nebukazar**
 - Fixed vertical tabbed QR going all over the place on mouse hover (General.css)
-
 
 ## v5.1.0
 *2014-04-07*

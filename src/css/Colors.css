@@ -19,7 +19,11 @@ textarea,
 }
 /* Highlighting posts */
 .post.reply.highlight {
-  outline: 3px solid rgba(" + $SS.theme.nameColor.rgb + ",0.8) !important;
+  outline: 2px solid rgba(" + $SS.theme.nameColor.rgb + ",0.8) !important;
+}
+.highlight-own:root .yourPost > .reply, 
+.highlight-you:root .quotesYou > .reply {
+    border-left: 5px solid rgba(147, 14, 14, 0.5) !important;
 }
 /* Names */
 .nameBlock>.name,

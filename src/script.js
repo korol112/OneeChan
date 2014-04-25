@@ -59,16 +59,16 @@
         "Show Board Name": [true, "Toggle visibility of the board name."],
         "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
         "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus."],
-        "Show Header Background Gradient": [true, "Gives the header bar a gradient background to be prettier."],
+        "Show Header Background Gradient": [true, "Gives the header bar a shadow-like gradient."],
         "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
         "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
         "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
         "Show Middle Ad": [true, "Show the middle 4chan banner ad.", "Show 4chan Ads", true, true],
         "Show Bottom Ad": [true, "Show the bottom 4chan banner ad.", "Show 4chan Ads", true, true],
-        "Reduce Ad Opacity": [false, "Reduce the opacity of the ads until hover for easier viewing.", "Show 4chan Ads", true, true],
-        "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads in reply mode.", null, true],
-        "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link in reply mode.", "Show Navigation Links", true, true],
-        "Show Previous/Next buttons": [false, "Hides the Previous/Next buttons in page navigation mode."],
+        "Reduce Ad Opacity": [false, "Reduce the opacity of Ads until hover for easier viewing.", "Show 4chan Ads", true, true],
+        "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
+        "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link.", "Show Navigation Links", true, true],
+        "Show Previous/Next buttons": [false, "Hides the Previous / Next buttons in page navigation mode."],
         "--Sidebar--": ["header", ""],
         "Sidebar Position": [
             1, "Change the position of the sidebar", [{
@@ -82,7 +82,7 @@
                 value: 3
             }], true
         ],
-        "SS-like Sidebar": [true, "Optionally darkens the sidebar and adds a border like 4chan Style Script."],
+        "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
         "--Replies--": ["header", ""],
@@ -91,7 +91,7 @@
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
         "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
-        "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading and Post Highlighting."],
+        "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
         "Reduce Thumbnail Opacity": [false, "Reduces the opacity of the thumbnails."],
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
@@ -314,7 +314,6 @@
         length: function() {
             return this.elems.length;
         },
-
         /* CONSTRUCTOR */
         init: function(selector, root) {
             if (selector == null || selector == undefined) return this;
@@ -959,7 +958,8 @@
             saveAndClose: true,
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
-                return $(".shortcut.brackets-wrap").prepend(a);
+                var b = $("<span id='navtopright'> / <a id='OneeChanLink' title='OneeChan Settings' href='javascript:;'>OneeChan</a> </span>").bind("click", $SS.options.show);
+                return $(".shortcut.brackets-wrap").prepend(a) && $("#settingsWindowLink").after(b) && $("#shortcuts.brackets-wrap").append(a);
             },
             show: function() {
                 if ($("#overlay").exists())
