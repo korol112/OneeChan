@@ -51,11 +51,12 @@
             999,
             true
         ],
-        "Underline Links": [false, "Underlines links."],
-        "Show Banner": [true, "Toggle visibility of the logo banner.", null, true],
-        "Reduce Banner Opacity": [false, "Reduce the opacity of the logo for easier viewing.", "Show Banner", true, true],
-        "Show Board Name": [true, "Toggle visibility of the board name.", null, true],
-        "Show Text Board": [true, "Toggle visibility of the text board link.", "Show Board Name", true, true],
+        "Toggle Underline Options": [true, "Check to show underline options.", null, true],
+        "Underline QuoteLinks only": [true, "Underlines quotelinks only.", "Toggle Underline Options", true, true],
+        "Underline All Links": [false, "Underlines all the links.", "Toggle Underline Options", true, true],
+        "Show Banner": [true, "Toggle visibility of the banner.", null, true],
+        "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
+        "Show Board Name": [true, "Toggle visibility of the board name."],
         "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
         "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus."],
         "Show Header Background Gradient": [true, "Gives the header bar a gradient background to be prettier."],
@@ -90,7 +91,8 @@
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
         "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
-        "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
+        "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading and Post Highlighting."],
+        "Reduce Thumbnail Opacity": [false, "Reduces the opacity of the thumbnails."],
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
@@ -2118,7 +2120,7 @@
                 headerLColor: "34345c",
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
-                boardColor: "34345c"
+                boardColor: "af0a0f"
             }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
@@ -2643,12 +2645,13 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
-                $("html").optionClass("Underline Links", false, "underline-disabled");
+                $("html").optionClass("Toggle Underline Links", true, "underline-option");
+                $("html").optionClass("Underline QuoteLinks only", true, "underline-quotes");
+                $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
                 $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");
                 $("html").optionClass("Show Board Name", false, "hide-board-name");
                 $("html").optionClass("Fit Width", true, "reply-fit-width");
-                $("html").optionClass("Show Text Board", false, "hide-text-board");
                 $("html").optionClass("Show Banner", false, "hide-banner");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
                 $("html").optionClass("Show Reply to Thread Button", false, "hide-button");
@@ -2678,6 +2681,7 @@
                 $("html").optionClass("Show Previous/Next buttons", false, "hide-prevnext");
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
+                $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
                 $("html").optionClass("Style Emails as Links", false, "email-color");
             }
         },

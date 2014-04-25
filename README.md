@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x). These are a bunch of dirty fixes but it "just werks", thank you for your understanding.
+Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks. These are a bunch of dirty fixes but it "just werks", thank you for your understanding.
 
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
 ##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)

@@ -7,7 +7,6 @@
 #full-board-list {
   font-size: 0px !important;
 }
-
 /* Anything we need small */
 .fileText,
 .summary {
@@ -33,13 +32,11 @@
   font-weight: 400 !important;
   font-size:28px !important;
 }
-
 /* Code Tags */
 .prettyprint span {
   font-family:monospace!important;
   font-size:medium!important;
 }
-
 /* Full board list */
 #full-board-list {
   font-size: 0px !important;
@@ -49,7 +46,6 @@ body>#header-bar,
 #full-board-list .fourchanx-link {
   font-size: " + (($SS.conf["Font Size"] < 13) ? 12 : ($SS.conf["Font Size"] - 1)) + "px !important;
 }
-
 /* Everything else */
 body,
 .prev span::after, 
@@ -76,7 +72,6 @@ body,
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
   font-size:" + $SS.conf["Font Size"] + "px !important;
 }
-
 /* Text decoration */
 :root.underline-disabled a {
   text-decoration: none !important;
@@ -84,7 +79,10 @@ body,
 :root.underline-disabled .filtered {
   text-decoration: line-through !important;
 }
-
+:root.underline-quotes .deadlink.quotelink,
+:root.underline-quotes .quotelink {
+  text-decoration: underline !important;
+}
 /* Font weight */
 .name,
 .subject,

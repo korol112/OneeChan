@@ -17,6 +17,10 @@ textarea,
 .pln {
   color: " + $SS.theme.textColor.hex + " !important;
 }
+/* Highlighting posts */
+.post.reply.highlight {
+  outline: 3px solid rgba(" + $SS.theme.nameColor.rgb + ",0.8) !important;
+}
 /* Names */
 .nameBlock>.name,
 .com,

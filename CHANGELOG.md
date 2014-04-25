@@ -1,3 +1,13 @@
+### v5.2.1
+*2014-04-25*
+
+- Fixed post highlighting (thanks @seanssel)
+- Removed ```Show text board``` due to moot scrapping discussion boards (RIP)
+
+**New:**
+- ```Reduce Thumbnail Opacity```
+- ```Underline QuoteLinks```
+
 ## v5.2.0
 *2014-04-22*
 
