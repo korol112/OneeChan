@@ -1,6 +1,6 @@
 (function() {
     var defaultConfig = {
-        "--Main Rice--": ["header", ""],
+        ".:: Main Rice": ["header", ""],
         "Left Margin": [
             0, "Change the size of the left margin.", [{
                 name: "Large",
@@ -51,9 +51,8 @@
             999,
             true
         ],
-        "Toggle Underline Options": [true, "Check to show underline options.", null, true],
-        "Underline QuoteLinks only": [true, "Underlines quotelinks only.", "Toggle Underline Options", true, true],
-        "Underline All Links": [false, "Underlines all the links.", "Toggle Underline Options", true, true],
+        "Underline QuoteLinks": [true, "Underlines quotelinks only."],
+        "Underline All Links": [true, "Underlines all the links."],
         "Show Banner": [true, "Toggle visibility of the banner.", null, true],
         "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
         "Show Board Name": [true, "Toggle visibility of the board name."],
@@ -69,7 +68,7 @@
         "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
         "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link.", "Show Navigation Links", true, true],
         "Show Previous/Next buttons": [false, "Hides the Previous / Next buttons in page navigation mode."],
-        "--Sidebar--": ["header", ""],
+        ".:: Sidebar": ["header", ""],
         "Sidebar Position": [
             1, "Change the position of the sidebar", [{
                 name: "Right",
@@ -85,7 +84,7 @@
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
-        "--Replies--": ["header", ""],
+        ".:: Replies": ["header", ""],
         "Fit Width": [true, "Makes the replies stretch to the width of the page."],
         "Style Post Info": [true, "Separate the post info by the post info colors defined in Themes."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
@@ -135,7 +134,7 @@
                 value: 3
             }]
         ],
-        "--Quick Reply--": ["header", ""],
+        ".:: Quick Reply": ["header", ""],
         "Autohide Style": [
             3, "Changes the style of the quick reply.", [{
                 name: "Normal",
@@ -150,7 +149,7 @@
         ],
         "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
         "Secret Name Field": [false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling."],
-        "--Font--": ["header", ""],
+        ".:: Fonts": ["header", ""],
         "Font Family": [
             "sans-serif", "Set the default font family.", [{
                 name: "Default",
@@ -975,7 +974,7 @@
                             "<li class='tab-item'><label class='tab-label' for=mascots-select>Mascots</label></li>" +
                             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
                             "<p class='buttons-container'>" +
-                            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a>" +
+                            "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span title='Thanks to ahodesuka, Seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
                             "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
@@ -1087,6 +1086,21 @@
                             return;
                         var exportalert = $("<a class='options-button'download='OneeChan Settings.json' href='data:application/json," + encodeURIComponent(JSON.stringify($SS.exportOptions)) + "'>Save me!").bind("click", $SS.options.close);
                         return $(this).replace(exportalert);
+                    });
+                    // Reset settings
+                    $("a[name=resetSettings]", tOptions).bind("click", function() {
+                        var confirmReset = confirm('Your current OneeChan settings will be wiped, are you sure?');
+                        if (confirmReset){
+                            Object.keys(localStorage)
+                            .forEach(function(key){
+                            if (/^(?:OneeChan)/.test(key)) {
+                                    localStorage.removeItem(key);
+                                }
+                            }),
+                            alert('Your OneeChan settings have been reset. Reloading.');
+                            return window.location.reload();
+                        }
+                        else return;
                     });
                     // options window
                     $(".tab-label", tOptions).bind("click", function(e) {
@@ -1252,6 +1266,7 @@
                     p = $("<p class='buttons-container'>");
 
                 p.append($("<a class='options-button' name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
+                p.append($("<a class='options-button' href='http://appchan.booru.org/index.php?page=post&s=list' target='_blank'>More Mascots"));
                 p.append($("<a class='options-button' name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
                     .bind("click", function() {
                         $SS.conf["Hidden Mascots"] = [];
@@ -2426,27 +2441,29 @@
                 "default": true,
                 name: "Ali Baba"
             }, {
-                img: "https://i.minus.com/iortvyiEFHVQi.png",
+                img: "https://i.minus.com/ib2z9ME9QKEBaS.png",
                 "default": true,
-                name: "Asuka Langley Soryu"
+                name: "Asuka Langley Soryu",
+                width: "280px"
             }, {
                 img: "https://i.minus.com/ifbmhOBaK5DAh.png",
                 "default": true,
                 name: "Ayanami Rei",
-                hoffset: "-50"
+                width: "325px",
+                hoffset: "-20"
             }, {
                 img: "https://i.minus.com/iSZ06ZxrcqAKq.png",
                 "default": true,
                 name: "Cirno"
             }, {
+                img: "https://i.minus.com/i2G8BrVh9wZ0c.png",
+                "default": true,
+                name: "Cirno Head",
+                width: "600px"
+            }, {
                 img: "https://i.minus.com/ibc2GhW4AW6tYy.png",
                 "default": true,
                 name: "Fubuki Atsuya"
-            }, {
-                img: "https://i.minus.com/ixEW2qpW09BuX.png",
-                "default": true,
-                name: "Gasai Yuno",
-                hoffset: "25"
             }, {
                 img: "https://i.minus.com/ibhc1YdPCHjxb5.png",
                 "default": true,
@@ -2479,6 +2496,11 @@
                 "default": true,
                 name: "Kagami Taiga"
             }, {
+                img: "https://i.minus.com/ihT7VyaKy8vc9.png",
+                "default": true,
+                name: "Kaguya Houraisan",
+                hoffset: "-40"
+            }, {
                 img: "https://i.minus.com/iben2goxAmh7aV.png",
                 "default": true,
                 name: "Kaname Madoka",
@@ -2506,6 +2528,10 @@
                 "default": true,
                 name: "Kousaka Kirino"
             }, {
+                img: "https://i.minus.com/isjF5qP3d2D9l.png",
+                "default": true,
+                name: "Kurisu Makise"
+            }, {
                 img: "https://i.minus.com/iwp3zHABdUZn9.png",
                 "default": true,
                 name: "Kuroko no Basuke",
@@ -2514,11 +2540,15 @@
                 img: "https://i2.minus.com/ivKEIV0mbO1na.png",
                 "default": true,
                 name: "Kusanagi Motoko",
-                voffset: "-22"
+                width: "300px"
             }, {
                 img: "https://i.minus.com/ibwkO6nLTS8aQW.png",
                 "default": true,
                 name: "Mashiro Shiina"
+            }, {
+                img: "https://i.minus.com/ibffmPDhETXdA3.png",
+                "default": true,
+                name: "Mayoi Hachikuji"
             }, {
                 img: "https://i.minus.com/iHnv6bBdH3ElF.png",
                 "default": true,
@@ -2533,6 +2563,11 @@
                 name: "Mokou",
                 height: "450px"
             }, {
+                img: "https://i.minus.com/ihc47WNDUvKIl.png",
+                "default": true,
+                name: "Morrigan Aesland",
+                width: "300px"
+            }, {
                 img: "https://i.minus.com/ioWJ4fUbplPVt.png",
                 "default": true,
                 name: "Nagase Iori"
@@ -2546,6 +2581,11 @@
                 "default": true,
                 name: "Nakano Azusa"
             }, {
+                img: "https://i.minus.com/ibnOEAxXaKlctB.png",
+                "default": true,
+                name: "Patchouli Knowledge",
+                width: "250px"
+            }, {
                 img: "https://i.minus.com/iZmUFk9hKgNGZ.png",
                 "default": true,
                 name: "Poko Fox"
@@ -2553,7 +2593,6 @@
                 img: "https://i.minus.com/ibewnKH8wXWaXC.png",
                 "default": true,
                 name: "Purple Heart",
-                voffset: "225"
             }, {
                 img: "https://i.minus.com/ibdeMvwnCdYqPX.png",
                 "default": true,
@@ -2561,7 +2600,8 @@
             }, {
                 img: "https://i.minus.com/ibtZo1fdOk8NCB.png",
                 "default": true,
-                name: "Ruri Gokou"
+                name: "Ruri Gokou",
+                width: "200px"
             }, {
                 img: "https://i.minus.com/ilYueyo9s91ex.png",
                 "default": true,
@@ -2574,19 +2614,11 @@
                 name: "Shana",
                 hoffset: "25"
             }, {
-                img: "https://i.minus.com/iRA9OW02HVchv.png",
-                "default": true,
-                name: "Shiki"
-            }, {
                 img: "https://i.minus.com/iSrVpiEk8XB7i.png",
                 "default": true,
                 name: "Solaire of Astora",
                 height: "450px",
                 hoffset: "50"
-            }, {
-                img: "https://i.minus.com/iHYGiEeinZngK.png",
-                "default": true,
-                name: "Sucy Manbabalan"
             }, {
                 img: "https://i.minus.com/ir1jBydJsjYtX.png",
                 "default": true,
@@ -2645,8 +2677,7 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
-                $("html").optionClass("Toggle Underline Links", true, "underline-option");
-                $("html").optionClass("Underline QuoteLinks only", true, "underline-quotes");
+                $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
                 $("html").optionClass("Show Checkboxes", false, "hide-checkboxes");

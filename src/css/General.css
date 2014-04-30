@@ -212,7 +212,7 @@ input[type=checkbox]:checked+.riceCheck::before
 }
 /* Reposition things based on Header position */
 :root:not(.fixed) #header-bar {
-  position: absolute;
+  /*position: absolute;*/
   top: 0px;
   right: 0px;
   left: 0px;
@@ -239,10 +239,6 @@ input[type=checkbox]:checked+.riceCheck::before
 .navSmall>a {
   margin-left: 2px;
 }
-/* Delform */
-/*:root.fixed:not(.autohide):not(.bottom) #delform {
-  margin-top: -15px;
-}*/
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
 margin-bottom: 20px !important;
 }

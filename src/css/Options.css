@@ -164,7 +164,9 @@ select[name='Font Family']>option {
   right:300px;
   
 }
-.theme-preview.selected:not(.nsfw) .sfw-label, .theme-preview.nsfw:not(.selected) .sfw-label, .theme-preview.nsfw.selected .both {
+.theme-preview.selected:not(.nsfw) .sfw-label, 
+.theme-preview.nsfw:not(.selected) .sfw-label, 
+.theme-preview.nsfw.selected .both {
   transition:opacity .3s, right .3s;
 }
 .theme-preview.nsfw .notsafe {
@@ -208,7 +210,7 @@ select[name='Font Family']>option {
 }
 #add-theme>label#customCSS>textarea
 {
-  height:100px;
+  height:110px;
   resize:vertical;
   width:100%;
 }

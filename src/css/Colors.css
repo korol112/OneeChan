@@ -1,5 +1,4 @@
 /* Text Colors */
-
 /* Anything we need transparent */
 div[style='float: right;'] {
   color: transparent !important;
@@ -18,12 +17,13 @@ textarea,
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Highlighting posts */
-.post.reply.highlight {
-  outline: 2px solid rgba(" + $SS.theme.nameColor.rgb + ",0.8) !important;
-}
+.post.reply.highlight,
 .highlight-own:root .yourPost > .reply, 
 .highlight-you:root .quotesYou > .reply {
-    border-left: 5px solid rgba(147, 14, 14, 0.5) !important;
+  border-left: 5px solid rgba(" + $SS.theme.headerLHColor.rgb + ", 1.0) !important;
+}
+.reply:target {
+  background: rgba(" + $SS.theme.nameColor.rgb + ",0.2) !important;
 }
 /* Names */
 .nameBlock>.name,
@@ -39,7 +39,6 @@ textarea,
 .tag {
   color: " + $SS.theme.tripColor.hex + " !important;
 }
-
 /* Links */
 a,
 .typ, 
@@ -87,6 +86,9 @@ s:hover .quote,
 .option.header .option-title,
 .kwd {
   color: " + $SS.theme.titleColor.hex + " !important;
+}
+.option.header {
+  font-size: 18px;
 }
 /* Board Title */
 .boardTitle {
@@ -183,7 +185,6 @@ hr {
 :root.post-info .reply>.postInfo {
   background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2);
 }
-
 /* Borders */
 .reply {
   border-width: 0px 1px 1px 0px;

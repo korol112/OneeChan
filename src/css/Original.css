@@ -12,6 +12,9 @@ div.post div.file .fileThumb {
 .postContainer {
   display: block;
 }
+.fixed.bottom-header body {
+padding-bottom: 3em !important;
+}
 div.post {
   margin: 4px 0;
 }
@@ -24,7 +27,7 @@ div.post {
 div.thread {
   margin: 0px;
   clear: both;
-  padding-top: none;
+  padding-bottom: 8px;
 }
 table.flashListing {
   border-spacing: 1px;

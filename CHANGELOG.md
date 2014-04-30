@@ -1,3 +1,25 @@
+### v5.2.3
+*2014-04-30*
+
+**WARNING:** 
+If you were using certain mascots before this version the extension could break.
+See [Deleting the localStorage](https://github.com/Nebukazar/OneeChan/wiki/Deleting-the-localStorage) for a fix.
+
+- Removed some ugly mascots, added some new ones
+- Fixed certain mascots default positioning and height
+- Removed the page break (`HR`) at the bottom of the thread in reply mode
+- You/Own posts take color from Link Header color
+- Fixed targeted posts not having a visible background to differentiate them from the other posts
+- OneeChan settings icon should now appear on bottom header in MayhemYDG forks and doesn't hide the latter anymore
+- Slightly increased margin between single threads
+- Slightly increased margin at the bottom of the thread in reply mode
+- Cleaned up the menu a bit
+
+**New:**
+
+- Added a `Reset` button to reset OneeChan settings
+- Added a `More Mascots` button linking to Appchan booru for more mascots
+
 ### v5.2.2
 *2014-04-25*
 
