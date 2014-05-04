@@ -1,3 +1,23 @@
+### v5.2.4
+*2014-05-02*
+
+**Nebukazar**
+
+- Lots of small syntax, redundancy and other CSS fixes, OneeChan should render just sliiiightly faster now
+- Fixed `Reset` not resetting anything on Firefox (this is still pretty wonky as a whole)
+- Fixed Cirno Head
+
+**New:**
+- `Pin Thread Watcher as a tree`
+This will pin the TW as a sidebar depending on which side the SS Sidebar is placed, or default to left when the latter is disabled.
+
+**Tracerneo**
+
+**New:**
+- `Highlighting` options
+Offers a wide range of post highlighting and selection rice.
+
+
 ### v5.2.3
 *2014-04-30*
 

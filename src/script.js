@@ -20,11 +20,7 @@
             }], true
         ],
         "Custom Left Margin": [
-            0,
-            "Left margin custom width (pixels)",
-            "Left Margin",
-            999,
-            true
+            0, "Left margin custom width (pixels)", "Left Margin", 999, true
         ],
         "Right Margin": [
             0, "Change the size of the right margin.", [{
@@ -45,14 +41,9 @@
             }], true
         ],
         "Custom Right Margin": [
-            0,
-            "Right side margin custom width (pixels)",
-            "Right Margin",
-            999,
-            true
+            0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
         ],
-        "Underline QuoteLinks": [true, "Underlines quotelinks only."],
-        "Underline All Links": [true, "Underlines all the links."],
+        "Thread Watcher as a tree": [false, "Pins the thread watcher as a tree to the sidebar."],
         "Show Banner": [true, "Toggle visibility of the banner.", null, true],
         "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
         "Show Board Name": [true, "Toggle visibility of the board name."],
@@ -87,6 +78,8 @@
         ".:: Replies": ["header", ""],
         "Fit Width": [true, "Makes the replies stretch to the width of the page."],
         "Style Post Info": [true, "Separate the post info by the post info colors defined in Themes."],
+        "Underline QuoteLinks": [false, "Underlines quotelinks only."],
+        "Underline All Links": [false, "Underlines all the links."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
         "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
@@ -106,7 +99,7 @@
                 value: 3
             }]
         ],
-        "Margin Between Replies": [-2, "Change the size of the spacing in between replies.", [{
+        "Margin Between Replies": ['', "Change the size of the spacing in between replies.", [{
             name: "Large",
             value: 6
         }, {
@@ -134,6 +127,54 @@
                 value: 3
             }]
         ],
+        ".:: Highlighting": ["header", ""],
+        "Highlight style of You/Own posts": [
+            0, "Changes the highlight style of your posts and posts quoting you (enable in 4chan X).", [{
+                name: "Border",
+                value: 0
+            }, {
+                name: "Outline",
+                value: 1
+            }]
+        ],
+        "Highlight OP posts": [false, "Highlight posts quoting OP."],
+        "Highlight deleted posts": [false, "Highlight deleted posts."],
+        "Highlight Style": [
+            "dashed", "Changes style of highlight.", [{
+                name: "None",
+                value: "none"
+            }, {
+                name: "Solid",
+                value: "solid"
+            }, {
+                name: "Dotted",
+                value: "dotted"
+            }, {
+                name: "Dashed",
+                value: "dashed"
+            }, {
+                name: "Double",
+                value: "double"
+            }]
+        ],
+        "Highlight Width": [
+            3, "Changes width of border or outline of highlighted posts.", [{
+                name: "Large",
+                value: 5
+            }, {
+                name: "Medium",
+                value: 3
+            }, {
+                name: "Small",
+                value: 1
+            }, {
+                name: "Custom",
+                value: 999
+            }], true
+        ],
+        "Custom Highlight Width": [
+            0, "Custom width of border or outline of highlighted posts (pixels)", "Highlight Width", 999, true
+        ],
         ".:: Quick Reply": ["header", ""],
         "Autohide Style": [
             3, "Changes the style of the quick reply.", [{
@@ -148,7 +189,6 @@
             }]
         ],
         "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
-        "Secret Name Field": [false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling."],
         ".:: Fonts": ["header", ""],
         "Font Family": [
             "sans-serif", "Set the default font family.", [{
@@ -924,10 +964,10 @@
                         $SS.exportOptions[key] = $SS.conf[key];
                     };
                 };
-
                 $SS.conf["Margin Left"] = $SS.conf["Left Margin"] !== 999 ? $SS.conf["Left Margin"] : $SS.conf["Custom Left Margin"];
                 $SS.conf["Margin Right"] = $SS.conf["Right Margin"] !== 999 ? $SS.conf["Right Margin"] : $SS.conf["Custom Right Margin"];
                 $SS.conf["Margin Post Message"] = $SS.conf["Post Message Margin"] === 1 ? "4px 16px" : ($SS.conf["Post Message Margin"] === 3 ? "20px 40px" : "");
+                $SS.conf["Width Highlight"] = $SS.conf["Highlight Width"] !== 999 ? $SS.conf["Highlight Width"] : $SS.conf["Custom Highlight Width"];
             },
             get: function(name) {
                 var val = this.hasGM ?
@@ -1000,6 +1040,12 @@
                             optionsHTML += "<span class='option suboption " + id + "' title=\"" + des + "\"" +
                                 (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
                                 "</span><input name='Custom Right Margin' type=text value=" + $SS.conf["Custom Right Margin"] + "px></span>";
+                        } else if ((defaultConfig[key][4] === true) && (key === "Custom Highlight Width")) {
+                            var pVal = $SS.conf[defaultConfig[key][2]];
+                            id = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
+                            optionsHTML += "<span class='option suboption " + id + "' title=\"" + des + "\"" +
+                                (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
+                                "</span><input name='Custom Highlight Width' type=text value=" + $SS.conf["Custom Highlight Width"] + "px></span>";
                         } else if (val === "header") {
                             optionsHTML += "<label class='option header'><span class='option-title'>" + key + "</span></label>";
                         } else if (defaultConfig[key][4] === true) // sub-option
@@ -1016,7 +1062,7 @@
                             optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + (key === "Font Family" ? " (<a name=loadSysFonts title='Load fonts from system. Requires flash from external site to run.'>" + ($SS.fontList ? "loaded!" : "load") + "</a>)" : "") + "</span>" +
                                 "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "") + ">";
 
-                            for (var i = 0, MAX = opts.length; i < MAX; ++i) {
+                             for (var i = 0, MAX = opts.length; i < MAX; ++i) {
                                 var name, value;
 
                                 if (typeof opts[i] === "object") {
@@ -1097,6 +1143,7 @@
                                     localStorage.removeItem(key);
                                 }
                             }),
+                            GM_deleteValue(key);
                             alert('Your OneeChan settings have been reset. Reloading.');
                             return window.location.reload();
                         }
@@ -1363,8 +1410,9 @@
                         val = parseInt(val);
                     } else if (name === "Custom Left Margin") {
                         val = parseInt(val);
+                    } else if (name === "Custom Highlight Width") {
+                        val = parseInt(val);
                     }
-
 
                     $SS.Config.set($(this).attr("name"), val);
                 });
@@ -2131,7 +2179,7 @@
                 textColor: "000000",
                 tripColor: "228854",
                 titleColor: "0f0c5d",
-                headerColor: "000000",
+                headerColor: "34345c",
                 headerLColor: "34345c",
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
@@ -2456,10 +2504,10 @@
                 "default": true,
                 name: "Cirno"
             }, {
-                img: "https://i.minus.com/i2G8BrVh9wZ0c.png",
+                img: "https://i.imgur.com/2Z2Dpgi.png",
                 "default": true,
                 name: "Cirno Head",
-                width: "600px"
+                width: "300px"
             }, {
                 img: "https://i.minus.com/ibc2GhW4AW6tYy.png",
                 "default": true,
@@ -2677,6 +2725,7 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
+                $("html").optionClass("Thread Watcher as a tree", true, "threadwatcher-tree");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
@@ -2689,6 +2738,13 @@
                 $("html").optionClass("Style Post Info", true, "post-info");
                 $("html").optionClass("Borders", 2, "borders-all");
                 $("html").optionClass("Borders", 3, "borders-none");
+                $("html").optionClass("Highlight Type", 0, "hl-fallback");
+                $("html").optionClass("Highlight Type", 1, "hl-border");
+                $("html").optionClass("Highlight Type", 2, "hl-mixed");
+                $("html").optionClass("Highlight own posts", true, "hl-own");
+                $("html").optionClass("Highlight posts quoting you", true, "hl-you");
+                $("html").optionClass("Highlight OP posts", true, "hl-op");
+                $("html").optionClass("Highlight deleted posts", true, "hl-deleted");
                 $("html").optionClass("Sidebar Position", 1, "right-sidebar");
                 $("html").optionClass("Sidebar Position", 2, "left-sidebar");
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
@@ -2700,7 +2756,6 @@
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-op");
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
-                $("html").optionClass("Secret Name Field", true, "hide-name");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Blotter", false, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");

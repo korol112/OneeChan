@@ -10,10 +10,10 @@
   width: 900px;
   text-align:left!important;
   height: 532px;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .options-close,
 .options-container {
@@ -24,27 +24,27 @@
 }
 #add-mascot {
   height: 208px;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
   position: fixed;
   margin: auto;
   border: 0 !important;
   border-radius: 3px !important;
-  right: 0px;
+  right: 0;
   z-index: 999 !important;
   width: 500px;
   text-align:right!important;
   padding: 5px !important;
-  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.3) !important;
 }
 #add-theme {
   text-align:right!important;
   padding: 20px 20px 20px 20px !important;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   height: 400px;
 }
 :root.webkit #add-theme {
@@ -80,7 +80,7 @@
   vertical-align:middle;
 }
 #main-section>.option:nth-of-type(even) {
-  background: rgb\(" + $SS.theme.mainColor.shiftRGB(-5) + ") !important
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(-5) + ") !important;
 }
 #main-section .buttons-container+.option {
   border-top: none !important;
@@ -262,8 +262,8 @@ select[name='Font Family']>option {
 }
 .mascot-buttons {
   position: absolute;
-  left: 0px;
-  right: 0px;
+  left: 0;
+  right: 0;
   bottom: 10px;
 }
 /* Add Mascot */
@@ -279,7 +279,6 @@ select[name='Font Family']>option {
   margin-top:1px!important;
   width:200px;
 }
-.mascot-select,
 .mascot-input.offset,
 .mascot-input.hoffset,
 .mascot-input.height,
@@ -370,7 +369,6 @@ select[name='Font Family']>option {
   min-width:30px;
 }
 #import-link {
-  height:22px;
   line-height:22px;
   overflow:hidden;
   position:relative;
@@ -385,7 +383,7 @@ select[name='Font Family']>option {
   vertical-align: bottom;
 }
 #import-settings>.import-input {
-  left: 0px;
+  left: 0;
 }
 .import-input {
   position:absolute;
@@ -407,9 +405,6 @@ span.option>select,
   max-height:20px;
   margin-top: 1px!important;
   padding:1px 3px!important;
-}
-#oneechan-options select {
-  padding:1px 1px 1px 0!important;
 }
 #oneechan-options textarea {
   background:transparent!important;

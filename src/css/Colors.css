@@ -6,7 +6,7 @@ div[style='float: right;'] {
 /* General */
 html,
 body,
-div.boardBanner,
+.boardBanner,
 #menu,
 input:not(.jsColor),
 textarea,
@@ -15,15 +15,6 @@ textarea,
 .post-last,
 .pln {
   color: " + $SS.theme.textColor.hex + " !important;
-}
-/* Highlighting posts */
-.post.reply.highlight,
-.highlight-own:root .yourPost > .reply, 
-.highlight-you:root .quotesYou > .reply {
-  border-left: 5px solid rgba(" + $SS.theme.headerLHColor.rgb + ", 1.0) !important;
-}
-.reply:target {
-  background: rgba(" + $SS.theme.nameColor.rgb + ",0.2) !important;
 }
 /* Names */
 .nameBlock>.name,
@@ -101,7 +92,7 @@ s:hover .quote,
 }
 /* Code Tags */
 .prettyprint {
-  background: none repeat scroll 0% 0% rgba(" + $SS.theme.codeBackground + ") !important;
+  background: none repeat scroll 0 0 rgba(" + $SS.theme.codeBackground + ") !important;
   border: 1px solid rgba(" + $SS.theme.codeBorder + ") !important;
 }
 .pun {
@@ -145,7 +136,7 @@ body {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
 .options-button:hover,
-.import-input:hover + .options-button,
+.import-input:hover,
 .pages strong>a:hover {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }
@@ -187,14 +178,14 @@ hr {
 }
 /* Borders */
 .reply {
-  border-width: 0px 1px 1px 0px;
+  border-width: 0 1px 1px 0;
   border-style: solid;
 }
 :root.borders-all .reply {
   border-width: 1px;
 }
 :root.borders-none .reply {
-  border-width: 0px;
+  border-width: 0;
 }
 :root.rounded-corners .reply,
 :root.rounded-corners .dialog:not(#header-bar),
@@ -231,7 +222,6 @@ textarea,
   border-style: solid;
   border-width: 1px;
   border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;
-}
 }
 input:focus,
 textarea:focus,

@@ -5,7 +5,7 @@
 .pages, 
 .pagelist button,
 #full-board-list {
-  font-size: 0px !important;
+  font-size: 0 !important;
 }
 /* Anything we need small */
 .fileText,
@@ -39,7 +39,7 @@
 }
 /* Full board list */
 #full-board-list {
-  font-size: 0px !important;
+  font-size: 0 !important;
 }
 #full-board-list a,
 body>#header-bar,
@@ -56,7 +56,7 @@ body,
 #qr input.field,
 #qr textarea.field,
 #qr span.field,
-#qr [type=submit],
+#qr input[type=submit],
 #menu .entry,
 .boardBanner .boardTitle {
   font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
@@ -90,10 +90,6 @@ body,
 a.current {
   font-weight: " + ($SS.conf["Bitmap Font"] ? 4 : 7) + "00 !important;
 }
-.qr-link {
-  font-weight: normal;
-}
-
 /* Font Style */
 .summary {
   font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
