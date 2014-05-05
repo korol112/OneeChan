@@ -25,9 +25,10 @@ div.post {
   display: none !important;
 }
 div.thread {
-  margin: 0px;
+  margin: 0;
   clear: both;
   padding-bottom: 8px;
+  z-index: 3;
 }
 table.flashListing {
   border-spacing: 1px;
@@ -53,7 +54,7 @@ s,
 s:not(:hover) > a,
 s:not(:hover) > .linkify {
   color: rgb(0, 0, 0) !important;
-  background: none repeat scroll 0% 0% rgb(0, 0, 0) !important;
+  background: none repeat scroll 0 0 rgb(0, 0, 0) !important;
 }
 span.spoiler:hover, 
 s:hover,
@@ -68,7 +69,7 @@ s:focus {
 div.sideArrows {
   float: left;
   margin-right: 2px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-left: 2px;
   opacity: 0.3;
 }

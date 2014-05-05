@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks. These are a bunch of dirty fixes but it "just werks", thank you for your understanding.
+Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks.
 
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
 ##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
@@ -37,4 +37,4 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 #### Known Issues
 
 - OneeChan's settings icon sometimes doesn't render (especially bad on Chrome)
-- **Fix:** Load a new tab, refresh the page or navigate to another thread until it shows up
+- **Fix:** Open a different thread or navigate to another board until it shows up

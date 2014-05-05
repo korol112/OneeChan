@@ -20,11 +20,7 @@
             }], true
         ],
         "Custom Left Margin": [
-            0,
-            "Left margin custom width (pixels)",
-            "Left Margin",
-            999,
-            true
+            0, "Left margin custom width (pixels)", "Left Margin", 999, true
         ],
         "Right Margin": [
             0, "Change the size of the right margin.", [{
@@ -45,14 +41,11 @@
             }], true
         ],
         "Custom Right Margin": [
-            0,
-            "Right side margin custom width (pixels)",
-            "Right Margin",
-            999,
-            true
+            0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
         ],
-        "Underline QuoteLinks": [true, "Underlines quotelinks only."],
-        "Underline All Links": [true, "Underlines all the links."],
+        "Underline QuoteLinks": [false, "Underlines quotelinks only."],
+        "Underline All Links": [false, "Underlines all the links."],
+        "Thread Watcher as a sidebar": [false, "Pins the thread watcher. Position depends on Sidebar position. (beta)"],
         "Show Banner": [true, "Toggle visibility of the banner.", null, true],
         "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
         "Show Board Name": [true, "Toggle visibility of the board name."],
@@ -85,7 +78,7 @@
         "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
         ".:: Replies": ["header", ""],
-        "Fit Width": [true, "Makes the replies stretch to the width of the page."],
+        "Fit Width": [true, "Replies stretch to the width of the entire page."],
         "Style Post Info": [true, "Separate the post info by the post info colors defined in Themes."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
@@ -106,7 +99,7 @@
                 value: 3
             }]
         ],
-        "Margin Between Replies": [-2, "Change the size of the spacing in between replies.", [{
+        "Margin Between Replies": ['', "Change the size of the spacing in between replies.", [{
             name: "Large",
             value: 6
         }, {
@@ -134,6 +127,52 @@
                 value: 3
             }]
         ],
+        ".:: Highlighting": ["header", ""],
+        "Decoration Style": [
+            0, "Changes the highlight decoration of posts.", [{
+                name: "None",
+                value: 0
+            }, {
+                name: "Border",
+                value: 1
+            }, {
+                name: "Outline",
+                value: 2
+            }]
+        ],
+        "Decoration Width": [
+            3, "Changes decoration width of highlighted posts.", [{
+                name: "Large",
+                value: 6
+            }, {
+                name: "Medium",
+                value: 3
+            }, {
+                name: "Small",
+                value: 1
+            }, {
+                name: "Custom",
+                value: 999
+            }], true
+        ],
+        "Custom Decoration Width": [
+            0, "Enter a custom width for the decoration (pixels).", "Decoration Width", 999, true
+        ],
+        "Highlight Style": [
+            "solid", "Changes form of highlight.", [{
+                name: "Dashed",
+                value: "dashed"
+            }, {
+                name: "Dotted",
+                value: "dotted"
+            }, {
+                name: "Double",
+                value: "double"
+            }, {
+                name: "Solid",
+                value: "solid"
+            }]
+        ],
         ".:: Quick Reply": ["header", ""],
         "Autohide Style": [
             3, "Changes the style of the quick reply.", [{
@@ -147,8 +186,9 @@
                 value: 3
             }]
         ],
+        "Remove Background": [false, "Removes the QR background."],
+        "Remove Controls": [false, "Removes the QR controls and checkbox."],
         "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
-        "Secret Name Field": [false, "Pretends the name field is empty unless hovered/focused. Refresh after enabling."],
         ".:: Fonts": ["header", ""],
         "Font Family": [
             "sans-serif", "Set the default font family.", [{
@@ -276,6 +316,10 @@
         }, {
             dName: "Unread Line",
             name: "unreadColor",
+            property: "color"
+        }, {
+            dName: "Highlighting",
+            name: "highlightColor",
             property: "color"
         }],
         $lib, $SS;
@@ -924,10 +968,10 @@
                         $SS.exportOptions[key] = $SS.conf[key];
                     };
                 };
-
                 $SS.conf["Margin Left"] = $SS.conf["Left Margin"] !== 999 ? $SS.conf["Left Margin"] : $SS.conf["Custom Left Margin"];
                 $SS.conf["Margin Right"] = $SS.conf["Right Margin"] !== 999 ? $SS.conf["Right Margin"] : $SS.conf["Custom Right Margin"];
                 $SS.conf["Margin Post Message"] = $SS.conf["Post Message Margin"] === 1 ? "4px 16px" : ($SS.conf["Post Message Margin"] === 3 ? "20px 40px" : "");
+                $SS.conf["Width Decoration"] = $SS.conf["Decoration Width"] !== 999 ? $SS.conf["Decoration Width"] : $SS.conf["Custom Decoration Width"];
             },
             get: function(name) {
                 var val = this.hasGM ?
@@ -1000,6 +1044,12 @@
                             optionsHTML += "<span class='option suboption " + id + "' title=\"" + des + "\"" +
                                 (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
                                 "</span><input name='Custom Right Margin' type=text value=" + $SS.conf["Custom Right Margin"] + "px></span>";
+                        } else if ((defaultConfig[key][4] === true) && (key === "Custom Decoration Width")) {
+                            var pVal = $SS.conf[defaultConfig[key][2]];
+                            id = defaultConfig[key][2].replace(/\s/g, "_") + defaultConfig[key][3];
+                            optionsHTML += "<span class='option suboption " + id + "' title=\"" + des + "\"" +
+                                (pVal != defaultConfig[key][3] ? "hidden" : "") + "><span class='option-title'>" + key +
+                                "</span><input name='Custom Decoration Width' type=text value=" + $SS.conf["Custom Decoration Width"] + "px></span>";
                         } else if (val === "header") {
                             optionsHTML += "<label class='option header'><span class='option-title'>" + key + "</span></label>";
                         } else if (defaultConfig[key][4] === true) // sub-option
@@ -1016,7 +1066,7 @@
                             optionsHTML += "<label class=option title=\"" + des + "\"><span class='option-title'>" + key + (key === "Font Family" ? " (<a name=loadSysFonts title='Load fonts from system. Requires flash from external site to run.'>" + ($SS.fontList ? "loaded!" : "load") + "</a>)" : "") + "</span>" +
                                 "<select name='" + key + "'" + (defaultConfig[key][3] === true ? " has-suboption" : "") + ">";
 
-                            for (var i = 0, MAX = opts.length; i < MAX; ++i) {
+                             for (var i = 0, MAX = opts.length; i < MAX; ++i) {
                                 var name, value;
 
                                 if (typeof opts[i] === "object") {
@@ -1090,17 +1140,21 @@
                     // Reset settings
                     $("a[name=resetSettings]", tOptions).bind("click", function() {
                         var confirmReset = confirm('Your current OneeChan settings will be wiped, are you sure?');
-                        if (confirmReset){
-                            Object.keys(localStorage)
-                            .forEach(function(key){
+                        if (confirmReset) { 
+                            if ($SS.browser.webkit) {
+                            Object.keys(localStorage).forEach(function(key) {
                             if (/^(?:OneeChan)/.test(key)) {
                                     localStorage.removeItem(key);
                                 }
-                            }),
+                            })}
+                            else if ($SS.browser.gecko) {
+                                var keys = GM_listValues();
+                                for (var i=0, key=null; key=keys[i]; i++) {
+                                GM_deleteValue(key);
+                            }}
                             alert('Your OneeChan settings have been reset. Reloading.');
                             return window.location.reload();
-                        }
-                        else return;
+                        } else return;
                     });
                     // options window
                     $(".tab-label", tOptions).bind("click", function(e) {
@@ -1363,8 +1417,9 @@
                         val = parseInt(val);
                     } else if (name === "Custom Left Margin") {
                         val = parseInt(val);
+                    } else if (name === "Custom Decoration Width") {
+                        val = parseInt(val);
                     }
-
 
                     $SS.Config.set($(this).attr("name"), val);
                 });
@@ -1809,7 +1864,8 @@
                 headerLColor: "53bdb1",
                 headerLHColor: "3090b5",
                 headerBGColor: "0d1114",
-                boardColor: "f8f8f8"
+                boardColor: "f8f8f8",
+                highlightColor: "d4b63c"
             }, {
                 name: "Muted",
                 authorName: "Seaweed",
@@ -1836,7 +1892,8 @@
                 headerLColor: "bc312a",
                 headerLHColor: "8e2220",
                 headerBGColor: "f5f2e9",
-                boardColor: "bc312a"
+                boardColor: "bc312a",
+                highlightColor: "cc6563"
             }, {
                 name: "Stilig",
                 authorName: "Myson",
@@ -1864,6 +1921,7 @@
                 tripColor: "5f5f65",
                 titleColor: "7a7f88",
                 quoteColor: "009933",
+                highlightColor: "5f5f65",
                 customCSS: ".reply { box-shadow: -1px 1px 1px rgba(0,0,0,.08); }"
             }, {
                 name: "Minimalistic Mayhem",
@@ -1891,7 +1949,8 @@
                 headerLColor: "897399",
                 headerLHColor: "c617e6",
                 headerBGColor: "222222",
-                boardColor: "bbbbbb"
+                boardColor: "bbbbbb",
+                highlightColor: "96562c"
             }, {
                 name: "Blackboard",
                 authorName: "Seaweed",
@@ -1918,7 +1977,8 @@
                 headerLColor: "fbde2d",
                 headerLHColor: "4b65cc",
                 headerBGColor: "0c1021",
-                boardColor: "f8f8f8"
+                boardColor: "f8f8f8",
+                highlightColor: "ff6400"
             }, {
                 name: "Dark Flat",
                 authorName: "ahodesuka",
@@ -1946,7 +2006,8 @@
                 headerLColor: "ac9bb0",
                 headerLHColor: "6f99b4",
                 headerBGColor: "232425",
-                boardColor: "dddddd"
+                boardColor: "dddddd",
+                highlightColor: "d4c095"
             }, {
                 name: "Yukimura",
                 authorName: "the real",
@@ -1973,7 +2034,8 @@
                 tripColor: "5c433c",
                 titleColor: "5c433c",
                 quoteColor: "b3c45e",
-                unreadColor: "5c433c"
+                unreadColor: "5c433c",
+                highlightColor: "5c433c"
             }, {
                 name: "Photons + Odin",
                 authorName: "John",
@@ -2000,7 +2062,8 @@
                 tripColor: "ff0085",
                 titleColor: "ffa600",
                 quoteColor: "85c600",
-                unreadColor: "446a6d"
+                unreadColor: "446a6d",
+                highlightColor: "ff0085"
             }, {
                 name: "Photon",
                 authorName: "Seaweed",
@@ -2027,7 +2090,8 @@
                 headerLColor: "ff6600",
                 headerLHColor: "ff3300",
                 headerBGColor: "dddddd",
-                boardColor: "004a99"
+                boardColor: "004a99",
+                highlightColor: "ff3300"
             }, {
                 name: "Original Minimalistic Mayhem",
                 authorName: "Mayhem",
@@ -2054,7 +2118,8 @@
                 headerLColor: "559c7a",
                 headerLHColor: "c7de1a",
                 headerBGColor: "333333",
-                boardColor: "dddddd"
+                boardColor: "dddddd",
+                highlightColor: "8c5d2a"
             }, {
                 name: "Tomorrow",
                 authorName: "Seaweed",
@@ -2081,7 +2146,8 @@
                 headerLColor: "81a2be",
                 headerLHColor: "cc6666",
                 headerBGColor: "282a2e",
-                boardColor: "c5c8c6"
+                boardColor: "c5c8c6",
+                highlightColor: "8abeb7"
             }, {
                 name: "Yotsuba",
                 authorName: "moot",
@@ -2108,7 +2174,8 @@
                 headerLColor: "800000",
                 headerLHColor: "dd0000",
                 headerBGColor: "f0e0d6",
-                boardColor: "800000"
+                boardColor: "800000",
+                highlightColor: "228854"
             }, {
                 name: "Yotsuba B",
                 authorName: "moot",
@@ -2131,11 +2198,12 @@
                 textColor: "000000",
                 tripColor: "228854",
                 titleColor: "0f0c5d",
-                headerColor: "000000",
+                headerColor: "34345c",
                 headerLColor: "34345c",
                 headerLHColor: "dd0000",
                 headerBGColor: "d6daf0",
-                boardColor: "af0a0f"
+                boardColor: "af0a0f",
+                highlightColor: "228854"
             }, {
                 name: "Yotsuba Purple",
                 authorName: "Seaweed",
@@ -2162,7 +2230,8 @@
                 headerLColor: "962594",
                 headerLHColor: "b22caa",
                 headerBGColor: "eeddff",
-                boardColor: "591177"
+                boardColor: "591177",
+                highlightColor: "b22caa"
             }, {
                 name: "安心院なじみ",
                 authorName: "ahodesuka",
@@ -2189,7 +2258,8 @@
                 headerLColor: "bf8040",
                 headerLHColor: "bf8040",
                 headerBGColor: "efefef",
-                boardColor: "4d4d4c"
+                boardColor: "4d4d4c",
+                highlightColor: "3e999f"
             }, {
                 name: "Solarized Dark", // http://ethanschoonover.com/solarized
                 authorName: "ubuntufriend",
@@ -2216,7 +2286,8 @@
                 headerLColor: "696bba",
                 headerLHColor: "d33682",
                 headerBGColor: "032b36",
-                boardColor: "93a1a1"
+                boardColor: "93a1a1",
+                highlightColor: "2aa198"
             }, {
                 name: "4chan Rewired Modded", // Originally by !K.WeEabo0o, modded by ahoka
                 authorName: "ahodesuka",
@@ -2243,7 +2314,8 @@
                 headerLColor: "bf7f3f",
                 headerLHColor: "d33682",
                 headerBGColor: "efefef",
-                boardColor: "4c4c4c"
+                boardColor: "4c4c4c",
+                highlightColor: "bf7f3f"
             }, {
                 name: "4chan Dark Upgrade",
                 authorName: "ahodesuka",
@@ -2271,7 +2343,8 @@
                 headerLColor: "dddddd",
                 headerLHColor: "eeeeee",
                 headerBGColor: "333333",
-                boardColor: "ffffff"
+                boardColor: "ffffff",
+                highlightColor: "a7dce7"
             }, {
                 name: "AppChan", // Originally by Zixaphir @ http://userstyles.org/styles/54149/appchan
                 authorName: "Zixaphir",
@@ -2298,7 +2371,8 @@
                 headerLColor: "6688aa",
                 headerLHColor: "6688aa",
                 headerBGColor: "333333",
-                boardColor: "aaaaaa"
+                boardColor: "aaaaaa",
+                highlightColor: "aaaaaa"
             }, {
                 name: "Zenburned",
                 authorName: "lazy",
@@ -2325,7 +2399,8 @@
                 headerLColor: "efdcbc",
                 headerLHColor: "f8f893",
                 headerBGColor: "575757",
-                boardColor: "dcdccc"
+                boardColor: "dcdccc",
+                highlightColor: "8cd0d3"
             }, {
                 name: "Monokai",
                 authorName: "Seaweed",
@@ -2351,7 +2426,8 @@
                 headerLColor: "e2db74",
                 headerLHColor: "ae81ff",
                 headerBGColor: "272822",
-                boardColor: "f8f8f2"
+                boardColor: "f8f8f2",
+                highlightColor: "fa8220"
             }, {
                 name: "Ao ni sarasu", // based on jaygeegeegee's http://userstyles.org/styles/75602/last-fm-kind-of-blue
                 authorName: "Seaweed",
@@ -2377,7 +2453,8 @@
                 headerLColor: "477085",
                 headerLHColor: "5d6678",
                 headerBGColor: "e3e7e8",
-                boardColor: "477085"
+                boardColor: "477085",
+                highlightColor: "5d6678"
             }, {
                 name: "Cold Snap",
                 authorName: "Kori",
@@ -2403,7 +2480,8 @@
                 tripColor: "476b8f",
                 titleColor: "909090",
                 quoteColor: "83bf57",
-                unreadColor: "6699cc"
+                unreadColor: "6699cc",
+                highlightColor: "476b8f"
             }],
 
             init: function() {
@@ -2456,10 +2534,10 @@
                 "default": true,
                 name: "Cirno"
             }, {
-                img: "https://i.minus.com/i2G8BrVh9wZ0c.png",
+                img: "https://i.imgur.com/2Z2Dpgi.png",
                 "default": true,
                 name: "Cirno Head",
-                width: "600px"
+                width: "300px"
             }, {
                 img: "https://i.minus.com/ibc2GhW4AW6tYy.png",
                 "default": true,
@@ -2677,6 +2755,7 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
+                $("html").optionClass("Thread Watcher as a sidebar", true, "threadwatcher-tree");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
@@ -2689,6 +2768,8 @@
                 $("html").optionClass("Style Post Info", true, "post-info");
                 $("html").optionClass("Borders", 2, "borders-all");
                 $("html").optionClass("Borders", 3, "borders-none");
+                $("html").optionClass("Decoration Style", 1, "hl-border");
+                $("html").optionClass("Decoration Style", 2, "hl-outline");
                 $("html").optionClass("Sidebar Position", 1, "right-sidebar");
                 $("html").optionClass("Sidebar Position", 2, "left-sidebar");
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
@@ -2697,10 +2778,11 @@
                 $("html").optionClass("Expanded Images Cover QR", true, "expand-cover");
                 $("html").optionClass("Autohide Style", 2, "vertical-qr");
                 $("html").optionClass("Autohide Style", 3, "fade-qr");
+                $("html").optionClass("Remove Background", true, "qr-background");
+                $("html").optionClass("Remove Controls", true, "qr-controls");             
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-op");
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
-                $("html").optionClass("Secret Name Field", true, "hide-name");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Blotter", false, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");
@@ -3426,6 +3508,7 @@
             this.headerLHColor = new $SS.Color(theme.headerLHColor);
             this.headerBGColor = new $SS.Color(theme.headerBGColor);
             this.headerbColor = new $SS.Color(theme.headerbColor);
+            this.highlightColor = new $SS.Color(theme.highlightColor);
             this.checkMark = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? 0 : -8) + "px");
             this.radioCheck = new $SS.Image(inputImages, "no-repeat center " + (this.inputColor.isLight ? -16 : -24) + "px");
             this.codeBackground = (this.bgColor.isLight ? "255, 255, 255, 0.2" : "0, 0, 0, 0.2");

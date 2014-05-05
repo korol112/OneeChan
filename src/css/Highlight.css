@@ -1,0 +1,24 @@
+/* Highlighting posts */
+:root.hl-border .replyContainer {
+  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
+}
+
+:root.hl-outline .replyContainer {
+  outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
+}
+
+:root.highlight-own .yourPost > .reply, 
+:root.highlight-you .quotesYou > .reply {
+  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-top-color: rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-bottom-color: rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+}
+
+/* Targeted replies */
+.reply:target {
+  background: rgba(" + $SS.theme.nameColor.rgb + ",0.3) !important;
+}
+
+.highlight {
+  outline: 2px solid rgba(" + $SS.theme.tripColor.rgb + ",1) !important;
+}

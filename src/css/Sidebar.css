@@ -4,10 +4,10 @@
   z-index: 10;
 }
 :root.left-sidebar.fourchan-x body {
-  padding-left: 303px;
+  padding-left: 303px !important;
 }
 :root.right-sidebar.fourchan-x body {
-  padding-right: 303px;
+  padding-right: 303px !important;
 }
 .boardBanner {
   position: fixed;
@@ -28,17 +28,17 @@
   width: 100% !important;
 }
 .qr-link-container {
-  margin-top: 0px;
+  margin-top: 0;
 }
 #qr {
   min-width: 297px !important;
 }
 :root.left-sidebar #qr {
-  left: 0px !important;
+  left: 0 !important;
   right: auto !important;
 }
 :root.right-sidebar #qr {
-  right: 0px !important;
+  right: 0 !important;
   left: auto !important;
 }
 :root.fixed.bottom:not(.autohide) #qr {
@@ -59,12 +59,12 @@
   height:100%;
   width:302px;
   position:fixed;
-  top:0px;
-  right: 0px;
+  top:0;
+  right: 0;
 }
 :root.ss-sidebar.left-sidebar body::before {
   border-right:2px solid rgba(" + $SS.theme.mainColor.rgb + ",.9);
   border-left: none !important;
-  left: 0px;
+  left: 0;
   right: auto !Important;
 }

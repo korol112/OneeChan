@@ -4,7 +4,7 @@ body {
   margin-right: " + $SS.conf["Margin Right"] + "px;
   margin-top: 1px;
 }
-body.hasDropDownNav {
+.hasDropDownNav {
     margin-top: auto !important;
 }
 /* Replies */
@@ -24,16 +24,7 @@ body.hasDropDownNav {
 }
 .fileThumb img {
   border-radius: 2px;
-  padding: 2px 0px 10px 10px;
-}
-/* Thumb Opacity */
-:root.thumb-opacity .fileThumb {
-  opacity: 0.5;
-  transition: opacity .3s ease-out 0s;
-}
-:root.thumb-opacity .fileThumb:hover {
-  opacity: 1.0;
-  transition: opacity .3s ease-in 0s;
+  padding: 2px 0 10px 10px;
 }
 :root.expand-cover #qr {
   z-index: 11 !important;
@@ -89,22 +80,19 @@ body.hasDropDownNav {
 :root.reply-hide .thread>.hasInline>.reply {
    margin-left: 12px !important;
 }
-
 /* Quote Threading */
 .threadContainer {
-  margin-left: 0px !important;
+  margin-left: 0 !important;
   padding-left: 20px!important;
 }
 :root.reply-hide .thread>.threadContainer {
    margin-left: 13px !important;
 }
-
 /* Style Post Info option */
 :root.post-info .reply>.postInfo {
-  box-shadow: inset rgba(0,0,0,.05) 0px -1px 2px;
+  box-shadow: inset rgba(0,0,0,.05) 0 -1px 2px;
   padding-top: 2px !important;
 }
-
 /* Backlinks */
 :root.backlink-bottom .post {
   position: relative;
@@ -116,7 +104,6 @@ body.hasDropDownNav {
   bottom:2px;
   right:6px;
 }
-
 /* Menu button */
 .reply .menu-button i {
   position: relative;
@@ -132,11 +119,11 @@ body.hasDropDownNav {
   margin-left: -2px !important;
 }
 :root:not(.reply-fit-width) .container {
-  margin-left: 0px !important;
+  margin-left: 0 !important;
 }
 :root.reply-fit-width .post .menu-button {
   float: right;
-  margin-left: 0px;
+  margin-left: 0;
   position: relative;
   left: 5px;
 }
@@ -174,17 +161,16 @@ input[type=checkbox],
   vertical-align: top;
   width: 10px!important;
   border-radius: 2px!important;
-  -webkit-appearance: none;
 }
 .riceCheck {
-  margin: 2px 3px 0px 0px; 
+  margin: 2px 3px 0 0; 
 }
 input[type=checkbox] {
-  margin: 3px 3px 0px 0px;
+  margin: 3px 3px 0 0;
 }
 #qr .riceCheck,
 #qr input[type=checkbox] {
-  margin: 3px 4px 0px !important;
+  margin: 3px 4px 0 !important;
   vertical-align: baseline;
   position: relative;
   top: 1px;
@@ -213,10 +199,10 @@ input[type=checkbox]:checked+.riceCheck::before
 /* Reposition things based on Header position */
 :root:not(.fixed) #header-bar {
   /*position: absolute;*/
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid;
 }
 :root:not(.fixed) body {
@@ -255,13 +241,13 @@ margin-bottom: 20px !important;
 #qr .close {
   padding: 2px 3px 2px 4px !important;
 }
-#qr [type='submit'] {
+#qr input[type='submit'] {
   height: 22px !important;
   margin-top: 1px;
 }
 :root.vertical-qr #qr {
   position: fixed !important;
-  right: 0px !important;
+  right: 0!important;
   bottom: 26px;
   left: auto !important;
   top: auto !important;
@@ -272,7 +258,7 @@ margin-bottom: 20px !important;
   transform-origin: bottom right;
   -webkit-transform: rotate(-90deg);
   -webkit-transform-origin: bottom right;
-  right: 0px !important;
+  right: 0 !important;
   bottom: 300px !important;
   min-width: 240px !important;
   width: 240px !important;
@@ -288,11 +274,11 @@ margin-bottom: 20px !important;
   right: auto !important;
 }
 :root.left-sidebar #qr {
-  left: 0px !important;
+  left: 0 !important;
   right: auto !important;
 }
 :root.right-sidebar #qr {
-  right: 0px !important;
+  right: 0 !important;
   left: auto !important;
 }
 :root.fade-qr #qr form {
@@ -323,7 +309,14 @@ margin-bottom: 20px !important;
   height: 8.6em;
   min-height: 0.6em !important;
 }
-
+:root.qr-background #qr {
+  background: transparent !important;
+  border: none;
+}
+:root.qr-controls #qr label,
+:root.qr-controls #qr .close {
+  display: none;
+}
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
@@ -332,18 +325,6 @@ div[style='float: right;'] {
 .deleteform input[type=checkbox],
 .deleteform .riceCheck {
   top: 3px;
-}
-:root.hide-name .secret {
-  position: absolute;
-  left: 1px !important;
-  pointer-events: none;
-  width: 33.2% !important;
-  min-width: 33.2% !important;
-}
-:root.hide-name .field[name=name]:hover + .secret,
-:root.hide-name .field[name=name]:focus + .secret,
-:root.hide-name .secret:hover {
-  display: none !important;
 }
 /* HRs */
 hr {
@@ -359,17 +340,15 @@ hr {
   margin-top: -3px !important;
   margin-bottom: -3px !important;
 }
-
 /* Board Title */
 .boardBanner .boardTitle {
   cursor:default;
   letter-spacing:-2px;
 }
-
 /* Banner */
 #bannerCnt {
-border: 0px !important;
-margin: 0px auto;
+border: 0 !important;
+margin: 0 auto;
 width: 300px;
 max-height: 100px !important;
 max-width: 100%;
@@ -377,7 +356,6 @@ max-width: 100%;
 .boardBanner {
   width: 300px;
   margin: auto;
-  margin-bottom: 20px;
 }
 .boardBanner>img {
   border: none !important;
@@ -392,7 +370,6 @@ max-width: 100%;
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
 }
-
 /* Pages */
 .pages strong>a {
   border-radius: 3px;
@@ -425,35 +402,29 @@ max-width: 100%;
   position: relative;
   right: 5px;
 }
-.prev a::after, .prev a::after {
+.prev a::after {
   content: '<';
   position: inherit;
   top: 4px;
   left: 1px;
-  pointer-events: none;
 }
-.next a::after, .next a::after {
+.next a::after {
   content: '>';
   position: inherit;
   top: 4px;
   right: 2px;
-  pointer-events: none;
 }
 .pagelist button,
 .pagelist button:hover {
   background: none !important;
   border: none !important;
-  pointer-events: none;
   box-shadow: none !important;
-  -moz-appearance: none !important;
-  -webkit-appearance: none !important;
   height: 20px;
   width: 20px;
 }
 .pagelist span {
   opacity: 0.2;
 }
-
 /* Catalog Link */
 .cataloglink {
   margin-left: 12px;
@@ -464,6 +435,7 @@ max-width: 100%;
   font-weight: bold;
 }
 .cataloglink a:hover {
+  color: " + $SS.theme.textColor.hex + " !important;
   opacity: 0.7 !important;
   transition: opacity .3s ease-in 0s;
 }
@@ -472,14 +444,7 @@ table.flashListing {
   margin: auto !important;
 }
 table.flashListing .highlightPost {
-  background: none !important;
-}
-table.flashListing .highlightPost::after {
-  content: '●';
-  color: rgb(214, 149, 149);
-  position: relative;
-  left: 12px;
-  margin-left: -10px;
+  background: rgb\(" + $SS.theme.mainColor.shiftRGB(-25) + ") !important;
 }
 .flashListing > tbody {
   padding-top: 200px;
@@ -499,9 +464,8 @@ table.flashListing .highlightPost::after {
 #mascot img, #mascotprev img {
   position:fixed;
   z-index:2;
-  pointer-events: none;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
 }
 #mascot img {
   margin-bottom:" + $SS.mascot.offset + "px;
@@ -512,11 +476,11 @@ table.flashListing .highlightPost::after {
 }
 :root.left-sidebar #mascot img,
 :root.left-sidebar #mascotprev img {
-  margin-left:" + $SS.mascot.hoffset + "px;
-  margin-right: 0px !important;
+  margin-left: " + $SS.mascot.hoffset + "px;
+  margin-right: 0 !important;
 }
 #mascotprev img {
-  z-index: 900 !important;
+  z-index: 90 !important;
 }
 #mascot.previewing img {
   display: none;
@@ -529,23 +493,18 @@ table.flashListing .highlightPost::after {
 }
 :root.left-sidebar #mascot img,
 :root.left-sidebar #mascotprev img {
-  left: 0px;
+  left: 0;
   right: auto !important;
 }
 :root.mascot-opacity #mascot img,
 :root.mascot-opacity #mascotprev img {
   opacity: 0.5;
-  pointer-events: auto !important;
   transition: opacity .3s ease-out 0s;
 }
 :root.mascot-opacity #mascot img:hover,
 :root.mascot-opacity #mascotprev img:hover {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
-}
-/* Scroll Marker */
-:root:not(.autohide) #scroll-marker {
-  pointer-events: none !important;
 }
 /* Ads */
 :root.ad-opacity .center img {
@@ -555,6 +514,10 @@ table.flashListing .highlightPost::after {
 :root.ad-opacity .center img:hover {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
+}
+/* Fix margin top when ads are shown */
+:root.show-ads .ad-cnt {
+  margin-top: auto !important;
 }
 /* Navlinks */
 :root.index div.navLinks {
@@ -571,4 +534,13 @@ table.flashListing .highlightPost::after {
 }
 #hoverUI {
   z-index: 12 !important;
+}
+/* Thumb Opacity */
+:root.thumb-opacity .fileThumb {
+  opacity: 0.5;
+  transition: opacity .3s ease-out 0s;
+}
+:root.thumb-opacity .fileThumb:hover {
+  opacity: 1.0;
+  transition: opacity .3s ease-in 0s;
 }

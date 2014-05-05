@@ -1,8 +1,8 @@
 {
   "name": "OneeChan",
-  "version": "5.2.3",
+  "version": "5.2.4",
   "manifest_version": 2,
-  "description": "Customizable rice and themes for 4chan and 4chan X.",
+  "description": "Customizable rice and themes for 4chan X.",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",

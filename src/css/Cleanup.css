@@ -8,6 +8,7 @@ iframe[src='about:blank'],
 #absbot,
 .stylechanger,
 #styleSwitcher,
+#togglePostFormLink,
 :root:not(.show-ads) .center,
 :root.show-ads.hide-top .topad.center,
 :root.show-ads.hide-middle .middlead.center,
@@ -28,12 +29,10 @@ iframe[src='about:blank'],
 :root.reply-fit-width .sideArrows,
 #postForm,
 .forwarded,
-body>hr,
-.board:not(#unread-line) hr,
-:root.catalog hr,
+hr:not(#unread-line),
 :root.hide-navlinkbot .navLinks.navLinksBot.desktop,
 :root.hide-navlinks .navLinks,
-:root.hide-navlinks body > .desktop:not(.pagelist),
+:root.hide-navlinks .desktop:not(.pagelist),
 .ad-plea,
 #mascot img[src=''],
 .exif:not([style]) {
@@ -42,16 +41,6 @@ body>hr,
 /* Get rid of Chrome input outlines, and link outlines */
 input:focus, 
 textarea:focus, 
-a
-{
+a {
   outline:none!important;
-}
-/* Hide unwanted horizontal lines, while keeping them */
-#delform>hr,
-.board>hr:last-of-type {
-  background: none !important;
-}
-/* Fix margin top when ads are shown */
-:root.show-ads .ad-cnt {
-  margin-top: auto !important;
 }
