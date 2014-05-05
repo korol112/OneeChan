@@ -14,6 +14,7 @@
 
 **New:**
 - `Thread Watcher as a sidebar`
+
 This will pin the TW as a sidebar depending on which side the SS Sidebar is placed, or default to left when the latter is disabled. This option uses a lot of roundabout ways to achieve and renders really slowly due to using multiple CSS3 selectors, you've been warned.
 
 - `Remove Background` and `Remove Controls` in the Quick Reply options
@@ -22,6 +23,7 @@ This will pin the TW as a sidebar depending on which side the SS Sidebar is plac
 
 **New:**
 - `Highlighting` options
+
 Offers a wide range of post highlighting rice.
 
 
