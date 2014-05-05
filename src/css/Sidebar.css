@@ -4,10 +4,10 @@
   z-index: 10;
 }
 :root.left-sidebar.fourchan-x body {
-  padding-left: 303px;
+  padding-left: 303px !important;
 }
 :root.right-sidebar.fourchan-x body {
-  padding-right: 303px;
+  padding-right: 303px !important;
 }
 .boardBanner {
   position: fixed;

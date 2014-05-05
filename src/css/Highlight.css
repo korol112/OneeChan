@@ -1,21 +1,24 @@
-:root.hl-border         div.post.reply                 { border-left: " + $SS.conf["Width Highlight"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.brderColor.rgb + ", 1.0) !important; }
-:root.hl-border.hl-op   div.op                         { border-left-color: rgba( 77, 113, 117, 1.0) !important; }
-:root.hl-border.hl-del  div.deleted-post > .post.reply { border-left-color: rgba(201,  91,  81, 1.0) !important; }
-:root.hl-border.hl-you  div.quotesYou > .post.reply    { border-left-color: rgba(245, 188, 108, 1.0) !important; }
-:root.hl-border.hl-own  div.yourPost > .post.reply     { border-left-color: rgba( 95, 130,  88, 1.0) !important; }
-:root.hl-border   div > div.post.reply.highlight       { border-left-color: rgba(" + $SS.theme.textColor.rgb + ", 1.0) !important; }
-:root.hl-border   div > div.post.reply.highlight       { border-left-style: solid !important; }
+/* Highlighting posts */
+:root.hl-border .replyContainer {
+  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
+}
 
-:root.hl-mixed          div.post.reply                 { border-left: " + $SS.conf["Width Highlight"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.brderColor.rgb + ", 1.0) !important; }
-:root.hl-mixed.hl-op    div.op                         { border-left-color: rgba( 77, 113, 117, 1.0) !important; }
-:root.hl-mixed.hl-del   div.deleted-post > .post.reply { border-left-color: rgba(201,  91,  81, 1.0) !important; }
-:root.hl-mixed.hl-you   div.quotesYou > .post.reply    { border-left-color: rgba(245, 188, 108, 1.0) !important; }
-:root.hl-mixed.hl-own   div.yourPost > .post.reply     { border-left-color: rgba( 95, 130,  88, 1.0) !important; }
-:root.hl-mixed    div > div.post.reply.highlight       { outline: " + $SS.conf["Width Highlight"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.textColor.rgb + ", 1.0) !important; }
+:root.hl-outline .replyContainer {
+  outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
+}
 
-:root.hl-fallback div > div.post.reply.highlight       { outline: " + $SS.conf["Width Highlight"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.textColor.rgb + ", 1.0) !important; }
+:root.highlight-own .yourPost > .reply, 
+:root.highlight-you .quotesYou > .reply {
+  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-top-color: rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-bottom-color: rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+}
 
 /* Targeted replies */
 .reply:target {
-  background: rgba(" + $SS.theme.nameColor.rgb + ",0.2) !important;
+  background: rgba(" + $SS.theme.nameColor.rgb + ",0.3) !important;
+}
+
+.highlight {
+  outline: 2px solid rgba(" + $SS.theme.tripColor.rgb + ",1) !important;
 }

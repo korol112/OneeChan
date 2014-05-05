@@ -4,18 +4,25 @@
 **Nebukazar**
 
 - Lots of small syntax, redundancy and other CSS fixes, OneeChan should render just sliiiightly faster now
-- Fixed `Reset` not resetting anything on Firefox (this is still pretty wonky as a whole)
-- Fixed Cirno Head
+- Hid the new moot changes to the post form and all those ugly horizontal rules
+- Fixed `Reset` not resetting anything on Firefox
+- Fixed original post margin when nesting inline posts
+- Fixed Cirno Head image
+- Added a new color option for highlighting (`highlightColor`), this also gives color to J/K keybind
+- `Custom Themes` button now links to an actual page on the wiki with instructions
+- Removed `Secret Name Field` option
 
 **New:**
-- `Pin Thread Watcher as a tree`
-This will pin the TW as a sidebar depending on which side the SS Sidebar is placed, or default to left when the latter is disabled.
+- `Thread Watcher as a sidebar`
+This will pin the TW as a sidebar depending on which side the SS Sidebar is placed, or default to left when the latter is disabled. This option uses a lot of roundabout ways to achieve and renders really slowly due to using multiple CSS3 selectors, you've been warned.
+
+- `Remove Background` and `Remove Controls` in the Quick Reply options
 
 **Tracerneo**
 
 **New:**
 - `Highlighting` options
-Offers a wide range of post highlighting and selection rice.
+Offers a wide range of post highlighting rice.
 
 
 ### v5.2.3

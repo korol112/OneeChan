@@ -1,7 +1,7 @@
 /* General Styling */
 :root.threadwatcher-tree #thread-watcher {
   top: 0 !important;
-  left: 0;
+  left: 0 !important;
   bottom: 0 !important;
   max-width: 52px;
   position: fixed !important;
@@ -19,6 +19,9 @@
   word-spacing: -2px;
   margin-left: -3px !important;
 }
+:root.threadwatcher-tree.fourchan-x body {
+  padding-left: 52px;
+}
 :root.threadwatcher-tree #watcher-link {
 	display: none !important;
 }
@@ -30,12 +33,11 @@
   text-align: center;
   cursor: auto !important;
 }
-:root.threadwatcher-tree #thread-watcher .move>.close {
+:root.threadwatcher-tree #thread-watcher .close {
   display: none !important;
 }
-
 /* Right Sidebar */
-:root.threadwatcher-tree.fourchan-x body {
+:root.right-sidebar:root.threadwatcher-tree.fourchan-x body {
   padding-left: 52px;
 }
 :root.right-sidebar:root.threadwatcher-tree #thread-watcher {
@@ -44,7 +46,7 @@
 }
 /* Left Sidebar */
 :root.left-sidebar:root.threadwatcher-tree.fourchan-x body {
-  padding-right: 52px;
+  padding-right: 56px;
 }
 :root.left-sidebar:root.threadwatcher-tree #thread-watcher {
   left: auto !important;
@@ -54,12 +56,10 @@
 :root.left-sidebar:root.threadwatcher-tree #watched-threads a:nth-of-type(odd) {
   float: right;
 }
-
 /* Watched Threads */
 :root.threadwatcher-tree #watched-threads {
   line-height: 20px;
 }
-
 /* Tooltip */
 :root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::after {
   content: attr(title);

@@ -13,6 +13,7 @@
 // @grant        GM_setValue
 // @grant        GM_deleteValue
 // @grant        GM_openInTab
+// @grant        GM_listValues
 // @run-at       document-start
 // @updateURL 	 <%= meta.repo %>raw/master/builds/<%= meta.files.metajs %>
 // @downloadURL  <%= meta.repo %>raw/master/builds/<%= meta.files.userjs %>

@@ -309,6 +309,14 @@ margin-bottom: 20px !important;
   height: 8.6em;
   min-height: 0.6em !important;
 }
+:root.qr-background #qr {
+  background: transparent !important;
+  border: none;
+}
+:root.qr-controls #qr label,
+:root.qr-controls #qr .close {
+  display: none;
+}
 /* Delete form */
 div[style='float: right;'] {
   float: none !important;
@@ -506,6 +514,10 @@ table.flashListing .highlightPost {
 :root.ad-opacity .center img:hover {
   opacity: 1.0 !important;
   transition: opacity .3s ease-in 0s;
+}
+/* Fix margin top when ads are shown */
+:root.show-ads .ad-cnt {
+  margin-top: auto !important;
 }
 /* Navlinks */
 :root.index div.navLinks {
