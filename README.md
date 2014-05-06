@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks.
+Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks.
 
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
 ##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
@@ -15,17 +15,17 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 
 #### Compatibility with 4chan X forks and others:
-(Updated 2014-04-25)
+(Updated 2014-05-06)
 
 - [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
-- [Seaweedchan](https://github.com/seaweedchan/4chan-x) /// `Compatible`
+- [seaweedchan](https://github.com/seaweedchan/4chan-x) /// `Compatible`
 - [Spittie](https://github.com/Spittie/4chan-x) /// `Compatible`
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// Partial
 - [ihavenoface](https://github.com/ihavenoface/4chan-x) /// Partial
 - [loadletter](https://github.com/loadletter/4chan-x) /// No
 - [inline](https://boards.4chan.org/) /// No
 
-See [forks](https://github.com/Nebukazar/OneeChan/tree/master/src) for CSS fixes.
+See [forks](https://github.com/Nebukazar/OneeChan/tree/master/forks) for CSS fixes.
 
 
 #### Troubleshooting
