@@ -12,6 +12,9 @@ body {
   padding: 4px 12px 2px;
   display: block !important;
 }
+.closed {
+  text-align: center;
+}
 .useremail::before {
   margin-bottom: -20px;
   display: inline-block;
@@ -158,15 +161,11 @@ input[type=checkbox],
   display: inline-block;
   height: 10px !important;
   position: relative;
-  vertical-align: top;
   width: 10px!important;
   border-radius: 2px!important;
 }
 .riceCheck {
   margin: 2px 3px 0 0; 
-}
-input[type=checkbox] {
-  margin: 3px 3px 0 0;
 }
 #qr .riceCheck,
 #qr input[type=checkbox] {
@@ -205,9 +204,7 @@ input[type=checkbox]:checked+.riceCheck::before
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid;
 }
-:root:not(.fixed) body {
-  padding-top: 2em;
-}
+
 :root.index.bottom:not(.autohide) body {
   padding-bottom: 4em !important;
 }
@@ -321,10 +318,6 @@ margin-bottom: 20px !important;
 div[style='float: right;'] {
   float: none !important;
   margin-left: 10px;
-}
-.deleteform input[type=checkbox],
-.deleteform .riceCheck {
-  top: 3px;
 }
 /* HRs */
 hr {

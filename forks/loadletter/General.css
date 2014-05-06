@@ -1,0 +1,26 @@
+/* Compatibility fixes for different 4chan X forks */
+/* loadletter */
+#qr [type=submit] {
+	width: 29% !important;
+}
+#overlay {
+	z-index: 900;
+}
+:root.left-sidebar.fourchan_x body {
+  padding-left: 303px !important;
+}
+:root.right-sidebar.fourchan_x body {
+  padding-right: 303px !important;
+}
+#qr input[type=submit] {
+height: 24px!important;
+}
+#qr:not(.has-captcha) textarea {
+min-height: 115px!important;
+}
+.riceCheck {
+margin: 7px 3px 0 4px !important;
+}
+#navlinks {
+top: 135px !important;
+}

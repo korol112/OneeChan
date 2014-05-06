@@ -1,3 +1,9 @@
+### v5.2.5
+*2014-05-05*
+
+- Fixed right sidebar Thread Watcher
+- Minor CSS fixes
+
 ### v5.2.4
 *2014-05-02*
 

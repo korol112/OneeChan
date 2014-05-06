@@ -1,0 +1,45 @@
+/* Hide things we don't want */
+.mobile,
+#delform .mobile.center,
+.brackets-wrap:not(.hide-board-list-container)::before,
+.brackets-wrap:not(.hide-board-list-container)::after,
+.tab-select:not(:checked) + div,
+iframe[src='about:blank'],
+#absbot,
+.stylechanger,
+#styleSwitcher,
+#togglePostFormLink,
+:root.show-ads.hide-top .topad.center,
+:root.show-ads.hide-middle .middlead.center,
+:root.show-ads.hide-bottom .bottomad.center,
+#delPassword,
+:root.hide-prevnext .prev,
+:root.hide-prevnext .next,
+:root.hide-blotter #blotter,
+:root.hide-checkboxes #delform .post input[type=checkbox],
+:root.hide-checkboxes #delform .post .riceCheck,
+:root.hide-checkboxes #qp .post input[type=checkbox],
+:root.hide-checkboxes #qp .riceCheck,
+:root.hide-checkboxes .deleteform,
+:root.hide-board-name .boardTitle,
+:root.hide-board-name .boardSubtitle,
+:root.hide-banner #bannerCnt,
+:root.hide-button .qr-link-container,
+:root.reply-fit-width .sideArrows,
+#postForm,
+.forwarded,
+hr:not(#unread-line),
+:root.hide-navlinkbot .navLinks.navLinksBot.desktop,
+:root.hide-navlinks .navLinks,
+:root.hide-navlinks .desktop:not(.pagelist),
+.ad-plea,
+#mascot img[src=''],
+.exif:not([style]) {
+  display: none;
+}
+/* Get rid of Chrome input outlines, and link outlines */
+input:focus, 
+textarea:focus, 
+a {
+  outline:none!important;
+}

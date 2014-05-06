@@ -11,18 +11,21 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 - Firefox: Requires the Greasemonkey addon.
 
-- Chrome: Open the extensions page and drag and drop the downloaded ```.crx``` to install.
+- Chrome: Open the extensions page and drag & drop the downloaded `.crx` to install. Alternatively, install Tampermonkey and press the Firefox install link.
 
 
-#### Compatibility with 4chan X forks:
+#### Compatibility with 4chan X forks and others:
 (Updated 2014-04-25)
 
-- [Seaweedchan](https://github.com/seaweedchan/4chan-x) /// ```Compatible```
-- [Spittie](https://github.com/Spittie/4chan-x) /// ```Compatible```
-- [ccd0](https://github.com/ccd0/4chan-x) /// ```Compatible``` (Recommended)
-- [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// No
-- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// No
-- [loadletter] (https://github.com/loadletter/4chan-x) /// No
+- [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
+- [Seaweedchan](https://github.com/seaweedchan/4chan-x) /// `Compatible`
+- [Spittie](https://github.com/Spittie/4chan-x) /// `Compatible`
+- [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// Partial
+- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// Partial
+- [loadletter](https://github.com/loadletter/4chan-x) /// No
+- [inline](https://boards.4chan.org/) /// No
+
+See [forks](https://github.com/Nebukazar/OneeChan/tree/master/src) for CSS fixes.
 
 
 #### Troubleshooting
@@ -36,5 +39,5 @@ Maximum rice for Seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 #### Known Issues
 
-- OneeChan's settings icon sometimes doesn't render (especially bad on Chrome)
+- OneeChan's settings icon sometimes doesn't render on Chrome (this is related to [popstate](https://developer.mozilla.org/en-US/docs/Web/Reference/Events/popstate))
 - **Fix:** Open a different thread or navigate to another board until it shows up

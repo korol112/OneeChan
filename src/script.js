@@ -771,17 +771,14 @@
         browser: {},
         DOMLoaded: function(reload) {
             $SS.classes.init();
-
             if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
                 document.head.innerHTML = document.head.innerHTML;
 
             var div;
 
             if (reload !== true) {
-                $SS.options.init();
-
                 $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
-
+                $SS.options.init();
                 if (!$SS.browser.webkit)
                     $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
@@ -919,11 +916,6 @@
 
             if (!$SS.browser.webkit)
                 $("input[type=checkbox]", qr).riceCheck();
-
-            if ($SS.conf["Secret Name Field"])
-                $(".field[name=name]").each(function() {
-                    $(this).after($("<input class='secret field' placeholder=Name>"));
-                });
 
             $SS.QRhandled = true;
         },
