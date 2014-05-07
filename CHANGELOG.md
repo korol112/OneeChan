@@ -1,6 +1,13 @@
 ### v5.2.6
 *2014-05-06*
 
+- Fix for moot class changes
+- Changes to highlight so it doesn't interfere with sideArrows and post hiding buttons
+- Fixed J/K highlight color being tied to the wrong color setting
+- Added a Very Large option to `Margin Between Replies` and increased the Large option from 6 to 8px
+- More minor CSS fixes
+
+
 ### v5.2.5
 *2014-05-05*
 

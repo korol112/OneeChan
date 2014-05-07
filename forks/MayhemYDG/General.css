@@ -1,5 +1,5 @@
 /* Compatibility fixes for different 4chan X forks */
-/* loadletter */
+/* MayhemYDG */
 #qr [type=submit] {
 	width: 29% !important;
 }
@@ -13,14 +13,17 @@
   padding-right: 303px !important;
 }
 #qr input[type=submit] {
-height: 24px!important;
+  height: 24px!important;
 }
 #qr:not(.has-captcha) textarea {
-min-height: 115px!important;
+  min-height: 115px!important;
 }
 .riceCheck {
-margin: 7px 3px 0 4px !important;
+  margin: 7px 3px 0 4px !important;
 }
 #navlinks {
-top: 135px !important;
+  top: 135px !important;
+}
+.boardBanner {
+  top: 0px;
 }
