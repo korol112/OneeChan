@@ -41,3 +41,8 @@ See [forks](https://github.com/Nebukazar/OneeChan/tree/master/forks) for CSS fix
 
 - OneeChan's settings icon sometimes doesn't render on Chrome (this is related to [popstate](https://developer.mozilla.org/en-US/docs/Web/Reference/Events/popstate))
 - **Fix:** Open a different thread or navigate to another board until it shows up
+
+
+#### See also:
+
+[Ruri Gokou Homepage](https://github.com/gokoururi/homepage)

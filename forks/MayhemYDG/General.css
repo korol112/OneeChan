@@ -1,7 +1,7 @@
 /* Compatibility fixes for different 4chan X forks */
 /* MayhemYDG */
 #qr [type=submit] {
-	width: 29% !important;
+width: 29% !important;
 }
 #overlay {
 	z-index: 900;
@@ -15,6 +15,9 @@
 #qr input[type=submit] {
   height: 24px!important;
 }
+.captcha-input.field {
+width:300px;
+}
 #qr:not(.has-captcha) textarea {
   min-height: 115px!important;
 }
@@ -25,5 +28,5 @@
   top: 135px !important;
 }
 .boardBanner {
-  top: 0px;
+  top: 0;
 }
