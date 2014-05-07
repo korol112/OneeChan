@@ -16,7 +16,8 @@ div.post div.file .fileThumb {
 padding-bottom: 3em !important;
 }
 div.post {
-  margin-top: 4px;
+margin: 4px 0;
+overflow: hidden;
 }
 :root:not(.reply-fit-width) #delform div.reply:not([hidden]) {
   display: table !important;
