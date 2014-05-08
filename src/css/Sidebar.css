@@ -21,12 +21,6 @@
 :root.fixed:not(.autohide):not(.bottom) .boardBanner {
   margin-top: auto;
 }
-.bBanner {
-  margin-bottom: 40px;
-}
-.bBanner::after {
-  width: 100% !important;
-}
 #qr {
   min-width: 297px !important;
 }

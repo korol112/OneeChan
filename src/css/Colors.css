@@ -181,6 +181,7 @@ hr {
 }
 :root.post-info .reply>.postInfo {
   background: rgba\(" + $SS.theme.mainColor.shiftRGB(-16) + ",.2);
+  border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
 }
 /* Borders */
 .reply {
@@ -197,9 +198,6 @@ hr {
 :root.rounded-corners .dialog:not(#header-bar),
 :root.rounded-corners .inline {
   border-radius: 3px;
-}
-:root.post-info .reply>.postInfo {
-  border-bottom:1px solid rgb\(" + $SS.theme.mainColor.shiftRGB(4) + ");
 }
 :root.post-info.rounded-corners .reply>.postInfo {
   border-radius: 3px 3px 0 0;
@@ -245,7 +243,10 @@ textarea:focus,
   border-width: 1px;
   border-style: solid;
 }
-
+:root.header-highlight #custom-board-list .current:hover,
+:root.header-highlight #custom-board-list .current {
+  border-bottom: none !important;
+}
 /* Outlines */
 .qphl {
   outline: 2px solid rgba(" + $SS.theme.linkColor.rgb + ",0.5) !important;

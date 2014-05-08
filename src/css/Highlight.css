@@ -16,5 +16,5 @@
   background: rgba(" + $SS.theme.nameColor.rgb + ",0.3) !important;
 }
 .highlight {
-  outline: 2px solid rgba(" + $SS.theme.highlightColor.rgb + ",1) !important;
+  outline: 2px solid rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
 }
