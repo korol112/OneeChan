@@ -37,4 +37,4 @@ Note: this is only used to release new OneeChan versions, and is **not** needed 
 ### Contribute
 
 - Edit the sources.
-- Open a pull request.
+- Open a pull request  to merge branch.
