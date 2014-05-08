@@ -43,16 +43,24 @@
         "Custom Right Margin": [
             0, "Custom width of border or outline of highlighted posts (pixels).", "Right Margin", 999, true
         ],
-        "Underline QuoteLinks": [false, "Underlines quotelinks only."],
+        "Thread Watcher": [
+            1, "Changes how the Thread Watcher behaves: scrolling with the page (Fixed) or pinned as a sidebar (As a sidebar).", [{
+                name: "Normal",
+                value: ''
+            }, {
+                name: "Fixed",
+                value: 1
+            }, {
+                name: "As a sidebar",
+                value: 2
+            }], true
+        ],
         "Underline All Links": [false, "Underlines all the links."],
-        "Thread Watcher as a sidebar": [false, "Pins the thread watcher. Position depends on Sidebar position. (beta)"],
         "Show Banner": [true, "Toggle visibility of the banner.", null, true],
         "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
         "Show Board Name": [true, "Toggle visibility of the board name."],
         "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
         "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus."],
-        "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
-        "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
         "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
         "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
@@ -62,6 +70,10 @@
         "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
         "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link.", "Show Navigation Links", true, true],
         "Show Previous/Next buttons": [false, "Hides the Previous / Next buttons in page navigation mode."],
+        ":: Header": ["header", ""],
+        "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
+        "Show Header Shadow": [true, "Gives the header a drop shadow."],
+        "Highlight Current Board": [true, "Gives the current board link a bottom highlight border."],
         ":: Sidebar": ["header", ""],
         "Sidebar Position": [
             1, "Change the position of the sidebar", [{
@@ -80,8 +92,10 @@
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
-        "Style Post Info": [true, "Separate the post info by the post info colors defined in Themes."],
+        "Show Reply Header": [true, "Show reply header background and line border."],
+        "Show File Info": [true, "Hides the filename, resolution and size info."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
+        "Underline QuoteLinks": [false, "Underlines quotelinks only."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
         "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
         "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
@@ -89,7 +103,7 @@
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
-            2, "Changes which sides of replies have borders.", [{
+            1, "Changes which sides of replies have borders.", [{
                 name: "Normal",
                 value: 1
             }, {
@@ -231,8 +245,8 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         "Themes": [],
         "Hidden Themes": [],
-        "Selected Theme": 12,
-        "NSFW Theme": 12,
+        "Selected Theme": 13,
+        "NSFW Theme": 13,
         "Selected Mascots": 1,
         "Mascots": [],
         "Hidden Mascots": []
@@ -1895,6 +1909,34 @@
                 boardColor: "bc312a",
                 highlightColor: "cc6563"
             }, {
+                name: "Surf", //Inspired by Blue Tone
+                authorName: "Nebukazar",
+                authorTrip: "!/Am.NeBUqQ",
+                "default": true,
+                bgImg: false,
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "242424",
+                brderColor: "242424",
+                inputColor: "1b1b1b",
+                inputbColor: "242424",
+                headerBGColor: "242424",
+                headerColor: "ffffff",
+                boardColor: "ffffff",
+                bgColor: "1b1b1b",
+                textColor: "ffffff",
+                blinkColor: "3296c8",
+                headerLColor: "3296c8",
+                headerLHColor: "ffffff",
+                linkColor: "808080",
+                linkHColor: "ffffff",
+                nameColor: "3296c8",
+                tripColor: "808080",
+                titleColor: "808080",
+                quoteColor: "07992d",
+                unreadColor: "ffffff",
+                highlightColor: "ffffff"
+            }, {
                 name: "Stilig",
                 authorName: "Myson",
                 authorTrip: "!RiDeag.gG.",
@@ -2321,7 +2363,7 @@
                 authorName: "ahodesuka",
                 authorTrip: "!.pC/AHOKAg",
                 "default": true,
-                bgImg: "http://img85.imageshack.us/img85/4162/4chbg.gif",
+                bgImg: false,
                 bgRPA: "repeat top left fixed",
                 replyOp: "1.0",
                 navOp: "0.9",
@@ -2455,6 +2497,34 @@
                 headerBGColor: "e3e7e8",
                 boardColor: "477085",
                 highlightColor: "5d6678"
+            }, {
+                name:"Blue Tone",
+                authorName: "Leagle",
+                authorTrip: "!YoGiiH6Oi.",
+                "default": true,
+                replyOp: "1.0",
+                navOp: "0.9",
+                mainColor: "222222",
+                brderColor: "222222",
+                inputColor: "18191a",
+                inputbColor: "121314",
+                headerBGColor: "1b1b1b",
+                headerColor: "dddddd",
+                boardColor: "dddddd",
+                bgColor: "1b1b1b",
+                textColor: "a0a0a0",
+                blinkColor: "3296c8",
+                headerLColor: "3296c8",
+                headerLHColor: "dddddd",
+                linkColor: "a0a0a0",
+                linkHColor: "dddddd",
+                nameColor: "dddddd",
+                tripColor: "dddddd",
+                titleColor: "a0a0a0",
+                quoteColor: "009933",
+                unreadColor: "3296c8",
+                highlightColor: "ffffff",
+                customCSS: ":root.post-info .reply>.postInfo {box-shadow: none;}:root.post-info .reply>.postInfo {border-bottom: none;}:root.post-info .reply>.postInfo {background: none;}.header-gradient:root #header-bar {background:rgba(27,27,27,1)!important;} .fixed:root #header-bar {box-shadow: none !important;} #custom-board-list .current, #custom-board-list a.current {border-bottom: 0px rgba(27, 27, 27, 1) !important;}.highlight-you:root .quotesYou > .post.reply {border-left: 3px solid #3296c8 !important;}.highlight-own:root .yourPost > .reply {border-left: 1px dashed #3296c8 !important;}body {background: rgba(19,19,19,1);}.boardBanner .boardTitle {text-shadow: 0 0 3px #a0a0a0 !important; letter-spacing: 0px !important; padding-top: 30px !important;}a.quotelink, a.linkify {color: rgb(50, 150, 200) !important;} a.quotelink:hover, a.linkify:hover {color: rgb(221, 221, 221) !important;}"
             }, {
                 name: "Cold Snap",
                 authorName: "Kori",
@@ -2615,7 +2685,7 @@
                 name: "Kuroko no Basuke",
                 hoffset: "25"
             }, {
-                img: "https://i2.minus.com/ivKEIV0mbO1na.png",
+                img: "http://i.imgur.com/Z85TPvG.png",
                 "default": true,
                 name: "Kusanagi Motoko",
                 width: "300px"
@@ -2650,7 +2720,7 @@
                 "default": true,
                 name: "Nagase Iori"
             }, {
-                img: "https://i.minus.com/ijJber6Ts4www.png",
+                img: "https://i.minus.com/ibndIkldw4njbD.png",
                 "default": true,
                 name: "Nagato Yuki",
                 hoffset: "25"
@@ -2755,7 +2825,8 @@
             init: function() {
                 /* Function arguments: ("Option Name", value, "class-name") */
                 $("html").addClass("oneechan");
-                $("html").optionClass("Thread Watcher as a sidebar", true, "threadwatcher-tree");
+                $("html").optionClass("Thread Watcher", 1, "threadwatcher-fixed");
+                $("html").optionClass("Thread Watcher", 2, "threadwatcher-tree");
                 $("html").optionClass("Underline QuoteLinks", true, "underline-quotes");
                 $("html").optionClass("Underline All Links", false, "underline-disabled");
                 $("html").optionClass("Rounded Corners", true, "rounded-corners");
@@ -2765,7 +2836,8 @@
                 $("html").optionClass("Show Banner", false, "hide-banner");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
                 $("html").optionClass("Show Reply to Thread Button", false, "hide-button");
-                $("html").optionClass("Style Post Info", true, "post-info");
+                $("html").optionClass("Show Reply Header", true, "post-info");
+                $("html").optionClass("Show File Info", false, "show-file-info");
                 $("html").optionClass("Borders", 2, "borders-all");
                 $("html").optionClass("Borders", 3, "borders-none");
                 $("html").optionClass("Decoration Style", 1, "hl-border");
@@ -2785,6 +2857,7 @@
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Header Shadow", false, "header-shadow");
+                $("html").optionClass("Highlight Current Board", false, "header-highlight");
                 $("html").optionClass("Show Blotter", false, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");
                 $("html").optionClass("Show Top Ad", false, "hide-top");
@@ -3642,7 +3715,7 @@
         typeofBase64: function(b64) {
             switch (b64.substr(0, 8)) {
                 case "PD94bWwg":
-                    return "svg+xml";
+                    return "image/svg+xml";
                 case "R0lGODlh":
                     return "gif";
                 case "/9j/4AAQ":
