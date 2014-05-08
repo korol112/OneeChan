@@ -38,25 +38,6 @@ module.exports = (grunt) ->
             'src/script.js'
           ]
 
-#      css:
-#        options: concatOptions
-#        src: [
-#          'test.css'
-#        ]
-#        dest: 'tmp/styleMain.css'
-#
-#      coffee:
-#        options: concatOptions
-#        src: [
-#          'test.coffee'
-#        ]
-#        dest: 'tmp/script.coffee'
-#
-#    coffee:
-#      script:
-#        src:  'tmp/main.coffee' 
-#        dest: 'tmp/script.js'
-#
     cssmin:
       minify:
         src: 'tmp/style.css'
