@@ -61,6 +61,12 @@ a:hover,
 #header-bar a:hover {
   color: " + $SS.theme.headerLHColor.hex + " !important;
 }
+#custom-board-list .current {
+    border-bottom: 1px solid rgba(" + $SS.theme.linkColor.rgb + ",1) !important;;
+}
+#custom-board-list .current:hover {
+    border-bottom: 1px solid rgba(" + $SS.theme.linkHColor.rgb + ",1) !important;;
+}
 /* Greentext */
 .postMessage>.quote,
 s:hover .quote,
@@ -79,7 +85,7 @@ s:hover .quote,
   color: " + $SS.theme.titleColor.hex + " !important;
 }
 .option.header {
-  font-size: 18px;
+  font-size: 140%;
 }
 /* Board Title */
 .boardTitle {

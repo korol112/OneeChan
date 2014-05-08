@@ -1,10 +1,21 @@
+/* MayhemYDG 4chan X v3*/
 /* Compatibility fixes for different 4chan X forks */
-/* MayhemYDG */
+/* Insert in Rice > Custom CSS */
+/* Some functionality of OneeChan might not work with this fork */
+:root.top-header body {
+  margin-bottom: 3em;
+}
+#nav-links {
+  margin-bottom: inherit;
+}
 #qr [type=submit] {
-width: 29% !important;
+  width: 29% !important;
+}
+:root.qr-background #qr > div {
+  display: none;
 }
 #overlay {
-	z-index: 900;
+  z-index: 900;
 }
 :root.left-sidebar.fourchan_x body {
   padding-left: 303px !important;
@@ -16,7 +27,7 @@ width: 29% !important;
   height: 24px!important;
 }
 .captcha-input.field {
-width:300px;
+  width:300px;
 }
 #qr:not(.has-captcha) textarea {
   min-height: 115px!important;
@@ -28,5 +39,16 @@ width:300px;
   top: 135px !important;
 }
 .boardBanner {
-  top: 0;
+  top: auto;
+}
+#header-bar {
+  position: static !important;
+}
+/* Thread Watcher */
+:root.threadwatcher-tree #thread-watcher {
+  margin-top: inherit;
+}
+/* Fixed Thread Watcher */
+#thread-watcher {
+  position: fixed !important;
 }

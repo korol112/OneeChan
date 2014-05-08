@@ -45,4 +45,4 @@ See [forks](https://github.com/Nebukazar/OneeChan/tree/master/forks) for CSS fix
 
 #### See also:
 
-[Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
+- [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)

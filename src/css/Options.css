@@ -7,7 +7,7 @@
   margin: auto;
 }
 #oneechan-options {
-  width: 900px;
+  width: 720px;
   text-align:left!important;
   height: 532px;
   top: 0;
@@ -21,6 +21,8 @@
 }
 .options-close {
   text-align: right !important;
+  margin-right: auto;
+  margin-left: auto;
 }
 #add-mascot {
   height: 208px;
@@ -193,34 +195,29 @@ select[name='Font Family']>option {
   margin: 12px 40px !important;
 }
 /* Add THeme */
-#add-theme
-{
+#add-theme {
   text-align:left!important;
   width:800px!important;
 }
-#add-theme>label
-{
+#add-theme>label {
   display:inline-block;
   text-align:right;
   width:33.3%;
 }
-#add-theme>label#customCSS
-{
+#add-theme>label#customCSS {
   width:100%;
 }
-#add-theme>label#customCSS>textarea
-{
-  height:110px;
-  resize:vertical;
-  width:100%;
+#add-theme>label#customCSS>textarea {
+  height: 8em;
+  resize: vertical;
+  width: 99%;
+  max-height: 25em;
 }
 #add-theme>label>input[type=text],
-#add-theme>label>select
-{
+#add-theme>label>select {
   width:100px;
 }
-#add-theme>div
-{
+#add-theme>div {
   margin-top:.6em;
   text-align:right;
 }
@@ -414,11 +411,9 @@ span.option>select,
 #oneechan-version {
   opacity:.5;
   padding-right:5px;
-  margin-left: 160px;
+  padding-left: 40px;
+  font-size: x-small;
 }
 .link-delim {
   opacity:.4;
-}
-#issues-link {
-  padding-right:10px;
 }

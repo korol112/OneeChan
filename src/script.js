@@ -1,6 +1,6 @@
 (function() {
     var defaultConfig = {
-        ".:: Main Rice": ["header", ""],
+        ":: Main Rice": ["header", ""],
         "Left Margin": [
             0, "Change the size of the left margin.", [{
                 name: "Large",
@@ -51,7 +51,8 @@
         "Show Board Name": [true, "Toggle visibility of the board name."],
         "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
         "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus."],
-        "Show Header Background Gradient": [true, "Gives the header bar a shadow-like gradient."],
+        "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
+        "Show Header Shadow": [true, "Gives the header a drop shadow."],
         "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
         "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
         "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
@@ -61,7 +62,7 @@
         "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
         "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link.", "Show Navigation Links", true, true],
         "Show Previous/Next buttons": [false, "Hides the Previous / Next buttons in page navigation mode."],
-        ".:: Sidebar": ["header", ""],
+        ":: Sidebar": ["header", ""],
         "Sidebar Position": [
             1, "Change the position of the sidebar", [{
                 name: "Right",
@@ -77,7 +78,7 @@
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
-        ".:: Replies": ["header", ""],
+        ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
         "Style Post Info": [true, "Separate the post info by the post info colors defined in Themes."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
@@ -130,7 +131,7 @@
                 value: 3
             }]
         ],
-        ".:: Highlighting": ["header", ""],
+        ":: Highlighting": ["header", ""],
         "Decoration Style": [
             0, "Changes the highlight decoration of posts.", [{
                 name: "None",
@@ -162,7 +163,7 @@
             0, "Enter a custom width for the decoration (pixels).", "Decoration Width", 999, true
         ],
         "Highlight Style": [
-            "solid", "Changes form of highlight.", [{
+            "solid", "Changes style of post highlight.", [{
                 name: "Dashed",
                 value: "dashed"
             }, {
@@ -176,9 +177,9 @@
                 value: "solid"
             }]
         ],
-        ".:: Quick Reply": ["header", ""],
+        ":: Quick Reply": ["header", ""],
         "Autohide Style": [
-            3, "Changes the style of the quick reply.", [{
+            3, "Changes the style of the quick reply hiding.", [{
                 name: "Normal",
                 value: 1
             }, {
@@ -192,7 +193,7 @@
         "Remove Background": [false, "Removes the QR background."],
         "Remove Controls": [false, "Removes the QR controls and checkbox."],
         "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
-        ".:: Fonts": ["header", ""],
+        ":: Fonts": ["header", ""],
         "Font Family": [
             "sans-serif", "Set the default font family.", [{
                 name: "Default",
@@ -997,7 +998,7 @@
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
                 var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show);
-                return $(".shortcut.brackets-wrap").prepend(a) && $("#shortcuts.brackets-wrap").append(b);
+                return $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b);
             },
             show: function() {
                 if ($("#overlay").exists())
@@ -1014,7 +1015,7 @@
                             "</ul><div id=options-container><input type=radio class=tab-select name=tab-select id=main-select hidden checked><div id='main-section' class='options-section'>" +
                             "<p class='buttons-container'>" +
                             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetSettings>Reset</a>" +
-                            "<span id=oneechan-version><span title='Thanks to ahodesuka, Seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
+                            "<span id=oneechan-version><span title='Thanks to ahodesuka, seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
                             "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
@@ -1100,7 +1101,11 @@
                         var file = this.files[0],
                             reader = new FileReader(),
                             key, imported, val;
-                        if (!confirm('Your current settings will be entirely overwritten, are you sure?')) {
+                        if (this.files[0].name.match(/\.json$/) == null) {
+                            alert('Only JSON files are accepted!');
+                            return;
+                        }
+                        else if (!confirm('Your current settings will be entirely overwritten, are you sure?')) {
                             return;
                         }
                         reader.onload = (function(tFile) {
@@ -2779,6 +2784,7 @@
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-op");
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
+                $("html").optionClass("Show Header Shadow", false, "header-shadow");
                 $("html").optionClass("Show Blotter", false, "hide-blotter");
                 $("html").optionClass("Show 4chan Ads", true, "show-ads");
                 $("html").optionClass("Show Top Ad", false, "hide-top");

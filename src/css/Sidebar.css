@@ -28,7 +28,7 @@
   width: 100% !important;
 }
 .qr-link-container {
-  margin-top: 0;
+  margin-top: 1px;
 }
 #qr {
   min-width: 297px !important;
@@ -40,9 +40,6 @@
 :root.right-sidebar #qr {
   right: 0 !important;
   left: auto !important;
-}
-:root.fixed.bottom:not(.autohide) #qr {
-  margin-bottom: 24px;
 }
 .captcha-img, 
 .captcha-img img {

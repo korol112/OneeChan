@@ -2,12 +2,12 @@
 body {
   margin-left: " + $SS.conf["Margin Left"] + "px;
   margin-right: " + $SS.conf["Margin Right"] + "px;
-  margin-top: 1px;
+  margin-top: 0;
 }
-/* Fix margin top when ads are shown */
+/* Fix margin top when fixed top header */
 .hasDropDownNav,
 :root.show-ads .ad-cnt {
-    margin-top: auto !important;
+  margin-top: auto !important;
 }
 /* Replies */
 .postInfo {
@@ -186,16 +186,17 @@ input[type=checkbox]:checked+.riceCheck::before {
 #header-bar {
   padding: 4px 4px 5px !important;
 }
+:root.header-shadow #header-bar {
+  box-shadow: none !important;
+}
 /* Reposition things based on Header position */
 :root:not(.fixed) #header-bar {
-  /*position: absolute;*/
   top: 0;
   right: 0;
   left: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid;
 }
-
 :root.index.bottom:not(.autohide) body {
   padding-bottom: 4em !important;
 }
@@ -365,12 +366,11 @@ max-width: 100%;
   opacity: 0.7 !important;
   transition: opacity .3s ease-in 0s;
 }
-:root.reply-fit-width .pagelist {
-  margin: 5px 10px 20px 1px !important;
+.pagelist.desktop {
+  margin-left: 18px;
 }
-.pagelist {
-  margin: 5px 10px 20px 15px;
-  padding-bottom: inherit;
+:root.reply-fit-width .pagelist {
+  margin-left: 0;
 }
 .pages a {
   padding: 5px 10px;
@@ -443,7 +443,6 @@ table.flashListing .highlightPost {
   border: none !important;
   box-shadow: none !important;
 }
-
 /* Mascot */
 #mascot img, 
 #mascotprev img {
@@ -507,15 +506,22 @@ table.flashListing .highlightPost {
   margin-left: auto;
   margin-top: auto;
 }
-.desktop:not(.postInfo) {
-  margin-bottom: 5px;
-}
 .navLinks.navLinksBot.desktop {
   margin-top: 10px;
   margin-bottom: 5px;
 }
 #hoverUI {
   z-index: 12 !important;
+}
+#search-box, 
+#index-search {
+  width: 6%;
+  transition: color .25s, border-color .25s, width .25s;
+}
+#search-box:focus, 
+#index-search:focus {
+  width: 12%;
+  transition: color .25s, border-color .25s, width .25s;
 }
 /* Thumb Opacity */
 :root.thumb-opacity .fileThumb {
