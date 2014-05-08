@@ -27,9 +27,6 @@
 .bBanner::after {
   width: 100% !important;
 }
-.qr-link-container {
-  margin-top: 1px;
-}
 #qr {
   min-width: 297px !important;
 }

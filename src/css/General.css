@@ -29,7 +29,6 @@ body {
 }
 .fileThumb img {
   border-radius: 2px;
-  padding: 2px 0 10px 10px;
 }
 :root.expand-cover #qr {
   z-index: 11 !important;

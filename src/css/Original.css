@@ -3,10 +3,10 @@ div.post div.file .fileThumb {
   float: left;
   margin-left: 10px;
   margin-right: 20px;
-  margin-bottom: 1px;
+  margin-bottom: 10px;
 }
 .fileText {
-  margin-left: 20px;
+  margin-left: 10px !important;
   margin-right: 10px;
 }
 .postContainer {
@@ -101,4 +101,7 @@ table {
 .middlead,
 .topad {
   margin-bottom: 20px !important;
+}
+.bottomCtrl.desktop {
+  float: right;
 }
