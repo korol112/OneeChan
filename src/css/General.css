@@ -210,12 +210,15 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root:not(.fixed).left-sidebar #header-bar {
   left: 300px;
 }
+:root:not(.fixed) .boardBanner {
+  top: 0;
+}
 #full-board-list>a, 
 .navSmall>a {
   margin-left: 2px;
 }
 :root.fixed:not(.autohide):not(.bottom) #globalMessage {
-margin-bottom: 20px !important;
+  margin-bottom: 20px !important;
 }
 .globalMessage, h2, h3 {
   margin: auto;
@@ -339,11 +342,11 @@ hr {
 }
 /* Banner */
 #bannerCnt {
-border: 0 !important;
-margin: 0 auto;
-width: 300px;
-max-height: 100px !important;
-max-width: 100%;
+  border: 0 !important;
+  margin: 0 auto;
+  width: 300px;
+  max-height: 100px !important;
+  max-width: 100%;
 }
 .boardBanner {
   width: 300px;
@@ -474,6 +477,10 @@ table.flashListing .highlightPost {
 }
 #delform {
   position: relative;
+}
+:root.fixed.bottom-header:not(.autohide) #mascot img,
+:root.fixed.bottom-header:not(.autohide) #mascotprev img {
+  padding-bottom: 26px;
 }
 :root:not(.left-sidebar):not(.right-sidebar) #delform {
   z-index: 3;

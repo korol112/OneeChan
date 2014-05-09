@@ -5,6 +5,9 @@
 :root.top-header body {
   margin-bottom: 3em;
 }
+#header-bar {
+  position: static !important;
+}
 #nav-links {
   margin-bottom: inherit;
 }
@@ -32,13 +35,12 @@
 #navlinks {
   top: 135px !important;
 }
-.boardBanner {
-  top: auto;
-}
 #qr .riceCheck, #qr input[type=checkbox] {
-margin: 0px 4px 0!important;
+  margin: 0px 4px 0!important;
 }
-
+:root.top-header .boardBanner {
+  top: 26px !important;
+}
 /* Thread Watcher */
 :root.threadwatcher-tree #thread-watcher {
   margin-top: inherit;

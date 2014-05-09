@@ -266,7 +266,7 @@ select[name='Font Family']>option {
 /* Add Mascot */
 
 #mascot-buttons-container {
-  padding:5px;
+  padding: 1px;
 }
 .add-mascot-label {
   display:block;
