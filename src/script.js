@@ -789,16 +789,12 @@
         browser: {},
         DOMLoaded: function(reload) {
             $SS.classes.init();
-            if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
-                document.head.innerHTML = document.head.innerHTML;
 
             var div;
-
             if (reload !== true) {
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
                 $SS.options.init();
-                if (!$SS.browser.webkit)
-                    $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
+                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
                 var MutationObserver = window.MutationObserver;
                 var observer = new MutationObserver(function(mutations) {
@@ -939,7 +935,6 @@
         },
         NodeInsertionHandler: function(e) {
             var settings = e.target;
-
             $("input[type=checkbox]", settings).riceCheck();
         },
         AddMenuHandler: function(e) {
@@ -2886,13 +2881,11 @@
             hasInit: false,
             init: function() {
                 if (!this.hasInit) {
-                    if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"])
+                    if ($SS.conf["Show Checkboxes"])
                         $("input[type=checkbox]").riceCheck();
-
                     return this.hasInit = true;
-                } else if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"] && !$(".postInfo>.riceCheck").exists()) {
-                    $("input[type=checkbox]").riceCheck();
-                    return this.hasInit = false;
+                } else if (!$SS.conf["Show Checkboxes"] && !$(".postInfo>.riceCheck").exists()) {
+                        return this.hasInit = false;
                 }
             }
         },
