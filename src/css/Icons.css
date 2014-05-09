@@ -22,3 +22,9 @@
 :root.backlink-icon .backlink:hover, :root.backlink-icon .backlink.inlined {
   opacity: 1 !important;
 }
+
+/* ExLinks */
+.exlinksOptionsLink.entry {
+  min-width:  0;
+  padding: 0;
+}
