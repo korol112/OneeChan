@@ -3,6 +3,7 @@ body {
   margin-left: " + $SS.conf["Margin Left"] + "px;
   margin-right: " + $SS.conf["Margin Right"] + "px;
   margin-top: 0;
+  margin-bottom: 0;
 }
 /* Fix margin top when fixed top header */
 .hasDropDownNav,
