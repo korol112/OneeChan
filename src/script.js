@@ -2884,7 +2884,7 @@
                     if ($SS.conf["Show Checkboxes"])
                         $("input[type=checkbox]").riceCheck();
                     return this.hasInit = true;
-                } else if (!$SS.conf["Show Checkboxes"] && !$(".postInfo>.riceCheck").exists()) {
+                } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
                         return this.hasInit = false;
                 }
             }
