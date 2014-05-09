@@ -1,3 +1,33 @@
+### v5.2.7
+*2014-05-07*
+
+- Mistakes were made but hopefully corrected
+- Cleared up the menu
+- Added 2 new themes
+- Mascots will now render above the bottom header but still under the QR
+- Changed Yuki Nagato mascot, we have enough guitars
+- Removed Cirno Head (check "More Mascots" if you want it back)
+- Added 3 more mascots
+- Border for current board in Custom board navigation will now be colored according to theme as intended
+- Fix ExLinks menu icon
+- Fix Checkboxes
+- Banner content will now properly react to the header position (auto-hide)
+- Non-JSON Search bar expands on focus
+- Cleaned up all the margin/padding hacks that were made over time, pages should be cleaner and more responsive
+- Renamed `Style Post Info` to `Show Reply Header`
+- Minor menu fixes
+
+**New:**
+- `Show Header Shadow` option
+- `Show File Info` option
+- `Highlight Current Board`
+- `Thread Watcher`
+Changes how the TW is pinned. As a sidebar or simply fixed by the user.
+
+- `Compatibility` option
+This option will apply CSS fixes depending on the fork you are using. Currently only MayhemYDG forks.
+
+
 ### v5.2.6
 *2014-05-06*
 
