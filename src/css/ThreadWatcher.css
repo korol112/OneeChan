@@ -70,9 +70,9 @@
   padding: 5px;
   margin-top: -7px;
   font-size: 14px;
-  color: " + $SS.theme.linkColor.hex + " !important;
-  background: " + $SS.theme.mainColor.hex + " !important;;
-  border: 2px solid " + $SS.theme.headerLColor.hex + " !important;
+  color: " + $SS.theme.linkColor.hex + ";
+  background: " + $SS.theme.mainColor.hex + ";
+  border: 2px solid " + $SS.theme.headerLColor.hex + ";
   border-radius: 3px;
 }
 :root.left-sidebar:root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::after {
@@ -89,6 +89,6 @@
   border-color: transparent " + $SS.theme.headerLColor.hex + " transparent transparent;
 }
 :root.left-sidebar:root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::before {
-  border-color: transparent transparent transparent " + $SS.theme.headerLColor.hex + " !important;
+  border-color: transparent transparent transparent " + $SS.theme.headerLColor.hex + ";
   margin-left: -15px;
 }
