@@ -243,6 +243,16 @@
         ],
         "Font Size": [13, "Set the general size of text (Pixels)."],
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
+        ":: Compatibility": ["header", ""],
+        "Version Fix": [
+            1, "Applies CSS fixes for different forks. Default is seadweed forks.", [{
+                name: "Default",
+                value: 1
+            }, {
+                name: "MayhemYDG",
+                value: 2
+            }], true
+        ],
         "Themes": [],
         "Hidden Themes": [],
         "Selected Theme": 13,
@@ -2675,10 +2685,9 @@
                 name: "Kuroko no Basuke",
                 hoffset: "25"
             }, {
-                img: "https://i.minus.com/iRgZeUpHDvoBK.png",
+                img: "https://i.minus.com/iMjBajUZWU1Hr.png",
                 "default": true,
-                name: "Kusanagi Motoko",
-                width: "300px"
+                name: "Kusanagi Motoko"
             }, {
                 img: "https://i.minus.com/ibwkO6nLTS8aQW.png",
                 "default": true,
@@ -2710,7 +2719,7 @@
                 "default": true,
                 name: "Nagase Iori"
             }, {
-                img: "https://i.minus.com/iCIerjt2uJEDq.png",
+                img: "https://i.minus.com/ibbIzKFszRwbP.png",
                 "default": true,
                 name: "Nagato Yuki",
                 hoffset: "25"
@@ -2728,9 +2737,9 @@
                 "default": true,
                 name: "Poko Fox"
             }, {
-                img: "https://i.minus.com/ipgBfm1ohzWii.png",
+                img: "https://i.minus.com/ibv1F7XYxcFwt5.png",
                 "default": true,
-                name: "Purple Heart",
+                name: "Purple Heart"
             }, {
                 img: "https://i.minus.com/ibdeMvwnCdYqPX.png",
                 "default": true,
@@ -2772,11 +2781,11 @@
             }, {
                 img: "https://i.minus.com/ibkuPHnJCOVF5y.png",
                 "default": true,
-                name: "Yoko",
+                name: "Yoko Littner",
                 height: "450px",
                 hoffset: "25"
             }, {
-                img: "http://i.minus.com/iV3J33s700ay9.png",
+                img: "https://i.minus.com/iboPx7pxI4QZcJ.png",
                 "default": true,
                 name: "Yukinoshita Yukino"
             }, {

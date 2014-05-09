@@ -1,0 +1,45 @@
+/* MayhemYDG/ihavenoface 4chan X v3*/
+/* Compatibility fixes for different 4chan X forks */
+/* Insert in Rice > Custom CSS */
+/* Some functionality of OneeChan might not work with this fork */
+:root.top-header body {
+  margin-bottom: 3em;
+}
+#nav-links {
+  margin-bottom: inherit;
+}
+#qr [type=submit] {
+  width: 29% !important;
+}
+:root.qr-background #qr > div {
+  display: none;
+}
+#overlay {
+  z-index: 900;
+}
+#qr input[type=submit] {
+  height: 24px!important;
+}
+.captcha-input.field {
+  width:300px;
+}
+#qr:not(.has-captcha) textarea {
+  min-height: 115px!important;
+}
+.riceCheck {
+  margin: 7px 3px 0 4px !important;
+}
+#navlinks {
+  top: 135px !important;
+}
+.boardBanner {
+  top: auto;
+}
+#qr .riceCheck, #qr input[type=checkbox] {
+margin: 0px 4px 0!important;
+}
+
+/* Thread Watcher */
+:root.threadwatcher-tree #thread-watcher {
+  margin-top: inherit;
+}
