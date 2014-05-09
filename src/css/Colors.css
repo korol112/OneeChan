@@ -6,7 +6,7 @@ div[style='float: right;'] {
 /* General */
 html,
 body,
-.boardBanner,
+div.boardBanner,
 #menu,
 input:not(.jsColor),
 textarea,
@@ -142,7 +142,7 @@ body {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
 .options-button:hover,
-.import-input:hover,
+.import-input:hover + .options-button,
 .pages strong>a:hover {
   background:rgb\(" + $SS.theme.mainColor.shiftRGB(15) + ");
 }

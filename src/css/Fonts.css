@@ -28,9 +28,9 @@
   font-size:12px !important;
 }
 /* Board Title */
-.boardTitle {
+.boardBanner .boardTitle {
   font-weight: 400 !important;
-  font-size:28px !important;
+  font-size: 28px !important;
 }
 /* Code Tags */
 .prettyprint span {
@@ -94,6 +94,9 @@ a.options-button,
 .option.header .option-title,
 a.current {
   font-weight: " + ($SS.conf["Bitmap Font"] ? 4 : 7) + "00 !important;
+}
+.qr-link {
+  font-weight: normal;
 }
 /* Font Style */
 .summary {

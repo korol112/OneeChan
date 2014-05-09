@@ -6,7 +6,7 @@ body {
   margin-bottom: 0;
 }
 /* Fix margin top when fixed top header */
-.hasDropDownNav,
+body.hasDropDownNav,
 :root.show-ads .ad-cnt {
   margin-top: auto !important;
 }
@@ -327,6 +327,10 @@ hr {
 #unread-line {
   margin-top: -3px !important;
   margin-bottom: -3px !important;
+}
+/* Scroll Marker */
+:root:not(.autohide) #scroll-marker {
+ pointer-events: none !important;
 }
 /* Board Title */
 .boardBanner .boardTitle {

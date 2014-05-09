@@ -33,7 +33,7 @@ iframe[src='about:blank'],
 hr:not(#unread-line),
 :root.hide-navlinkbot .navLinks.navLinksBot.desktop,
 :root.hide-navlinks .navLinks,
-:root.hide-navlinks .desktop:not(.title):not(.postNum):not(.summary):not(.postInfo):not(.pagelist),
+:root.hide-navlinks body > .desktop:not(.pagelist),
 .ad-plea,
 #mascot img[src=''],
 .exif:not([style]) {
