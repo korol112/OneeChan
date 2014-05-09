@@ -17,12 +17,6 @@
 #overlay {
   z-index: 900;
 }
-:root.left-sidebar.fourchan_x body {
-  padding-left: 303px !important;
-}
-:root.right-sidebar.fourchan_x body {
-  padding-right: 303px !important;
-}
 #qr input[type=submit] {
   height: 24px!important;
 }
@@ -41,14 +35,11 @@
 .boardBanner {
   top: auto;
 }
-#header-bar {
-  position: static !important;
+#qr .riceCheck, #qr input[type=checkbox] {
+margin: 0px 4px 0!important;
 }
+
 /* Thread Watcher */
 :root.threadwatcher-tree #thread-watcher {
   margin-top: inherit;
-}
-/* Fixed Thread Watcher */
-#thread-watcher {
-  position: fixed !important;
 }
