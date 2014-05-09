@@ -2599,11 +2599,6 @@
                 "default": true,
                 name: "Cirno"
             }, {
-                img: "https://i.imgur.com/2Z2Dpgi.png",
-                "default": true,
-                name: "Cirno Head",
-                width: "300px"
-            }, {
                 img: "https://i.minus.com/ibc2GhW4AW6tYy.png",
                 "default": true,
                 name: "Fubuki Atsuya"
@@ -2680,7 +2675,7 @@
                 name: "Kuroko no Basuke",
                 hoffset: "25"
             }, {
-                img: "http://i.imgur.com/Z85TPvG.png",
+                img: "https://i.minus.com/iRgZeUpHDvoBK.png",
                 "default": true,
                 name: "Kusanagi Motoko",
                 width: "300px"
@@ -2715,7 +2710,7 @@
                 "default": true,
                 name: "Nagase Iori"
             }, {
-                img: "https://i.minus.com/ibndIkldw4njbD.png",
+                img: "https://i.minus.com/iCIerjt2uJEDq.png",
                 "default": true,
                 name: "Nagato Yuki",
                 hoffset: "25"
@@ -2724,7 +2719,7 @@
                 "default": true,
                 name: "Nakano Azusa"
             }, {
-                img: "https://i.minus.com/ibnOEAxXaKlctB.png",
+                img: "https://i.minus.com/iBvqnYscczL3D.png",
                 "default": true,
                 name: "Patchouli Knowledge",
                 width: "250px"
@@ -2733,7 +2728,7 @@
                 "default": true,
                 name: "Poko Fox"
             }, {
-                img: "https://i.minus.com/ibewnKH8wXWaXC.png",
+                img: "https://i.minus.com/ipgBfm1ohzWii.png",
                 "default": true,
                 name: "Purple Heart",
             }, {
@@ -2751,6 +2746,10 @@
                 name: "Saber",
                 height: "500px",
                 hoffset: "25"
+            }, {
+                img: "http://i.minus.com/iASvr0zsZHBMm.png",
+                "default": true,
+                name: "Sakamoto-san",
             }, {
                 img: "https://i.minus.com/izQNQ4akphZWn.png",
                 "default": true,
@@ -2776,6 +2775,10 @@
                 name: "Yoko",
                 height: "450px",
                 hoffset: "25"
+            }, {
+                img: "http://i.minus.com/iV3J33s700ay9.png",
+                "default": true,
+                name: "Yukinoshita Yukino"
             }, {
                 img: "https://i.minus.com/iGxFTTdgRFHPi.png",
                 "default": true,
