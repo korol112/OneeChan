@@ -1,7 +1,5 @@
-/* MayhemYDG/ihavenoface 4chan X v3*/
+/* MayhemYDG 4chan X v3*/
 /* Compatibility fixes for different 4chan X forks */
-/* Insert in Rice > Custom CSS */
-/* Some functionality of OneeChan might not work with this fork */
 :root.top-header body {
   margin-bottom: 3em;
 }

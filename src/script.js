@@ -1035,9 +1035,9 @@
                             "<p class='buttons-container'>" +
                             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span title='Thanks to ahodesuka, seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank'>Update</a><span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank'>Changelog</a><span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank'>Issues</a></p>",
+                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/") + "' id=update-link target='_blank' title='OneeChan gets updated automatically.'>Github</a><span class=link-delim> | </span>" +
+                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the Changelog.'>Changelog</a><span class=link-delim> | </span>" +
+                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report any Issue.'>Issues</a></p>",
                         key, val, des;
 
                     for (key in defaultConfig) {

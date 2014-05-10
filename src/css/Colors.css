@@ -229,6 +229,9 @@ textarea,
   border-width: 1px;
   border-color: rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-15) + ") rgb\(" + $SS.theme.mainColor.shiftRGB(-30) + ") !important;
 }
+a.quotelink.forwardlink, a.backlink.forwardlink {
+  border-bottom: 1px dashed;
+}
 input:focus,
 textarea:focus,
 #qr-filename-container:focus {
