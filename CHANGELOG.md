@@ -1,3 +1,12 @@
+### v5.2.8
+*2014-05-09*
+
+- I knew I forgot someone in the mascots
+- Fix TW sidebar in MayhemYDG
+- Fix bottom margin when bottom header in MayhemYDG
+- Fix TW borders not responding to `Borders` option
+
+
 ### v5.2.7
 *2014-05-07*
 

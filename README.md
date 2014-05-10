@@ -21,7 +21,7 @@ Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 - [seaweedchan](https://github.com/seaweedchan/4chan-x) /// `Compatible`
 - [Spittie](https://github.com/Spittie/4chan-x) /// `Compatible`
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// Compatible
-- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// Compatible
+- [ihavenoface](https://github.com/ihavenoface/4chan-x) /// No
 - [loadletter](https://github.com/loadletter/4chan-x) /// No
 - [inline](https://boards.4chan.org/) /// No
 

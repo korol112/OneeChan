@@ -188,10 +188,12 @@ hr {
   border-width: 0 1px 1px 0;
   border-style: solid;
 }
-:root.borders-all .reply {
-  border-width: 1px;
+:root.borders-all .reply,
+:root.borders-all:root.threadwatcher-tree #thread-watcher {
+  border-width: 1px !important;
 }
-:root.borders-none .reply {
+:root.borders-none .reply,
+:root.borders-none:root.threadwatcher-tree #thread-watcher {
   border-width: 0;
 }
 :root.rounded-corners .reply,

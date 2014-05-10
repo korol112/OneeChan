@@ -245,7 +245,7 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
         "Version Fix": [
-            1, "Applies CSS fixes for different forks. Default is seadweed forks.", [{
+            1, "Applies CSS fixes for different forks. Default is seaweed forks.", [{
                 name: "Default",
                 value: 1
             }, {
@@ -2700,6 +2700,10 @@
                 img: "https://i.minus.com/iHnv6bBdH3ElF.png",
                 "default": true,
                 name: "Megurine Luka"
+            }, {
+                img: "http://i5.minus.com/iDDCg5RKMKZvi.png",
+                "default": true,
+                name: "Mikasa Ackerman"
             }, {
                 img: "https://i.minus.com/irUUuK1WcX8X8.png",
                 "default": true,
