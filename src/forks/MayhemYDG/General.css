@@ -73,3 +73,8 @@
 :root.left-sidebar:root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::before {
   margin-left: -24px;
 }
+/* Bottom Controls */
+.bottomCtrl.desktop {
+  float: right;
+  margin-bottom: 28px;
+}

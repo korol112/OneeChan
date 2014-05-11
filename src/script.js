@@ -771,7 +771,10 @@
 
         riceCheck: function() {
             return this.each(function() {
-                var click = function(e) { e.preventDefault(); this.previousSibling.click(); };
+                var click = function(e) {
+                    e.preventDefault();
+                    this.previousSibling.click();
+                };
                 if (this.isRiced) return;
                 else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
                     return $(this.nextSibling).bind("click", click);
@@ -792,180 +795,163 @@
     /* END STYLE SCRIPT LIBRARY */
 
     /* STYLE SCRIPT CLASSES & METHODS */
-  $SS =
-  {
-    browser: { },
-    DOMLoaded: function(reload) {
-      $SS.classes.init();
+    $SS = {
+        browser: {},
+        DOMLoaded: function(reload) {
+            $SS.classes.init();
 
-      if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
-        document.head.innerHTML = document.head.innerHTML;
+            var div;
+            if (reload !== true) {
+                $SS.options.init();
+                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
+                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
-      var div;
+                var MutationObserver = window.MutationObserver;
+                var observer = new MutationObserver(function(mutations) {
+                    var i, j, MAX, _MAX, nodes;
 
-      if (reload !== true) {
-        $SS.options.init();
+                    for (i = 0, MAX = mutations.length; i < MAX; ++i) {
+                        nodes = mutations[i].addedNodes;
 
-        $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
+                        for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
+                            if (nodes[j].nodeType !== 3)
+                                $("input[type=checkbox]", nodes[j]).riceCheck();
+                    }
+                });
 
-        if (!$SS.browser.webkit)
-          $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+                observer.observe(document, {
+                    childList: true,
+                    subtree: true
+                });
 
-        var MutationObserver = window.MutationObserver;
-        var observer = new MutationObserver(function(mutations) {
-          var i, j, MAX, _MAX, nodes;
+                if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
+                    if ((link = $("link[title][rel='stylesheet']")).exists())
+                        link.each(function() {
+                            $(this).attr("href", "");
+                        });
 
-          for (i = 0, MAX = mutations.length; i < MAX; ++i) {
-            nodes = mutations[i].addedNodes;
+                if ((div = $("#globalMessage *[style]")).exists())
+                    div.each(function() {
+                        $(this).attr("style", "");
+                    });
 
-            for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
-              if (nodes[j].nodeType !== 3)
-                $("input[type=checkbox]", nodes[j]).riceCheck();
+                if ((div = $(".closeIcon")).exists()) {
+                    div.text("x");
+                };
 
-          }
-        });
+                // things that need to change after 4chan X loads.
+                setTimeout(function() {
+                    if (!$SS.QRhandled && (div = $("#qr")).exists())
+                        $SS.QRDialogCreationHandler({
+                            target: div
+                        });
+                });
 
-        observer.observe(document, { childList: true, subtree: true });
+            }
 
-        if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
-          if ((link = $("link[title][rel='stylesheet']")).exists())
-            link.each(function() { $(this).attr("href", ""); });
+            $SS.insertMascot();
+            $SS.pages.init();
+            $SS.riceInputs.init();
 
-        if ((div = $("#globalMessage *[style]")).exists())
-          div.each(function() { $(this).attr("style", ""); });
+        },
+        init: function(reload) {
+            if (!reload) {
+                if (/^about:neterror/.test(document.documentURI)) return;
+                localStorage["4chan-settings"] = "{ \"disableAll\" : true }";
 
-        if ((div = $(".closeIcon")).exists()) {
-          div.text("x");
-        };
+                var m_VERSION;
+                $SS.browser.webkit = /AppleWebKit/.test(navigator.userAgent);
+                $SS.browser.gecko = /Gecko\//.test(navigator.userAgent);
+                $SS.location = $SS.getLocation();
 
-        // things that need to change after 4chan X loads.
-        setTimeout(function() {
-          if (!$SS.QRhandled && (div = $("#qr")).exists())
-            $SS.QRDialogCreationHandler({ target: div });
-        });
+                // correct selected theme/mascot after updating
+                // and the number defaults has changed.
+                if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION) {
+                    var ntMascots = $SS.Mascots.defaults.length, // new total
+                        ntThemes = $SS.Themes.defaults.length,
+                        otMascots = $SS.Config.get("Total Mascots"), // old total
+                        otThemes = $SS.Config.get("Total Themes"),
+                        sMascots = $SS.Config.get("Selected Mascots"),
+                        sTheme = $SS.Config.get("Selected Theme");
 
-      }
-      
-      $SS.insertMascot()
-      $SS.pages.init();
-      $SS.riceInputs.init();
-      
-    },
-    init: function(reload)
-    {
-      if (!reload)
-      {
-        if (/^about:neterror/.test(document.documentURI)) return;
-        localStorage["4chan-settings"] = "{ \"disableAll\" : true }";
+                    if (otMascots !== ntMascots && otMascots != undefined) {
+                        var mDiff = ntMascots - otMascots;
 
-        var m_VERSION;
-        $SS.browser.webkit = /AppleWebKit/.test(navigator.userAgent);
-        $SS.browser.gecko = /Gecko\//.test(navigator.userAgent);
-        $SS.location = $SS.getLocation();
+                        for (var i = 0, MAX = sMascots.length; i < MAX; ++i)
+                            if (sMascots[i] < otMascots) break;
+                            else sMascots[i] += mDiff;
 
-        // correct selected theme/mascot after updating
-        // and the number defaults has changed.
-        if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION)
-        {
-          var ntMascots = $SS.Mascots.defaults.length, // new total
-            ntThemes = $SS.Themes.defaults.length,
-            otMascots = $SS.Config.get("Total Mascots"), // old total
-            otThemes = $SS.Config.get("Total Themes"),
-            sMascots = $SS.Config.get("Selected Mascots"),
-            sTheme = $SS.Config.get("Selected Theme");
+                        $SS.Config.set("Selected Mascots", sMascots);
+                    }
 
-          if (otMascots !== ntMascots && otMascots != undefined)
-          {
-            var mDiff = ntMascots - otMascots;
+                    if (otThemes !== ntThemes && otThemes != undefined && sTheme >= otThemes) {
+                        sTheme += ntThemes - otThemes;
+                        $SS.Config.set("Selected Theme", sTheme);
+                    }
 
-            for (var i = 0, MAX = sMascots.length; i < MAX; ++i)
-              if (sMascots[i] < otMascots) break;
-              else sMascots[i] += mDiff;
+                    $SS.Config.set("VERSION", VERSION);
+                    $SS.Config.set("Total Mascots", ntMascots);
+                    $SS.Config.set("Total Themes", ntThemes);
+                }
+            }
 
-            $SS.Config.set("Selected Mascots", sMascots);
-          }
+            $SS.Config.init();
+            $SS.Themes.init();
+            $SS.Mascots.init();
 
-          if (otThemes !== ntThemes && otThemes != undefined && sTheme >= otThemes)
-          {
-            sTheme += ntThemes - otThemes;
-            $SS.Config.set("Selected Theme", sTheme);
-          }
+            if (reload) {
+                $SS.insertCSS();
+                $SS.DOMLoaded(true);
+            } else {
+                $.asap((function() {
+                    return $("link[rel=stylesheet]", document.head).exists();
+                }), $SS.insertCSS);
+                if (/complete|interactive/.test(document.readyState))
+                    $SS.DOMLoaded();
+                else
+                    $(document).bind("DOMContentLoaded", $SS.DOMLoaded);
+            }
 
-          $SS.Config.set("VERSION", VERSION);
-          $SS.Config.set("Total Mascots", ntMascots);
-          $SS.Config.set("Total Themes", ntThemes);
-        }
-      }
-      
-      $SS.Config.init();
-      $SS.Themes.init();
-      $SS.Mascots.init();
+        },
 
-      if (reload)
-      {
-        $SS.insertCSS();
-        $SS.DOMLoaded(true);
-      }
-      else
-      {
-        $.asap((function() { return $("link[rel=stylesheet]", document.head).exists();}), $SS.insertCSS);
-        if (/complete|interactive/.test(document.readyState))
-          $SS.DOMLoaded();
-        else
-          $(document).bind("DOMContentLoaded", $SS.DOMLoaded);
-      }
+        /* STYLING & DOM */
+        insertCSS: function() {
+            var css;
 
-    },
-
-    /* STYLING & DOM */
-    insertCSS: function()
-    {
-      var css;
-
-      $SS.bHideSidebar = $SS.location.sub !== "boards" ||
+            $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-      css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
-      if ($("#ch4SS").exists())
-        $("#ch4SS").text(css);
-      else
-        $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
-    },
-    insertMascot: function()
-    {
-      var createMascot;
+            css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
+            if ($("#ch4SS").exists())
+                $("#ch4SS").text(css);
+            else
+                $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
+        },
+        insertMascot: function() {
+            var createMascot;
 
-      createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
-      if ((div = $("#mascot")).exists())
-        div.replace(createMascot);
-      else
-        $(document.body).append(createMascot);
-    },
-    QRDialogCreationHandler: function(e)
-    {
-      var qr = e.target;
+            createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
+            if ((div = $("#mascot")).exists())
+                div.replace(createMascot);
+            else
+                $(document.body).append(createMascot);
+        },
+        QRDialogCreationHandler: function(e) {
+            var qr = e.target;
 
-      if (!$SS.browser.webkit)
-        $("input[type=checkbox]", qr).riceCheck();
+            if (!$SS.browser.webkit)
+                $("input[type=checkbox]", qr).riceCheck();
 
-      if ($SS.conf["Secret Name Field"])
-        $(".field[name=name]").each(function() {
-          $(this).after($("<input class='secret field' placeholder=Name>"));
-        });
-
-      $SS.QRhandled = true;
-    },
-    NodeInsertionHandler: function(e)
-    {
-      var settings = e.target;
-
-      $("input[type=checkbox]", settings).riceCheck();
-    },
-    AddMenuHandler: function(e)
-    {
-      /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
-      $("#header-bar .menu-button").click();
-      $("#header-bar .menu-button").click();
-    },
+            $SS.QRhandled = true;
+        },
+        NodeInsertionHandler: function(e) {
+            var settings = e.target;
+            $("input[type=checkbox]", settings).riceCheck();
+        },
+        AddMenuHandler: function(e) {
+            /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
+            $("#header-bar .menu-button").click();
+            $("#header-bar .menu-button").click();
+        },
         /* CONFIG */
         Config: {
             hasGM: typeof GM_deleteValue !== "undefined",
@@ -1049,7 +1035,7 @@
                             "<p class='buttons-container'>" +
                             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span title='Thanks to ahodesuka, seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/") + "' id=update-link target='_blank' title='OneeChan should update automatically.'>Update</a><span class=link-delim> | </span>" +
+                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/releases") + "' id=update-link target='_blank' title='OneeChan updates automatically.'>Update</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
                             "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
                         key, val, des;
@@ -2907,24 +2893,17 @@
                 }
             }
         },
-        riceInputs:
-        {
-          hasInit: false,
-          init: function() {
-            if (!this.hasInit) {
-              if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"])
-                $("input[type=checkbox]").riceCheck();
-
-              return this.hasInit = true;
+        riceInputs: {
+            hasInit: false,
+            init: function() {
+                if (!this.hasInit) {
+                    if ($SS.conf["Show Checkboxes"] && !$(".postInfo>.riceCheck").exists())
+                        $("input[type=checkbox]").riceCheck();
+                    return this.hasInit = true;
+                } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
+                        return this.hasInit = false;
+                }
             }
-            else if (!$SS.browser.webkit &&
-                 !$SS.conf["Hide Checkboxes"] &&
-                 !$(".postInfo>.riceCheck").exists())
-            {
-              $("input[type=checkbox]").riceCheck();
-              return this.hasInit = false;
-            }
-          }
         },
         jscolor: {
             getElementPos: function(e) {
