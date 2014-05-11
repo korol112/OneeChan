@@ -12,21 +12,21 @@ div.post div.file .fileThumb {
 .postContainer {
   display: block;
 }
+.fixed.bottom-header.thread body{
+  padding-bottom: 0em;
+  padding-top: 0.1em;
+}
 .fixed.bottom-header.index body {
   padding-bottom: 4.5em;
   padding-top: 0.1em;
 }
-.fixed.bottom-header.thread body {
-  padding-bottom: 2em;
-  padding-top: 0.1em;
-}
 .fixed.top-header.index body {
-  padding-top: 2.2em ;
-  padding-bottom: 3em;
+  padding-bottom: 2.5em;
+  padding-top: 2.2em;
 }
 .fixed.top-header.thread body {
+  padding-bottom: 0em; 
   padding-top: 2.2em;
-  padding-bottom: 0;
 }
 .fixed.top-header.catalog body {
   padding-top: 2.2em;
@@ -113,19 +113,17 @@ table {
 .topad {
   margin-bottom: 20px !important;
 }
-.fixed.bottom-header.index .bottomCtrl.desktop {
+/* Bottom Controls */
+.bottomCtrl.desktop{
   float: right;
-  margin-bottom: 28px;
 }
-.fixed.bottom-header.thread .bottomCtrl.desktop {
+.fixed.bottom-header.index .bottomCtrl.desktop,
+.fixed.bottom-header.thread .bottomCtrl.desktop{
   float: right;
   margin-bottom: 35px;
 }
-.fixed.top-header.thread .bottomCtrl.desktop {
-  float: right;
-  margin-bottom: 4px;
-}
+.fixed.top-header.thread .bottomCtrl.desktop,
 .fixed.top-header.index .bottomCtrl.desktop {
   float: right;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }

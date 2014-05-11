@@ -74,7 +74,11 @@
   margin-left: -24px;
 }
 /* Bottom Controls */
-.bottomCtrl.desktop {
+.bottom-header .bottomCtrl.desktop {
   float: right;
-  margin-bottom: 28px;
+  margin-bottom: 35px;
+}
+.top-header .bottomCtrl.desktop {
+  float: right;
+  margin-bottom: 4px;
 }
