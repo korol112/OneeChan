@@ -1,3 +1,10 @@
+### v5.2.9
+*2014-05-11*
+
+- Differentiate between index and thread margins
+- Fix You/Own posts highlight not being tied to 4chan X options
+- Justified preview text in the catalog
+
 ### v5.2.8
 *2014-05-09*
 
