@@ -5,8 +5,8 @@
 :root.hl-outline .post.reply {
   outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
 }
-.yourPost > .reply, 
-.quotesYou > .reply {
+:root.highlight-own .yourPost > .reply, 
+:root.highlight-you .quotesYou > .reply {
   border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
   border-top-color: rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
   border-bottom-color: rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;

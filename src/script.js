@@ -799,10 +799,10 @@
         browser: {},
         DOMLoaded: function(reload) {
             $SS.classes.init();
+            $SS.options.init();
 
             var div;
             if (reload !== true) {
-                $SS.options.init();
                 $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
                 $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
@@ -1035,9 +1035,9 @@
                             "<p class='buttons-container'>" +
                             "<a class='options-button' name=Export>Export</a><a class='options-button' id='import-settings'><input type=file class='import-input' riced=true accept='application/json'>Import</a><a class='options-button' name=resetSettings>Reset</a>" +
                             "<span id=oneechan-version><span title='Thanks to ahodesuka, seaweedchan, Spittie and everyone else involved in this project!'>OneeChan</span> v" + VERSION + "<span class=link-delim> | </span>" +
-                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/") + "' id=update-link target='_blank' title='OneeChan gets updated automatically.'>Github</a><span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the Changelog.'>Changelog</a><span class=link-delim> | </span>" +
-                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report any Issue.'>Issues</a></p>",
+                            "<a href='" + ("https://github.com/Nebukazar/OneeChan/") + "' id=update-link target='_blank' title='OneeChan should update automatically.'>Update</a><span class=link-delim> | </span>" +
+                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CHANGELOG.md' id=changelog-link target='_blank' title='Read the changelog.'>Changelog</a><span class=link-delim> | </span>" +
+                            "<a href='https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#reporting-bugs-and-suggestions' id=issues-link target='_blank' title='Report an issue.'>Issues</a></p>",
                         key, val, des;
 
                     for (key in defaultConfig) {
@@ -1339,7 +1339,7 @@
                     p = $("<p class='buttons-container'>");
 
                 p.append($("<a class='options-button' name=addMascot>Add", tOptions).bind("click", $SS.options.showMascot));
-                p.append($("<a class='options-button' href='http://appchan.booru.org/index.php?page=post&s=list' target='_blank'>More Mascots"));
+                p.append($("<a class='options-button' href='http://appchan.booru.org/' target='_blank'>More Mascots"));
                 p.append($("<a class='options-button' name=restoreMascots title='Restore hidden default mascots'>Restore", tOptions)
                     .bind("click", function() {
                         $SS.conf["Hidden Mascots"] = [];
