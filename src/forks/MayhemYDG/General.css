@@ -4,16 +4,16 @@
   margin-bottom: 3em;
 }
 :root.bottom-header body {
-margin-bottom: 5em;
+  margin-bottom: 5em;
 }
-#header-bar {
+ #header-bar {
   position: static !important;
-}
+ }
 #nav-links {
   margin-bottom: inherit;
 }
 #qr [type=submit] {
-  width: 29% !important;
+  width: 19% !important;
 }
 :root.qr-background #qr > div {
   display: none;
@@ -55,6 +55,9 @@ margin-bottom: 5em;
 }
 :root.threadwatcher-tree #thread-watcher .move {
   font-size: 13px;
+}
+:root.threadwatcher-tree #thread-watcher #menu {
+  text-align: left !important;
 }
 /* Right Sidebar */
 :root.right-sidebar:root.threadwatcher-tree.fourchan-x body {

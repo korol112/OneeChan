@@ -245,7 +245,7 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
         "Version Fix": [
-            1, "Applies CSS fixes for different forks. Default is seaweed forks.", [{
+            1, "Applies CSS fixes for different forks. Default is for seaweed forks.", [{
                 name: "Default",
                 value: 1
             }, {
@@ -771,10 +771,7 @@
 
         riceCheck: function() {
             return this.each(function() {
-                var click = function(e) {
-                    e.preventDefault();
-                    this.previousSibling.click();
-                };
+                var click = function(e) { e.preventDefault(); this.previousSibling.click(); };
                 if (this.isRiced) return;
                 else if (this.nextSibling != undefined && this.nextSibling.className === "riceCheck")
                     return $(this.nextSibling).bind("click", click);
@@ -795,163 +792,180 @@
     /* END STYLE SCRIPT LIBRARY */
 
     /* STYLE SCRIPT CLASSES & METHODS */
-    $SS = {
-        browser: {},
-        DOMLoaded: function(reload) {
-            $SS.classes.init();
-            $SS.options.init();
+  $SS =
+  {
+    browser: { },
+    DOMLoaded: function(reload) {
+      $SS.classes.init();
 
-            var div;
-            if (reload !== true) {
-                $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
-                $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
+      if ($SS.location.sub === "sys") // fix for firefux on report popups that have setTimeout.
+        document.head.innerHTML = document.head.innerHTML;
 
-                var MutationObserver = window.MutationObserver;
-                var observer = new MutationObserver(function(mutations) {
-                    var i, j, MAX, _MAX, nodes;
+      var div;
 
-                    for (i = 0, MAX = mutations.length; i < MAX; ++i) {
-                        nodes = mutations[i].addedNodes;
+      if (reload !== true) {
+        $SS.options.init();
 
-                        for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
-                            if (nodes[j].nodeType !== 3)
-                                $("input[type=checkbox]", nodes[j]).riceCheck();
-                    }
-                });
+        $(document).bind("QRDialogCreation", $SS.QRDialogCreationHandler);
 
-                observer.observe(document, {
-                    childList: true,
-                    subtree: true
-                });
+        if (!$SS.browser.webkit)
+          $(document).bind("OpenSettings", $SS.NodeInsertionHandler).bind("AddMenuEntry", $SS.AddMenuHandler).bind("ThreadUpdate", $SS.NodeInsertionHandler);
 
-                if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
-                    if ((link = $("link[title][rel='stylesheet']")).exists())
-                        link.each(function() {
-                            $(this).attr("href", "");
-                        });
+        var MutationObserver = window.MutationObserver;
+        var observer = new MutationObserver(function(mutations) {
+          var i, j, MAX, _MAX, nodes;
 
-                if ((div = $("#globalMessage *[style]")).exists())
-                    div.each(function() {
-                        $(this).attr("style", "");
-                    });
+          for (i = 0, MAX = mutations.length; i < MAX; ++i) {
+            nodes = mutations[i].addedNodes;
 
-                if ((div = $(".closeIcon")).exists()) {
-                    div.text("x");
-                };
+            for (j = 0, _MAX = nodes.length; i < _MAX; ++i)
+              if (nodes[j].nodeType !== 3)
+                $("input[type=checkbox]", nodes[j]).riceCheck();
 
-                // things that need to change after 4chan X loads.
-                setTimeout(function() {
-                    if (!$SS.QRhandled && (div = $("#qr")).exists())
-                        $SS.QRDialogCreationHandler({
-                            target: div
-                        });
-                });
+          }
+        });
 
-            }
+        observer.observe(document, { childList: true, subtree: true });
 
-            $SS.insertMascot();
-            $SS.pages.init();
-            $SS.riceInputs.init();
+        if ((!(html = $("*[xmlns]")).exists()) && (!(ctxmenu = $("#ctxmenu-main").exists())))
+          if ((link = $("link[title][rel='stylesheet']")).exists())
+            link.each(function() { $(this).attr("href", ""); });
 
-        },
-        init: function(reload) {
-            if (!reload) {
-                if (/^about:neterror/.test(document.documentURI)) return;
-                localStorage["4chan-settings"] = "{ \"disableAll\" : true }";
+        if ((div = $("#globalMessage *[style]")).exists())
+          div.each(function() { $(this).attr("style", ""); });
 
-                var m_VERSION;
-                $SS.browser.webkit = /AppleWebKit/.test(navigator.userAgent);
-                $SS.browser.gecko = /Gecko\//.test(navigator.userAgent);
-                $SS.location = $SS.getLocation();
+        if ((div = $(".closeIcon")).exists()) {
+          div.text("x");
+        };
 
-                // correct selected theme/mascot after updating
-                // and the number defaults has changed.
-                if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION) {
-                    var ntMascots = $SS.Mascots.defaults.length, // new total
-                        ntThemes = $SS.Themes.defaults.length,
-                        otMascots = $SS.Config.get("Total Mascots"), // old total
-                        otThemes = $SS.Config.get("Total Themes"),
-                        sMascots = $SS.Config.get("Selected Mascots"),
-                        sTheme = $SS.Config.get("Selected Theme");
+        // things that need to change after 4chan X loads.
+        setTimeout(function() {
+          if (!$SS.QRhandled && (div = $("#qr")).exists())
+            $SS.QRDialogCreationHandler({ target: div });
+        });
 
-                    if (otMascots !== ntMascots && otMascots != undefined) {
-                        var mDiff = ntMascots - otMascots;
+      }
+      
+      $SS.insertMascot()
+      $SS.pages.init();
+      $SS.riceInputs.init();
+      
+    },
+    init: function(reload)
+    {
+      if (!reload)
+      {
+        if (/^about:neterror/.test(document.documentURI)) return;
+        localStorage["4chan-settings"] = "{ \"disableAll\" : true }";
 
-                        for (var i = 0, MAX = sMascots.length; i < MAX; ++i)
-                            if (sMascots[i] < otMascots) break;
-                            else sMascots[i] += mDiff;
+        var m_VERSION;
+        $SS.browser.webkit = /AppleWebKit/.test(navigator.userAgent);
+        $SS.browser.gecko = /Gecko\//.test(navigator.userAgent);
+        $SS.location = $SS.getLocation();
 
-                        $SS.Config.set("Selected Mascots", sMascots);
-                    }
+        // correct selected theme/mascot after updating
+        // and the number defaults has changed.
+        if ((m_VERSION = $SS.Config.get("VERSION")) !== VERSION)
+        {
+          var ntMascots = $SS.Mascots.defaults.length, // new total
+            ntThemes = $SS.Themes.defaults.length,
+            otMascots = $SS.Config.get("Total Mascots"), // old total
+            otThemes = $SS.Config.get("Total Themes"),
+            sMascots = $SS.Config.get("Selected Mascots"),
+            sTheme = $SS.Config.get("Selected Theme");
 
-                    if (otThemes !== ntThemes && otThemes != undefined && sTheme >= otThemes) {
-                        sTheme += ntThemes - otThemes;
-                        $SS.Config.set("Selected Theme", sTheme);
-                    }
+          if (otMascots !== ntMascots && otMascots != undefined)
+          {
+            var mDiff = ntMascots - otMascots;
 
-                    $SS.Config.set("VERSION", VERSION);
-                    $SS.Config.set("Total Mascots", ntMascots);
-                    $SS.Config.set("Total Themes", ntThemes);
-                }
-            }
+            for (var i = 0, MAX = sMascots.length; i < MAX; ++i)
+              if (sMascots[i] < otMascots) break;
+              else sMascots[i] += mDiff;
 
-            $SS.Config.init();
-            $SS.Themes.init();
-            $SS.Mascots.init();
+            $SS.Config.set("Selected Mascots", sMascots);
+          }
 
-            if (reload) {
-                $SS.insertCSS();
-                $SS.DOMLoaded(true);
-            } else {
-                $.asap((function() {
-                    return $("link[rel=stylesheet]", document.head).exists();
-                }), $SS.insertCSS);
-                if (/complete|interactive/.test(document.readyState))
-                    $SS.DOMLoaded();
-                else
-                    $(document).bind("DOMContentLoaded", $SS.DOMLoaded);
-            }
+          if (otThemes !== ntThemes && otThemes != undefined && sTheme >= otThemes)
+          {
+            sTheme += ntThemes - otThemes;
+            $SS.Config.set("Selected Theme", sTheme);
+          }
 
-        },
+          $SS.Config.set("VERSION", VERSION);
+          $SS.Config.set("Total Mascots", ntMascots);
+          $SS.Config.set("Total Themes", ntThemes);
+        }
+      }
+      
+      $SS.Config.init();
+      $SS.Themes.init();
+      $SS.Mascots.init();
 
-        /* STYLING & DOM */
-        insertCSS: function() {
-            var css;
+      if (reload)
+      {
+        $SS.insertCSS();
+        $SS.DOMLoaded(true);
+      }
+      else
+      {
+        $.asap((function() { return $("link[rel=stylesheet]", document.head).exists();}), $SS.insertCSS);
+        if (/complete|interactive/.test(document.readyState))
+          $SS.DOMLoaded();
+        else
+          $(document).bind("DOMContentLoaded", $SS.DOMLoaded);
+      }
 
-            $SS.bHideSidebar = $SS.location.sub !== "boards" ||
+    },
+
+    /* STYLING & DOM */
+    insertCSS: function()
+    {
+      var css;
+
+      $SS.bHideSidebar = $SS.location.sub !== "boards" ||
                 $SS.location.board === "f";
-            css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
-            if ($("#ch4SS").exists())
-                $("#ch4SS").text(css);
-            else
-                $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
-        },
-        insertMascot: function() {
-            var createMascot;
+      css = "<%= grunt.file.read('tmp/style.min.css').replace(/\\(^\")/g, '') %>";
+      if ($("#ch4SS").exists())
+        $("#ch4SS").text(css);
+      else
+        $(document.head).append($("<style type='text/css' id=ch4SS>").text(css));
+    },
+    insertMascot: function()
+    {
+      var createMascot;
 
-            createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
-            if ((div = $("#mascot")).exists())
-                div.replace(createMascot);
-            else
-                $(document.body).append(createMascot);
-        },
-        QRDialogCreationHandler: function(e) {
-            var qr = e.target;
+      createMascot = $("<div id=mascot><img src=" + ($SS.mascot.img.get() !== "none " ? $SS.mascot.img.get() : "") + ">");
+      if ((div = $("#mascot")).exists())
+        div.replace(createMascot);
+      else
+        $(document.body).append(createMascot);
+    },
+    QRDialogCreationHandler: function(e)
+    {
+      var qr = e.target;
 
-            if (!$SS.browser.webkit)
-                $("input[type=checkbox]", qr).riceCheck();
+      if (!$SS.browser.webkit)
+        $("input[type=checkbox]", qr).riceCheck();
 
-            $SS.QRhandled = true;
-        },
-        NodeInsertionHandler: function(e) {
-            var settings = e.target;
-            $("input[type=checkbox]", settings).riceCheck();
-        },
-        AddMenuHandler: function(e) {
-            /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
-            $("#header-bar .menu-button").click();
-            $("#header-bar .menu-button").click();
-        },
+      if ($SS.conf["Secret Name Field"])
+        $(".field[name=name]").each(function() {
+          $(this).after($("<input class='secret field' placeholder=Name>"));
+        });
+
+      $SS.QRhandled = true;
+    },
+    NodeInsertionHandler: function(e)
+    {
+      var settings = e.target;
+
+      $("input[type=checkbox]", settings).riceCheck();
+    },
+    AddMenuHandler: function(e)
+    {
+      /* When AddMenuEntry is called by scripts like ExLinks it messes with riceCheck until we open and close the menu */
+      $("#header-bar .menu-button").click();
+      $("#header-bar .menu-button").click();
+    },
         /* CONFIG */
         Config: {
             hasGM: typeof GM_deleteValue !== "undefined",
@@ -2893,17 +2907,24 @@
                 }
             }
         },
-        riceInputs: {
-            hasInit: false,
-            init: function() {
-                if (!this.hasInit) {
-                    if ($SS.conf["Show Checkboxes"])
-                        $("input[type=checkbox]").riceCheck();
-                    return this.hasInit = true;
-                } else if ($SS.conf["Show Checkboxes"] && $(".postInfo>.riceCheck").exists()) {
-                        return this.hasInit = false;
-                }
+        riceInputs:
+        {
+          hasInit: false,
+          init: function() {
+            if (!this.hasInit) {
+              if (!$SS.browser.webkit && !$SS.conf["Hide Checkboxes"])
+                $("input[type=checkbox]").riceCheck();
+
+              return this.hasInit = true;
             }
+            else if (!$SS.browser.webkit &&
+                 !$SS.conf["Hide Checkboxes"] &&
+                 !$(".postInfo>.riceCheck").exists())
+            {
+              $("input[type=checkbox]").riceCheck();
+              return this.hasInit = false;
+            }
+          }
         },
         jscolor: {
             getElementPos: function(e) {

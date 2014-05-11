@@ -108,6 +108,10 @@ body.hasDropDownNav,
   right:6px;
 }
 /* Menu button */
+.reply .menu-button i {
+  position: relative;
+  bottom: 1px;
+}
 :root.reply-fit-width .reply .container {
   padding-right: 5px;
 }
@@ -156,6 +160,7 @@ input[type=checkbox],
   position: relative;
   width: 10px!important;
   border-radius: 2px!important;
+  -webkit-appearance: none;
 }
 .riceCheck {
   margin: 2px 3px 0 0; 
