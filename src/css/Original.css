@@ -13,7 +13,7 @@ div.post div.file .fileThumb {
   display: block;
 }
 .fixed.bottom-header.index body {
-  padding-bottom: 5em;
+  padding-bottom: 4.5em;
   padding-top: 0.1em;
 }
 .fixed.bottom-header.thread body {
@@ -113,6 +113,19 @@ table {
 .topad {
   margin-bottom: 20px !important;
 }
-.bottomCtrl.desktop {
+.fixed.bottom-header.index .bottomCtrl.desktop {
   float: right;
+  margin-bottom: 28px;
+}
+.fixed.bottom-header.thread .bottomCtrl.desktop {
+  float: right;
+  margin-bottom: 35px;
+}
+.fixed.top-header.thread .bottomCtrl.desktop {
+  float: right;
+  margin-bottom: 4px;
+}
+.fixed.top-header.index .bottomCtrl.desktop {
+  float: right;
+  margin-bottom: 4px;
 }
