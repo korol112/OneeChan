@@ -523,6 +523,7 @@ table.flashListing .highlightPost {
 .navLinks.navLinksBot.desktop {
   margin-top: 10px;
   margin-bottom: 5px;
+  position: absolute;
 }
 #hoverUI {
   z-index: 12 !important;
