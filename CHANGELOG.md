@@ -1,3 +1,14 @@
+### v5.2.10
+*2014-05-29*
+
+- Fix issue #18 where clicking apply would load the last mascot in the list (thanks to @Timpe)
+- Updates for the recent 4chan X changes
+- Minor margin fixes
+
+**Mayhem**
+
+- Fixed post menu not overlaying the post when `Fit Width` was enabled
+
 ### v5.2.9
 *2014-05-11*
 
