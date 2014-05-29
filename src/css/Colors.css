@@ -137,7 +137,7 @@ body {
 }
 .options-button,
 .qr-link,
-.cataloglink,
+.pages.cataloglink,
 .pages strong>a {
   background:linear-gradient(rgb\(" + $SS.theme.mainColor.shiftRGB(15) + "),rgb(" + $SS.theme.mainColor.rgb + ")) !important;
 }
@@ -223,7 +223,7 @@ textarea,
 }
 .options-button,
 .qr-link,
-.cataloglink,
+.pages.cataloglink,
 .pages strong>a {
   border-style: solid;
   border-width: 1px;
