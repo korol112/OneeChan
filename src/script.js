@@ -1665,7 +1665,7 @@
 
                 div = $("<div id='add-mascot' class='dialog'>").html("<label class='add-mascot-label' title='Set the name of the mascot'><span class='option-title'>Mascot Name:</span>" +
                     "<input class='mascot-input mascot-name' type=text name=mName value='" + (bEdit && mEdit.name !== undefined ? mEdit.name : "Chinese Girl Cartoon") + "'></label>" +
-                    "<label class='add-mascot-label'><span class='option-title'>Image URL:</span><input class='mascot-input image' type=text name=customIMG value='" +
+                    "<label class='add-mascot-label'><span class='option-title' title='URL of the mascot. HTTPS links are recommended.'>Image URL:</span><input class='mascot-input image' type=text name=customIMG value='" +
                     (bEdit ? ($SS.validImageURL(mEdit.img) ? mEdit.img + "'" : "'") : "'") +
                     "></label>" +
                     "<label class='add-mascot-label' title='Set the height. Use auto for the full size.'><span class='option-title'>Height:</span>" +
@@ -1795,8 +1795,7 @@
                 if (!$SS.validImageURL(cIMG))
                     return alert("Not a valid image URL!");
 
-                bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex].
-                default;
+                bDefault = $SS.conf["Mascots"][mIndex] != undefined && $SS.conf["Mascots"][mIndex];
 
                 if (typeof mIndex === "number" && !bDefault) {
                     $SS.conf["Mascots"][mIndex].img = cIMG;
