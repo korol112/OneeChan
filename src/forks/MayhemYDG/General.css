@@ -24,6 +24,14 @@
 .inline {
   min-width: 340px;
 }
+:root.backlink-bottom .post {
+  padding-bottom: 2px;
+}
+:root.backlink-bottom .backlink-container {
+  position: absolute;
+  bottom: 2px;
+  right: 6px;
+}
 /* Menu */
 :root.reply-fit-width .post .menu-button {
   float: right;
@@ -51,8 +59,8 @@
   top: 26px;
 }
 #qr-filename {
-  background: none;
-  border: none;
+  background: none !important;
+  border: none !important;
 }
 #qr-file-button {
   padding-top: 3px;
