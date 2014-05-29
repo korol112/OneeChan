@@ -1,26 +1,30 @@
 /* MayhemYDG 4chan X v3*/
 /* Compatibility fixes for different 4chan X forks */
+/* Header */
 :root.top-header .is_index {
   margin-bottom: 3em;
 }
 :root.bottom-header .is_index {
   margin-bottom: 5em;
 }
- #header-bar {
-  position: static;
- }
- #overlay {
-  z-index: 900;
+:root:not(.fixed).left-sidebar #header-bar {
+  left: 0;
 }
-.captcha-input.field {
-  width:300px;
+:root:not(.fixed).right-sidebar #header-bar {
+  right: 0;
 }
+:root.bottom-header:not(.autohide) #mascot img,
+:root.bottom-header:not(.autohide) #mascotprev img {
+  padding-bottom: 26px !important;
+}
+/* Navigation */
 #navlinks {
   top: 135px;
 }
 .backlink-container {
   padding-right: 10px;
 }
+/* Replies */
 .inline {
   min-width: 340px;
 }
@@ -38,6 +42,9 @@
   position: absolute;
   left: inherit;
   right: 6px;
+}
+ #overlay {
+  z-index: 900;
 }
  /* Quick Reply */
 #qr [type=submit] {
@@ -65,6 +72,9 @@
 #qr-file-button {
   padding-top: 3px;
   padding-bottom: 3px;
+}
+ .captcha-input.field {
+  width:300px;
 }
 /* Thread Watcher */
 :root.top-header:root.threadwatcher-tree #thread-watcher>div:first-child {
