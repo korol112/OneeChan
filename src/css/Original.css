@@ -29,9 +29,12 @@ div.post div.file .fileThumb {
   padding-bottom: 0em; 
   padding-top: 2.2em;
 }
-body.hasDropDownNav,
 .fixed.top-header.catalog body {
   padding-top: 2.2em;
+  padding-bottom: 0.5em;
+}
+.fixed.bottom-header.catalog body {
+  padding-bottom: 3em;
 }
 div.post {
 margin: 4px 0;
