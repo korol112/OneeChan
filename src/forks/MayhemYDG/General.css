@@ -1,49 +1,62 @@
 /* MayhemYDG 4chan X v3*/
 /* Compatibility fixes for different 4chan X forks */
-:root.top-header body {
+:root.top-header .is_index {
   margin-bottom: 3em;
 }
-:root.bottom-header body {
+:root.bottom-header .is_index {
   margin-bottom: 5em;
 }
  #header-bar {
-  position: static !important;
+  position: static;
  }
-#nav-links {
-  margin-bottom: inherit;
-}
-#qr [type=submit] {
-  width: 19% !important;
-}
-:root.qr-background #qr > div {
-  display: none;
-}
-#overlay {
+ #overlay {
   z-index: 900;
-}
-#qr input[type=submit] {
-  height: 24px!important;
 }
 .captcha-input.field {
   width:300px;
 }
-#qr:not(.has-captcha) textarea {
-  min-height: 115px!important;
-}
-.riceCheck {
-  margin: 7px 3px 0 4px !important;
-}
 #navlinks {
-  top: 135px !important;
+  top: 135px;
+}
+.backlink-container {
+  padding-right: 10px;
+}
+.inline {
+  min-width: 340px;
+}
+/* Menu */
+:root.reply-fit-width .post .menu-button {
+  float: right;
+  position: absolute;
+  left: inherit;
+  right: 6px;
+}
+ /* Quick Reply */
+#qr [type=submit] {
+  width: 19%;
+}
+:root.qr-background #qr > div {
+  display: none;
+}
+#qr input[type=submit] {
+  height: 24px;
+}
+#qr:not(.has-captcha) textarea {
+  min-height: 115px;
 }
 #qr .riceCheck, #qr input[type=checkbox] {
-  margin: 0px 4px 0!important;
+  margin: 0px 4px 0;
 }
 :root.top-header .boardBanner {
-  top: 26px !important;
+  top: 26px;
 }
-#file-n-submit input {
-  padding: 3px;
+#qr-filename {
+  background: none;
+  border: none;
+}
+#qr-file-button {
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 /* Thread Watcher */
 :root.top-header:root.threadwatcher-tree #thread-watcher>div:first-child {
@@ -57,7 +70,7 @@
   font-size: 13px;
 }
 :root.threadwatcher-tree #thread-watcher #menu {
-  text-align: left !important;
+  text-align: left;
 }
 /* Right Sidebar */
 :root.right-sidebar:root.threadwatcher-tree.fourchan-x body {
