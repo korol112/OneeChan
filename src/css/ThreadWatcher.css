@@ -23,7 +23,7 @@
   padding-left: 56px;
 }
 :root.threadwatcher-tree #watcher-link {
-	display: none !important;
+  display: none !important;
 }
 :root.threadwatcher-tree #thread-watcher .move {
   font-size: 11px;

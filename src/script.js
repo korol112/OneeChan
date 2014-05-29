@@ -93,7 +93,7 @@
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
         "Show Reply Header": [true, "Show reply header background and line border."],
-        "Show File Info": [true, "Hides the filename, resolution and size info."],
+        "Show File Info": [true, "Hides the filename, dimensions and size info."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Underline QuoteLinks": [false, "Underlines quotelinks only."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
