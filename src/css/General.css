@@ -6,13 +6,12 @@ body {
   margin-bottom: 0;
 }
 /* Fix margin top when fixed top header */
-body.hasDropDownNav,
 :root.show-ads .ad-cnt {
   margin-top: auto !important;
 }
 /* Replies */
 .postInfo {
-  padding: 4px 12px 2px;
+  padding: 4px 13px 2px;
   display: block !important;
 }
 .closed {
@@ -420,15 +419,15 @@ hr {
   opacity: 0.2;
 }
 /* Catalog Link */
-.cataloglink {
+.pages.cataloglink {
   margin-left: 12px;
   border-radius: 3px;
 }
-.cataloglink a {
+.pages.cataloglink a {
   color: " + $SS.theme.textColor.hex + " !important;
   font-weight: bold;
 }
-.cataloglink a:hover {
+.pages.cataloglink a:hover {
   color: " + $SS.theme.textColor.hex + " !important;
   opacity: 0.7 !important;
   transition: opacity .3s ease-in 0s;

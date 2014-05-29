@@ -1,17 +1,18 @@
 /* Some original Yotsuba CSS */
 div.post div.file .fileThumb {
   float: left;
-  margin-left: 10px;
+  margin-left: 13px;
   margin-right: 20px;
   margin-bottom: 10px;
 }
 .fileText {
-  margin-left: 10px !important;
+  margin-left: 13px !important;
   margin-right: 10px;
 }
 .postContainer {
   display: block;
 }
+/* Padding according to header position */
 .fixed.bottom-header.thread body{
   padding-bottom: 0em;
   padding-top: 0.1em;
@@ -28,6 +29,7 @@ div.post div.file .fileThumb {
   padding-bottom: 0em; 
   padding-top: 2.2em;
 }
+body.hasDropDownNav,
 .fixed.top-header.catalog body {
   padding-top: 2.2em;
 }
