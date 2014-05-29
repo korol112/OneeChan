@@ -62,14 +62,6 @@ body {
 :root.reply-fit-width .stub ~ .reply.post {
   display: none !important;
 }
-.hasInline .inline>.replyContainer:not(.expanded-image):not(.hasInline) .reply.post,
-:root.reply-fit-width .reply.post {
-  overflow: hidden !important;
-}
-:root.reply-fit-width .hasInline>.reply.post,
-:root.reply-fit-width .expanded-image>.reply.post {
-  overflow: visible !important;
-}
 :root.reply-fit-width .expanded-image>.post::after,
 :root.reply-fit-width .hasInline>.reply.post::after {
   clear:both !important;
