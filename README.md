@@ -45,4 +45,7 @@ Make sure you select your fork version in `Compatibility`. See [forks](https://g
 
 #### See also:
 
+- [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md)
+
+- [Windows 7 Ricing Reference](http://nanami-tan.info/)
 - [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
