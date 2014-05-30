@@ -481,6 +481,10 @@ table.flashListing .highlightPost {
 }
 #delform {
   position: relative;
+  z-index: 3;
+}
+:root.mascot-overlap #delform {
+  z-index: 0;
 }
 :root.fixed.bottom-header:not(.autohide) #mascot img,
 :root.fixed.bottom-header:not(.autohide) #mascotprev img {
