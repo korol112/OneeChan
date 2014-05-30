@@ -2700,7 +2700,7 @@
                 "default": true,
                 name: "Megurine Luka"
             }, {
-                img: "http://i5.minus.com/iDDCg5RKMKZvi.png",
+                img: "https://i5.minus.com/iDDCg5RKMKZvi.png",
                 "default": true,
                 name: "Mikasa Ackerman"
             }, {
@@ -2759,7 +2759,7 @@
                 height: "500px",
                 hoffset: "25"
             }, {
-                img: "http://i.minus.com/iASvr0zsZHBMm.png",
+                img: "https://i.minus.com/iASvr0zsZHBMm.png",
                 "default": true,
                 name: "Sakamoto-san",
             }, {
