@@ -1,7 +1,8 @@
 OneeChan
 ====
 
-Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks. [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md).
+Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks.
+
 
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
 ##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
@@ -45,5 +46,6 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 
 #### See also:
 
+- [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#development--contribution).
 - [Windows 7 Ricing Reference](http://nanami-tan.info/)
 - [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
