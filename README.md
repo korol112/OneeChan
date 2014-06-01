@@ -46,6 +46,6 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 
 #### See also:
 
-- [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#development--contribution).
+- [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md#development--contribution)
 - [Windows 7 Ricing Reference](http://nanami-tan.info/)
 - [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
