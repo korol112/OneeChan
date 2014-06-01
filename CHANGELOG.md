@@ -1,3 +1,13 @@
+### v5.2.11
+*2014-05-30*
+
+- Fix two mascots not having HTTPS links
+- Fix menu items being centered in ihavenoface fork
+
+**New:**
+- loadletter fork compatibility
+- `Mascot Overlaps Posts` menu option
+
 ### v5.2.10
 *2014-05-29*
 
@@ -5,9 +15,7 @@
 - Updates for the recent 4chan X changes
 - Minor margin fixes
 
-**Mayhem**
-
-- Fixed post menu not overlaying the post when `Fit Width` was enabled
+- Fixed post menu not overlaying the post when `Fit Width` was enabled in MayhemYDG
 
 ### v5.2.9
 *2014-05-11*
@@ -49,9 +57,11 @@
 - `Show File Info` option
 - `Highlight Current Board`
 - `Thread Watcher`
+
 Changes how the TW is pinned. As a sidebar or simply fixed by the user.
 
 - `Compatibility` option
+
 This option will apply CSS fixes depending on the fork you are using. Currently only MayhemYDG forks.
 
 
