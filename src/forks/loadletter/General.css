@@ -1,0 +1,100 @@
+/* loadletter 4chan X v2*/
+/* Compatibility fixes for different 4chan X forks */
+/* Some functionality of OneeChan might not work with this fork */
+/* Quick Reply */
+#qr input[type=submit] {
+  height: 24px !important;
+  width: 28%;
+}
+input[type=file] {
+  -webkit-appearance:none !important;
+}
+.captcha-input.field {
+  width:300px;
+}
+#qr:not(.has-captcha) textarea {
+  min-height: 115px!important;
+}
+:root.qr-controls #qr > .move {
+  display: none;
+}
+body > form:nth-child(13) {
+  display: none;
+}
+:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
+  width: 295px!important;
+}
+/* Misc */
+.boardList {
+  display: block;
+  text-align: center;
+}
+#navbotright,
+#boardNavDesktopFoot > .toggleCatalog {
+  display: none;
+}
+.pagelist {
+  margin-bottom: 15px;
+}
+.postInfo {
+  padding: 4px 6px 2px;
+}
+#boardNavDesktop {
+  margin-bottom: 15px;
+  text-align: center;
+}
+#boardNavDesktopFoot {
+  margin-bottom: 10px;
+}
+.riceCheck {
+  margin: 0 3px -2px 4px !important;
+}
+#navlinks {
+  top: 135px !important;
+}
+#overlay {
+  z-index: 900;
+}
+#ihover {
+  z-index: 5;
+}
+#qp {
+  z-index: 5;
+}
+#updater{
+  z-index: 11;
+}
+#menu {
+  z-index: 5;
+}
+:root.mascot-overlap #mascot img,
+#mascotprev img {
+  z-index: 4;
+}
+.inline,
+#qp {
+  padding: 0px;
+}
+/* Expanding Form Inputs */
+:root.expand-inputs .field:not(#commentTextArea):not(.captchainput) {
+  transition: color .25s, border-color .25s, width .25s;
+}
+:root.expand-inputs .field:focus:not(#commentTextArea):not(.captchainput) {
+  position: absolute;
+  right: 2px;
+  left: 2px;
+  width: 99% !important;
+  min-width: 99% !important;
+  transition: color .25s, border-color .25s, width .25s;
+}
+/* Thread Watcher */
+#watcher{
+  z-index: 20;
+}
+:root.threadwatcher-fixed #watcher {
+  position: fixed;
+}
+#watcher > .move {
+  text-align: center;
+  padding-bottom: 5px;
+}

@@ -246,12 +246,15 @@
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
         "Version Fix": [
-            1, "Applies CSS fixes for different forks. Default is for seaweed forks.", [{
+            1, "Applies CSS fixes for different forks. Default is for seaweed forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
                 name: "Default",
                 value: 1
             }, {
                 name: "MayhemYDG",
                 value: 2
+            }, {
+                name: "loadletter",
+                value: 3
             }], true
         ],
         "Themes": [],
@@ -1016,9 +1019,10 @@
         options: {
             saveAndClose: true,
             init: function() {
-                var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show);
-                var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show);
-                return $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b);
+                var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
+                var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
+                var c = $("<span id='OneeChanCont'> [<a id='OneeChanLink' title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                return $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) && $("#boardNavDesktop").append(c);
             },
             show: function() {
                 if ($("#overlay").exists())

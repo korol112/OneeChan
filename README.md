@@ -1,7 +1,7 @@
 OneeChan
 ====
 
-Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks.
+Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks. [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md).
 
 ##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
 ##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
@@ -15,17 +15,17 @@ Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x)
 
 
 #### Compatibility with 4chan X forks and others:
-(Updated 2014-05-09)
+(Updated 2014-06-01)
 
 - [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
 - [seaweedchan](https://github.com/seaweedchan/4chan-x) /// `Compatible`
 - [Spittie](https://github.com/Spittie/4chan-x) /// `Compatible`
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// `Compatible`
 - [ihavenoface](https://github.com/ihavenoface/4chan-x) /// `Compatible`
-- [loadletter](https://github.com/loadletter/4chan-x) /// No
+- [loadletter](https://github.com/loadletter/4chan-x) /// `Compatible`
 - [inline](https://boards.4chan.org/) /// No
 
-Make sure you select your fork version in `Compatibility`. See [forks](https://github.com/Nebukazar/OneeChan/tree/master/forks) for other CSS fixes.
+Make sure you select your fork version in `Compatibility`. Enabling Quick Reply and Persistent QR is recommended for maximum compatibility.
 
 
 #### Troubleshooting
@@ -44,8 +44,6 @@ Make sure you select your fork version in `Compatibility`. See [forks](https://g
 
 
 #### See also:
-
-- [Contributing to OneeChan](https://github.com/Nebukazar/OneeChan/blob/master/CONTRIBUTING.md)
 
 - [Windows 7 Ricing Reference](http://nanami-tan.info/)
 - [Ruri Gokou Homepage](https://github.com/gokoururi/homepage)
