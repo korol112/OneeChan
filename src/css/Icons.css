@@ -4,6 +4,7 @@
   margin-right: 6px;
   top: auto !important;
   bottom: 4px !important;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.heart + "\") !important;
 }
 /* Backlinks */
 :root.backlink-icon .backlink {
