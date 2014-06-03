@@ -54,7 +54,7 @@
   display: none;
 }
 #qr input[type=submit] {
-  height: 24px;
+  height: 24px !important;
 }
 #qr:not(.has-captcha) textarea {
   min-height: 115px;
@@ -112,4 +112,10 @@
 .top-header .bottomCtrl.desktop {
   float: right;
   margin-bottom: 4px;
+}
+/* Catalog */
+.catalog-thread > .comment {
+  text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
 }
