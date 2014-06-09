@@ -1,3 +1,4 @@
+/* Thread Watcher */
 :root.threadwatcher-fixed #thread-watcher {
   position: fixed !important;
 }
@@ -17,7 +18,7 @@
   min-width: 13px;
   min-height: 100% !important;
   display: block !important;
-  word-spacing: -2px; 
+  word-spacing: -2px;
 }
 :root.threadwatcher-tree.fourchan-x body {
   padding-left: 56px;
@@ -68,10 +69,10 @@
   position: absolute;
   padding: 5px;
   margin-top: -7px;
-  font-size: 14px;
+  font-size:" + $SS.conf["Font Size"] + "px;
   color: " + $SS.theme.linkColor.hex + ";
   background: " + $SS.theme.mainColor.hex + ";
-  border: 2px solid " + $SS.theme.headerLColor.hex + ";
+  border: 1px solid " + $SS.theme.headerLColor.hex + ";
   border-radius: 3px;
 }
 :root.left-sidebar:root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::after {
