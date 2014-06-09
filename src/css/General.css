@@ -188,7 +188,7 @@ input[type=checkbox]:checked+.riceCheck::before {
 }
 /* Header */
 #header-bar {
-  padding: 4px 4px 5px !important;
+  padding: 4px 4px 4px !important;
 }
 :root.header-shadow #header-bar {
   box-shadow: none !important;
@@ -434,7 +434,7 @@ hr {
 }
 /* /f/ */
 table.flashListing {
-  margin: auto !important;
+  margin-top: 20px;
 }
 table.flashListing .highlightPost {
   background: rgb\(" + $SS.theme.mainColor.shiftRGB(-25) + ") !important;
@@ -481,10 +481,9 @@ table.flashListing .highlightPost {
 }
 #delform {
   position: relative;
-  z-index: 3;
 }
-:root.mascot-overlap #delform {
-  z-index: 0;
+:root.mascot-overlap #mascot img {
+  z-index: 4 !important;
 }
 :root.fixed.bottom-header:not(.autohide) #mascot img,
 :root.fixed.bottom-header:not(.autohide) #mascotprev img {
