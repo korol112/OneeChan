@@ -22,7 +22,13 @@ body > form:nth-child(13) {
   display: none;
 }
 :root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
-  width: 295px!important;
+  width: 260px !important;
+}
+#qr > .move {
+  min-width: 260px !important;
+}
+#qr .riceCheck, #qr input[type=checkbox] {
+  float: left;
 }
 /* Misc */
 .boardList {

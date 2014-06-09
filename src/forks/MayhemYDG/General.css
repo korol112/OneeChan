@@ -1,6 +1,12 @@
 /* MayhemYDG 4chan X v3*/
 /* Compatibility fixes for different 4chan X forks */
 /* Header */
+#header-bar {
+  padding: 3px 4px 3px !important;
+}
+#header-bar a:not(.entry) {
+  padding: 2px;
+}
 :root.top-header .is_index {
   margin-bottom: 3em;
 }
@@ -77,6 +83,9 @@
   width:300px;
 }
 /* Thread Watcher */
+:root.threadwatcher-tree #thread-watcher {
+  padding: 0px !important;
+}
 :root.top-header:root.threadwatcher-tree #thread-watcher>div:first-child {
   padding-top: 24px;
 }
