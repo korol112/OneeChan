@@ -1,32 +1,29 @@
 OneeChan
 ====
 
-Maximum rice for seaweedchan's [4chan X](https://github.com/seaweedchan/4chan-x) and its forks.
+Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.com/seaweedchan), this fork adds compability with various forks and more custom options.
 
 
-##[Install](../../raw/master/builds/OneeChan.user.js) (Firefox)
-##[Install](../../raw/master/builds/OneeChan.crx) (Chrome)
+##[Install](../../raw/master/builds/OneeChan.user.js)
 
 
 #### Install instructions
 
 - Firefox: Requires the Greasemonkey addon.
 
-- Chrome: Open the extensions page and drag & drop the downloaded `.crx` to install. Alternatively, install Tampermonkey and press the Firefox install link.
+- Chrome: Requires the Tampermonkey extension.
 
 
 #### Compatibility with 4chan X forks and others:
-(Updated 2014-06-01)
+(Updated 2014-06-10)
 
 - [ccd0](https://github.com/ccd0/4chan-x) /// `Compatible` (Recommended)
-- [seaweedchan](https://github.com/seaweedchan/4chan-x) /// `Compatible`
-- [Spittie](https://github.com/Spittie/4chan-x) /// `Compatible`
 - [MayhemYDG](https://github.com/MayhemYDG/4chan-x) /// `Compatible`
 - [ihavenoface](https://github.com/ihavenoface/4chan-x) /// `Compatible`
 - [loadletter](https://github.com/loadletter/4chan-x) /// `Compatible`
 - [inline](https://boards.4chan.org/) /// No
 
-Make sure you select your fork version in `Compatibility`. Enabling Quick Reply and Persistent QR is recommended for maximum compatibility.
+Make sure you select your fork version in `Compatibility`. Enabling Quick Reply and Persistent QR is recommended for maximum compatibility. I can't promise everything will work with every fork.
 
 
 #### Troubleshooting
@@ -41,7 +38,7 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 #### Known Issues
 
 - OneeChan's settings icon sometimes doesn't render on Chrome (this is related to [popstate](https://developer.mozilla.org/en-US/docs/Web/Reference/Events/popstate))
-- **Fix:** Open a different thread or navigate to another board until it shows up
+- **Fix:** Opening a thread with 300+ replies will force it to render.
 
 
 #### See also:
