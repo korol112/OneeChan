@@ -201,8 +201,9 @@ hr {
 :root.rounded-corners .inline {
   border-radius: 3px;
 }
-:root.post-info.rounded-corners .reply>.postInfo {
-  border-radius: 3px 3px 0 0;
+:root.post-info.rounded-corners .reply>.postInfo,
+:root.rounded-corners #qr {
+  border-radius: 3px 3px 0 0 !important;
 }
 .reply,
 .dialog,
