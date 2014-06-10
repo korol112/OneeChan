@@ -36,13 +36,13 @@ body {
 :root.expand-cover .expanded-image {
   z-index: 9 !important;
 }
-:root.force-op-indent .opContainer {
+:root.force-indent .op {
   margin-left: -12px;
 }
-:root.force-op .op::after {
-  clear:both;
-  content:'';
-  display:block;
+:root.force-wrapping .op::after {
+  clear: both;
+  content: '';
+  display: block;
 }
 .thread>.replyContainer,
 .threadContainer>.replyContainer {
@@ -290,6 +290,9 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root.fade-qr #qr.autohide:not(.has-focus):not(:hover) {
   opacity: 0.2 !important;
   transition:opacity .2s ease-in-out 1s;
+}
+.persona .field {
+  margin-right: 1px;
 }
 :root.expand-inputs .persona .field {
   transition: color .25s, border-color .25s, width .25s;
