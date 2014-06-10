@@ -36,6 +36,9 @@ body {
 :root.expand-cover .expanded-image {
   z-index: 9 !important;
 }
+:root.force-op-indent .opContainer {
+  margin-left: -12px;
+}
 :root.force-op .op::after {
   clear:both;
   content:'';
@@ -188,7 +191,7 @@ input[type=checkbox]:checked+.riceCheck::before {
 }
 /* Header */
 #header-bar {
-  padding: 4px 4px 4px !important;
+  padding: 4px 4px 5px !important;
 }
 :root.header-shadow #header-bar {
   box-shadow: none !important;
@@ -236,6 +239,7 @@ input[type=checkbox]:checked+.riceCheck::before {
 /* Quick Reply */
 #qr {
   box-shadow: none !important;
+  border-radius: 0 !important;
 }
 #qr .close {
   padding: 2px 3px 2px 4px !important;
@@ -308,13 +312,20 @@ input[type=checkbox]:checked+.riceCheck::before {
   height: 8.6em;
   min-height: 0.6em !important;
 }
-:root.qr-background #qr {
+:root.qr-background #qr:not(div.captcha-img) {
   background: transparent !important;
   border: none;
 }
 :root.qr-controls #qr label,
 :root.qr-controls #qr .close {
   display: none;
+}
+:root.qr-opacity #qr {
+  opacity: 0.9;
+}
+.textarea {
+  margin-bottom: -2px;
+  margin-top: 1px;
 }
 /* Delete form */
 div[style='float: right;'] {

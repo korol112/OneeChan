@@ -97,6 +97,7 @@
         "Show File Info": [true, "Hides the filename, dimensions and size info."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Underline QuoteLinks": [false, "Underlines quotelinks only."],
+        "Indent OP": [false, "Indents the OP instead of touching the screen."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
         "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
         "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
@@ -104,7 +105,7 @@
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
-            1, "Changes which sides of replies have borders.", [{
+            2, "Changes which sides of replies have borders.", [{
                 name: "Normal",
                 value: 1
             }, {
@@ -205,6 +206,7 @@
                 value: 3
             }]
         ],
+        "Transparent QR": [false, "Reduces opacity of the QR box."],
         "Remove Background": [false, "Removes the QR background."],
         "Remove Controls": [false, "Removes the QR controls and checkbox."],
         "Expanding Form Inputs": [false, "Makes certain form elements expand on focus."],
@@ -2866,9 +2868,11 @@
                 $("html").optionClass("Expanded Images Cover QR", true, "expand-cover");
                 $("html").optionClass("Autohide Style", 2, "vertical-qr");
                 $("html").optionClass("Autohide Style", 3, "fade-qr");
+                $("html").optionClass("Transparent QR", true, "qr-opacity");
                 $("html").optionClass("Remove Background", true, "qr-background");
                 $("html").optionClass("Remove Controls", true, "qr-controls");             
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
+                $("html").optionClass("Indent OP", false, "force-op-indent");
                 $("html").optionClass("Allow Wrapping Around OP", false, "force-op");
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
