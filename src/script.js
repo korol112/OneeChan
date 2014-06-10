@@ -1632,8 +1632,7 @@
 
                 if (exp) return tTheme;
 
-                if (bEdit && !tEdit.
-                    default) {
+                if (bEdit && !tEdit.default) {
                     $SS.conf["Themes"][tIndex] = tTheme;
                     tTheme = new $SS.Theme(tIndex);
                     div = $("#theme" + tIndex, $("#overlay"));
@@ -2589,10 +2588,6 @@
                 "default": true,
                 name: "Akemi Homura"
             }, {
-                img: "https://i.minus.com/ibqbz63WobNaUZ.png",
-                "default": true,
-                name: "Akiyama Mio"
-            }, {
                 img: "https://i.minus.com/iiEOIF7u05fIr.png",
                 "default": true,
                 name: "Akiyama Mio"
@@ -2605,12 +2600,6 @@
                 "default": true,
                 name: "Asuka Langley Soryu",
                 width: "280px"
-            }, {
-                img: "https://i.minus.com/ifbmhOBaK5DAh.png",
-                "default": true,
-                name: "Ayanami Rei",
-                width: "325px",
-                hoffset: "-20"
             }, {
                 img: "https://i.minus.com/iSZ06ZxrcqAKq.png",
                 "default": true,
@@ -2665,11 +2654,6 @@
                 "default": true,
                 name: "Kikuchi Makoto"
             }, {
-                img: "https://i.minus.com/indbfcA4TS0Xb.png",
-                "default": true,
-                name: "Kirino Ranmaru",
-                hoffset: "50"
-            }, {
                 img: "https://i.minus.com/igbibpeTcWQIS.png",
                 "default": true,
                 name: "Kirino x Kariya",
@@ -2679,6 +2663,10 @@
                 "default": true,
                 name: "Kirisame Marisa"
             }, {
+                img: "https://i.minus.com/ibjWUbaN1zNYpS.png",
+                "default": true,
+                name: "Kisaragi Chihaya"
+            }, {
                 img: "https://i2.minus.com/ikPgsoC0DBeuP.png",
                 "default": true,
                 name: "Kousaka Kirino"
@@ -2686,6 +2674,10 @@
                 img: "https://i.minus.com/isjF5qP3d2D9l.png",
                 "default": true,
                 name: "Kurisu Makise"
+            }, {
+                img: "https://i.minus.com/jyPdnejQOGn2E.png",
+                "default": true,
+                name: "Kuriyama Mirai",
             }, {
                 img: "https://i.minus.com/iwp3zHABdUZn9.png",
                 "default": true,
@@ -2735,7 +2727,7 @@
                 name: "Nagato Yuki",
                 hoffset: "25"
             }, {
-                img: "https://i.minus.com/ibtRMzjF9MS6oy.png",
+                img: "https://i.minus.com/ibq5GPuROVE41U.png",
                 "default": true,
                 name: "Nakano Azusa"
             }, {
@@ -2755,6 +2747,12 @@
                 img: "https://i.minus.com/ibdeMvwnCdYqPX.png",
                 "default": true,
                 name: "Remilia Scarlet"
+            }, {
+                img: "https://i.minus.com/ifbmhOBaK5DAh.png",
+                "default": true,
+                name: "Rei Ayanami",
+                width: "325px",
+                hoffset: "-20"
             }, {
                 img: "https://i.minus.com/ibtZo1fdOk8NCB.png",
                 "default": true,
