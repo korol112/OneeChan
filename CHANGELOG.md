@@ -1,3 +1,15 @@
+### v5.2.12
+*2014-06-09*
+
+- Changed some mascots, no one gets to be special
+- QR box will now respond to the `Rounded Corners` option
+- Fix a issue where a second checkbox would appear on the QR box after thread update
+- Various MayhemYDG and loadletter fixes
+
+**New:**
+- `Indent OP`
+- `Transparent QR`
+
 ### v5.2.11
 *2014-05-30*
 
