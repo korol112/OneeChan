@@ -2870,8 +2870,8 @@
                 $("html").optionClass("Remove Background", true, "qr-background");
                 $("html").optionClass("Remove Controls", true, "qr-controls");             
                 $("html").optionClass("SS-like Sidebar", true, "ss-sidebar");
-                $("html").optionClass("Indent OP", false, "force-op-indent");
-                $("html").optionClass("Allow Wrapping Around OP", false, "force-op");
+                $("html").optionClass("Indent OP", false, "force-indent");
+                $("html").optionClass("Allow Wrapping Around OP", false, "force-wrapping");
                 $("html").optionClass("Expanding Form Inputs", true, "expand-inputs");
                 $("html").optionClass("Show Header Background Gradient", true, "header-gradient");
                 $("html").optionClass("Show Header Shadow", false, "header-shadow");
