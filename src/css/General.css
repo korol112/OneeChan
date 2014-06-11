@@ -315,7 +315,7 @@ input[type=checkbox]:checked+.riceCheck::before {
   height: 8.6em;
   min-height: 0.6em !important;
 }
-:root.qr-background #qr:not(div.captcha-img) {
+:root.qr-background #qr {
   background: transparent !important;
   border: none;
 }
