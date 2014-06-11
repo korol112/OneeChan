@@ -89,8 +89,10 @@
         ],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
         "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
+        ":: Mascots": ["header", ""],
+        "Hide Mascot in Catalog": [false, "Hides the mascot when viewing the catalog."],
         "Mascot Overlaps Posts": [true, "Mascots will render above the posts."],
-        "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events. Do not use with overlapping mascots."],
+        "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
         "Show Reply Header": [true, "Show reply header background and line border."],
@@ -101,7 +103,7 @@
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
         "Rounded Corners": [false, "Styles replies to have subtly rounded corners."],
         "Recolor Even Replies": [false, "Makes every other post a darker color. Not compatible with Quote Threading."],
-        "Reduce Thumbnail Opacity": [false, "Reduces the opacity of the thumbnails."],
+        "Reduce Thumbnail Opacity": [false, "Reduces opacity of the thumbnails."],
         "Backlink Icons": [true, "Use icons for backlinks instead of text."],
         "Backlinks on Bottom": [false, "Move backlinks to the bottom right of the replies."],
         "Borders": [
@@ -857,6 +859,7 @@
             }
 
             $SS.insertMascot();
+            $SS.hideMascot.init();
             $SS.pages.init();
             $SS.riceInputs.init();
 
@@ -1020,12 +1023,12 @@
 
         /* OPTIONS */
         options: {
-            saveAndClose: false,
+            saveAndClose: true,
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
                 var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
                 var c = $("<span id='OneeChanCont'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
-                return $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) && $("#boardNavDesktop").append(c);
+                return $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) : $("#boardNavDesktop").append(c);
             },
             show: function() {
                 if ($("#overlay").exists())
@@ -2596,10 +2599,9 @@
                 "default": true,
                 name: "Ali Baba"
             }, {
-                img: "https://i.minus.com/ib2z9ME9QKEBaS.png",
+                img: "https://i.minus.com/iEUQuwYOAisYj.png",
                 "default": true,
-                name: "Asuka Langley Soryu",
-                width: "280px"
+                name: "Asuka Langley Soryu"
             }, {
                 img: "https://i.minus.com/iSZ06ZxrcqAKq.png",
                 "default": true,
@@ -2627,7 +2629,12 @@
                 "default": true,
                 name: "Hitagi Senjougahara"
             }, {
-                img: "https://i.minus.com/ibjnPNJv4QGiUn.png",
+                img: "https://i.minus.com/ibzqKJMq4z8Ket.png",
+                "default": true,
+                name: "Horo",
+                hoffset: "20"
+            }, {
+                img: "https://i.minus.com/i7mSclzUH2SvV.png",
                 "default": true,
                 name: "Inga",
                 width: "301px"
@@ -2652,7 +2659,8 @@
             }, {
                 img: "https://i.minus.com/i7q6aOuUqqA9F.png",
                 "default": true,
-                name: "Kikuchi Makoto"
+                name: "Kikuchi Makoto",
+                hoffset: "20"
             }, {
                 img: "https://i.minus.com/igbibpeTcWQIS.png",
                 "default": true,
@@ -2733,8 +2741,7 @@
             }, {
                 img: "https://i.minus.com/iBvqnYscczL3D.png",
                 "default": true,
-                name: "Patchouli Knowledge",
-                width: "250px"
+                name: "Patchouli Knowledge"
             }, {
                 img: "https://i.minus.com/iZmUFk9hKgNGZ.png",
                 "default": true,
@@ -2748,16 +2755,15 @@
                 "default": true,
                 name: "Remilia Scarlet"
             }, {
-                img: "https://i.minus.com/ifbmhOBaK5DAh.png",
+                img: "https://i.minus.com/ioPJlYguBIGqK.png",
                 "default": true,
                 name: "Rei Ayanami",
-                width: "325px",
-                hoffset: "-20"
+                width: "290px"
             }, {
                 img: "https://i.minus.com/ibtZo1fdOk8NCB.png",
                 "default": true,
                 name: "Ruri Gokou",
-                width: "200px"
+                hoffset: "20"
             }, {
                 img: "https://i.minus.com/ilYueyo9s91ex.png",
                 "default": true,
@@ -2765,9 +2771,15 @@
                 height: "500px",
                 hoffset: "25"
             }, {
+                img: "https://i.minus.com/ibiMVDazHbvKg5.png",
+                "default": true,
+                name: "Saigyouji Yuyuko",
+                width: "301px"
+            }, {
                 img: "https://i.minus.com/iASvr0zsZHBMm.png",
                 "default": true,
                 name: "Sakamoto-san",
+                hoffset: "15"
             }, {
                 img: "https://i.minus.com/izQNQ4akphZWn.png",
                 "default": true,
@@ -2779,6 +2791,11 @@
                 name: "Solaire of Astora",
                 height: "450px",
                 hoffset: "50"
+            }, {
+                img: "https://i.minus.com/ibx465WCiRKMPD.png",
+                "default": true,
+                name: "Son Goku",
+                width: "301px"
             }, {
                 img: "https://i.minus.com/ir1jBydJsjYtX.png",
                 "default": true,
@@ -2892,6 +2909,14 @@
             }
         },
 
+        hideMascot: {
+            hasInit: false,
+            init: function() {
+                if ($SS.Config.get("Hide Mascot in Catalog") == true && $(".catalog").exists() || $(".catalog-mode").exists()) {
+                    document.getElementById('mascot').style.display = 'none';
+                }
+            }
+        },
         pages: {
             hasInit: false,
             init: function() {

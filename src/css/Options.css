@@ -314,6 +314,9 @@ select[name='Font Family']>option {
   opacity: 0.8;
 }
 /* Overlays */
+#overlay {
+  z-index: 12 !important;
+}
 #overlay2 {
   background:rgba(0,0,0,.5);
   position:fixed;

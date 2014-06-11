@@ -88,17 +88,8 @@ body > form:nth-child(13) {
 #qp {
   padding: 0px;
 }
-/* Expanding Form Inputs */
-:root.expand-inputs .field:not(#commentTextArea):not(.captchainput) {
-  transition: color .25s, border-color .25s, width .25s;
-}
-:root.expand-inputs .field:focus:not(#commentTextArea):not(.captchainput) {
-  position: absolute;
-  right: 2px;
-  left: 2px;
-  width: 99% !important;
-  min-width: 99% !important;
-  transition: color .25s, border-color .25s, width .25s;
+table.flashListing {
+  margin-bottom: 20px;
 }
 /* Thread Watcher */
 #watcher {

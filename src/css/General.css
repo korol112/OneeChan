@@ -294,16 +294,16 @@ input[type=checkbox]:checked+.riceCheck::before {
 .persona .field {
   margin-right: 1px;
 }
-:root.expand-inputs .persona .field {
-  transition: color .25s, border-color .25s, width .25s;
+:root.expand-inputs .persona {
+  display: flex;
 }
+:root.expand-inputs .persona .field {
+  flex: 1;
+  width: 0;
+}
+:root.expand-inputs .persona .field:hover,
 :root.expand-inputs .persona .field:focus {
-  position: absolute;
-  right: 2px;
-  left: 2px;
-  width: 99% !important;
-  min-width: 99% !important;
-  transition: color .25s, border-color .25s, width .25s;
+  flex: 3;
 }
 #qr:not(.has-captcha) textarea {
   min-height: 190px !important;
@@ -495,7 +495,9 @@ table.flashListing .highlightPost {
 }
 #delform {
   position: relative;
+  z-index: 3;
 }
+:root.mascot-overlap #mascot,
 :root.mascot-overlap #mascot img {
   z-index: 4 !important;
 }
@@ -515,6 +517,7 @@ table.flashListing .highlightPost {
 :root.mascot-opacity #mascotprev img {
   opacity: 0.5;
   transition: opacity .3s ease-out 0s;
+  pointer-events: auto !important;
 }
 :root.mascot-opacity #mascot img:hover,
 :root.mascot-opacity #mascotprev img:hover {
