@@ -1,3 +1,9 @@
+### v5.3.1
+*2014-06-11*
+
+- Fix `Remove Background` not working
+- Fix captcha width in vertical QR mode
+
 ## v5.3.0
 *2014-06-11*
 
