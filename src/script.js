@@ -1028,7 +1028,7 @@
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
                 var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
                 var c = $("<span id='OneeChanCont'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
-                var d = $("<span> [<a title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a>] </span>").bind("click", $SS.options.show); /* fail-safe */
+                var d = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a>] </span>").bind("click", $SS.options.show); /* fail-safe */
                 return $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) && $("#search-box").after(d) : $("#boardNavDesktop").append(c);
             },
             show: function() {
