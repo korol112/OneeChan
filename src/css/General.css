@@ -266,7 +266,8 @@ input[type=checkbox]:checked+.riceCheck::before {
   min-width: 240px !important;
   width: 240px !important;
 }
-:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) select {
+:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) select,
+:root.vertical-qr #qr .captcha-img img {
   max-width: 120px !important;
 }
 :root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.has-focus) {
