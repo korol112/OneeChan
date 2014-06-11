@@ -1,3 +1,16 @@
+## v5.3.0
+*2014-06-11*
+
+- Added 3 new mascots
+- Changed and cleaned up some mascots
+- Added a fail-safe next to the search bar for when OneeChan settings button doesn't appear
+- Changed how `Expanding Form Inputs` behaves so it doesn't break everything
+- Fix mascot opacity not changing on hover when `Reduce Mascot Opacity` enabled
+- Fix `Wrapping Around OP` / `Indent OP` interaction
+
+**New:**
+- `Hide Mascot in Catalog`
+
 ### v5.2.12
 *2014-06-09*
 
