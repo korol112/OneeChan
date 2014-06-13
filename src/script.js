@@ -69,7 +69,7 @@
         "Reduce Ad Opacity": [false, "Reduce the opacity of Ads until hover for easier viewing.", "Show 4chan Ads", true, true],
         "Show Navigation Links": [true, "Toggle visibility of the navigation links at the top and bottom of the threads.", null, true],
         "Show bottom Navigation Link": [true, "Toggle visibility of the bottom navigation link.", "Show Navigation Links", true, true],
-        "Show Previous/Next buttons": [false, "Hides the Previous / Next buttons in page navigation mode."],
+        "Show Previous/Next buttons": [false, "Shows the Previous / Next buttons in page navigation mode."],
         ":: Header": ["header", ""],
         "Show Header Background Gradient": [true, "Gives the header bar a gradient background."],
         "Show Header Shadow": [true, "Gives the header a drop shadow."],
