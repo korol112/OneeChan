@@ -194,7 +194,7 @@ hr {
 }
 :root.borders-none .reply,
 :root.borders-none:root.threadwatcher-tree #thread-watcher {
-  border-width: 0;
+  border: none;
 }
 :root.rounded-corners .reply,
 :root.rounded-corners .dialog:not(#header-bar),
