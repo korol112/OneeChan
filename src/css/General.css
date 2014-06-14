@@ -303,6 +303,9 @@ input[type=checkbox]:checked+.riceCheck::before {
   left: auto !important;
   top: auto !important;
 }
+:root.vertical-qr .bottom #qr {
+  bottom: 26px !important;
+}
 :root.vertical-qr #qr.autohide:not(.focus):not(:hover) {
   position: fixed !important;
   transform: rotate(-90deg);
