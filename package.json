@@ -18,7 +18,7 @@
       "userjs": "OneeChan.user.js"
     },
     "min": {
-      "chrome": "39",
+      "chrome": "29",
       "firefox": "26",
       "greasemonkey": "1.14"
     }
