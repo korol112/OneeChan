@@ -53,6 +53,9 @@
   z-index: 900;
 }
  /* Quick Reply */
+ #qr > div {
+  min-width: 240px !important;
+}
 #qr [type=submit] {
   width: 19%;
 }
