@@ -11,7 +11,7 @@ Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.c
 
 - Firefox: Requires the Greasemonkey addon.
 
-- Chrome: Requires the Tampermonkey extension.
+- Chrome: Requires the Tampermonkey extension. You can also download a [.crx here](https://github.com/Nebukazar/OneeChan/raw/master/builds/OneeChan.crx) if you're using Chromium or are not using Windows.
 
 
 #### Compatibility with 4chan X forks and others:
