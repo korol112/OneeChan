@@ -4,7 +4,7 @@
   margin-right: 6px;
   top: auto !important;
   bottom: 4px !important;
-  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.heart + "\") !important;
+  background-image: url(\"data:image/svg+xml," + $SS.theme.icons.star + "\") !important;
 }
 /* Backlinks */
 :root.backlink-icon .backlink {
@@ -22,4 +22,28 @@
 }
 :root.backlink-icon .backlink:hover, :root.backlink-icon .backlink.inlined {
   opacity: 1 !important;
+}
+/* From 4chanSS */
+/* https://github.com/ahodesuka/4chan-Style-Script/blob/master/LICENSE */
+img[alt=Closed],
+img[alt=Sticky] {
+  color:transparent!important;
+  font-size:0!important;
+  background-color:transparent!important;
+  background-position:center!important;
+  background-repeat:no-repeat;
+  display:inline-block;
+  height:0!important;
+  padding-top:16px!important;
+  text-indent:-9999px!important;
+  vertical-align:bottom;
+  width:16px!important;
+}
+/* Thread Closed */
+img[alt=Closed] {
+  background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadClosed + "\")!important;
+}
+/* Thread Pinned */
+img[alt=Sticky] {
+  background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadPinned + "\")!important;
 }
