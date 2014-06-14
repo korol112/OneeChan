@@ -1,0 +1,23 @@
+{
+  "name": "OneeChan",
+  "version": "5.3.1",
+  "manifest_version": 2,
+  "description": "Customizable rice and themes for 4chan X.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [{
+    "js": ["script.js"],
+    "matches": ["*://www.4chan.org/","*://boards.4chan.org/*"],
+    "all_frames": true,
+    "run_at": "document_start"
+  }],
+  "homepage_url": "https://github.com/Nebukazar/OneeChan/",
+  "update_url": "https://github.com/Nebukazar/OneeChan/raw/master/builds/updates.xml",
+  "minimum_chrome_version": "26",
+  "permissions": [
+    "storage"
+  ]
+}

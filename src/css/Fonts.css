@@ -1,0 +1,117 @@
+/* Font Size/Family */
+
+/* Anything we need 0px */
+.deleteform,
+.pages, 
+.pagelist button,
+#full-board-list {
+  font-size: 0 !important;
+}
+/* Anything we need small */
+.fileText,
+.summary {
+  font-size: " + (($SS.conf["Font Size"] < 13) ? 11 : ($SS.conf["Font Size"] - 2)) + "px !important;
+}
+/* Anything we need !important */
+.qr-link {
+  font-size: 14px !important;
+}
+/* Options */
+.tab-label, 
+.options-button, 
+.theme-preview,
+#oneechan-options input,
+#oneechan-options textarea,
+.hide-reply-button,
+.hide-thread-button {
+  font-family:sans-serif !important;
+  font-size:12px !important;
+}
+/* Board Title */
+.boardBanner .boardTitle {
+  font-weight: 400 !important;
+  font-size: 26px !important;
+}
+/* Code Tags */
+.prettyprint span {
+  font-family:monospace!important;
+  font-size:medium!important;
+}
+/* Full board list */
+#full-board-list {
+  font-size: 0 !important;
+}
+#full-board-list a,
+body>#header-bar,
+#full-board-list .fourchanx-link {
+  font-size: " + (($SS.conf["Font Size"] < 13) ? 12 : ($SS.conf["Font Size"] - 1)) + "px !important;
+}
+/* Everything else */
+body,
+.prev span::after, 
+.prev form::after,
+.next span::after,
+.next form::after,
+.pages a,
+#qr input.field,
+#qr textarea.field,
+#qr span.field,
+#qr input[type=submit],
+#menu .entry,
+.boardTitle {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + ";
+  font-size:" + $SS.conf["Font Size"] + "px;
+}
+#qr .field::-moz-placeholder,
+::-moz-placeholder {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
+  font-size:" + $SS.conf["Font Size"] + "px !important;
+}
+#qr .field::webkit-input-placeholder,
+::webkit-input-placeholder {
+  font-family:" + $SS.formatFont($SS.conf["Font Family"]) + " !important;
+  font-size:" + $SS.conf["Font Size"] + "px !important;
+}
+/* Text decoration */
+:root.underline-disabled a {
+  text-decoration: none !important;
+}
+:root.underline-disabled .filtered {
+  text-decoration: line-through !important;
+}
+.deadlink.quotelink {
+  text-decoration: none !important;
+}
+.backlink {
+  font-size: x-small;
+}
+:root.underline-quotes .deadlink.quotelink,
+:root.underline-quotes .quotelink,
+:root.underline-quotes .deadlink.backlink,
+:root.underline-quotes .backlink {
+  text-decoration: underline !important;
+}
+a.options-button,
+#oneechan-version a {
+  text-decoration: none !important;
+}
+/* Font weight */
+.name,
+.subject,
+.option.header .option-title,
+a.current {
+  font-weight: " + ($SS.conf["Bitmap Font"] ? 4 : 7) + "00 !important;
+}
+.qr-link {
+  font-weight: normal;
+}
+/* Font Style */
+.summary {
+  font-style:" + ($SS.conf["Bitmap Font"] ? 'none' : 'italic') + ";
+}
+/* Catalog */
+.extended-small .teaser, .extended-large .teaser {
+  text-align: justify;
+  margin-left: 5px;
+  margin-right: 5px;
+}

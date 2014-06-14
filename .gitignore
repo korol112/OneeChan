@@ -1,0 +1,6 @@
+node_modules/
+*~
+*.db
+tmp/
+builds/OneeChan-Chrome.zip
+builds/OneeChan-Opera.nex

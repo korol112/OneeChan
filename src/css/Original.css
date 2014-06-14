@@ -1,0 +1,134 @@
+/* Some original Yotsuba CSS */
+div.post div.file .fileThumb {
+  float: left;
+  margin-left: 13px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.fileText {
+  margin-left: 13px !important;
+  margin-right: 10px;
+}
+.postContainer {
+  display: block;
+}
+/* Padding according to header position */
+.fixed.bottom-header.thread body{
+  padding-bottom: 0em;
+  padding-top: 0.1em;
+}
+.fixed.bottom-header.index body {
+  padding-bottom: 4.5em;
+  padding-top: 0.1em;
+}
+.fixed.top-header.index body {
+  padding-bottom: 2.5em;
+  padding-top: 2.2em;
+}
+.fixed.top-header.thread body {
+  padding-bottom: 0em; 
+  padding-top: 2.2em;
+}
+.fixed.top-header.catalog body {
+  padding-top: 2.2em;
+  padding-bottom: 0.5em;
+}
+.fixed.bottom-header.catalog body {
+  padding-bottom: 3em;
+}
+div.post {
+margin: 4px 0;
+overflow: hidden;
+}
+:root:not(.reply-fit-width) #delform div.reply:not([hidden]) {
+  display: table !important;
+}
+:root:not(.reply-fit-width) #delform .stub ~ div.reply:not([hidden]) {
+  display: none !important;
+}
+div.thread {
+  margin: 0;
+  clear: both;
+  padding-bottom: 10px;
+  z-index: 3;
+}
+table.flashListing {
+  border-spacing: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.pagelist div.pages {
+  padding: 4px;
+}
+div.pagelist,
+div.pagelist>div {
+  float: left;
+}
+div.pagelist>div span {
+  padding: 4px;
+  display: inline-block;
+}
+.page-num {
+  margin-right: auto !important;
+}
+s {
+  text-decoration: none !important;
+}
+span.spoiler,
+s,
+s:not(:hover) > a,
+s:not(:hover) > .linkify {
+  color: rgb(0, 0, 0) !important;
+  background: none repeat scroll 0 0 rgb(0, 0, 0) !important;
+}
+span.spoiler:hover, 
+s:hover,
+span.spoiler:focus,
+s:focus {
+  color: rgb(255, 255, 255) !important;
+}
+#globalMessage,
+.boardBanner {
+  text-align: center;
+}
+#bannerCnt img {
+  width: 300px;
+  height: 100px;
+}
+div.sideArrows {
+  float: left;
+  margin-right: 2px;
+  margin-top: 0;
+  margin-left: 2px;
+  opacity: 0.3;
+}
+hr,
+#boardNavDesktopFoot {
+  clear: both;
+}
+table {
+  border-spacing: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center {
+  text-align: center !important;
+}
+.middlead,
+.topad {
+  margin-bottom: 20px !important;
+}
+/* Bottom Controls */
+.bottomCtrl.desktop{
+  float: right;
+}
+.fixed.bottom-header.index .bottomCtrl.desktop,
+.fixed.bottom-header.thread .bottomCtrl.desktop{
+  float: right;
+  margin-bottom: 35px;
+}
+.fixed.top-header.thread .bottomCtrl.desktop,
+.fixed.top-header.index .bottomCtrl.desktop {
+  float: right;
+  margin-bottom: 8px;
+}
