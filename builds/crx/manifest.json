@@ -16,7 +16,7 @@
   }],
   "homepage_url": "https://github.com/Nebukazar/OneeChan/",
   "update_url": "https://nebukazar.github.io/OneeChan/builds/updates.xml",
-  "minimum_chrome_version": "39",
+  "minimum_chrome_version": "29",
   "permissions": [
     "storage"
   ]
