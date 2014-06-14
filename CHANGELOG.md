@@ -1,3 +1,10 @@
+### v5.3.2
+*2014-06-12*
+
+- Bugfixes
+- Changed icons
+- Rewrote fail-safe and added option to disable
+
 ### v5.3.1
 *2014-06-11*
 
