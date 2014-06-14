@@ -248,35 +248,6 @@ input[type=checkbox]:checked+.riceCheck::before {
   height: 22px !important;
   margin-top: 1px;
 }
-:root.vertical-qr #qr {
-  position: fixed !important;
-  right: 0!important;
-  bottom: 26px;
-  left: auto !important;
-  top: auto !important;
-}
-:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) {
-  position: fixed !important;
-  transform: rotate(-90deg);
-  transform-origin: bottom right;
-  -webkit-transform: rotate(-90deg);
-  -webkit-transform-origin: bottom right;
-  right: 0 !important;
-  bottom: 300px !important;
-  min-width: 240px !important;
-  width: 240px !important;
-}
-:root.vertical-qr #qr.autohide:not(:hover):not(.has-focus) select,
-:root.vertical-qr #qr .captcha-img img {
-  max-width: 120px !important;
-}
-:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.has-focus) {
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  left: -244px !important;
-  bottom: 50px !important;
-  right: auto !important;
-}
 :root.left-sidebar #qr {
   left: 0 !important;
   right: auto !important;
@@ -284,13 +255,6 @@ input[type=checkbox]:checked+.riceCheck::before {
 :root.right-sidebar #qr {
   right: 0 !important;
   left: auto !important;
-}
-:root.fade-qr #qr form {
-  display: block !important;
-}
-:root.fade-qr #qr.autohide:not(.has-focus):not(:hover) {
-  opacity: 0.2 !important;
-  transition:opacity .2s ease-in-out 1s;
 }
 .persona .field {
   margin-right: 1px;
@@ -330,6 +294,43 @@ input[type=checkbox]:checked+.riceCheck::before {
 .textarea {
   margin-bottom: -2px;
   margin-top: 1px;
+}
+/* Vertical QR */
+:root.vertical-qr #qr {
+  position: fixed !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: auto !important;
+  top: auto !important;
+}
+:root.vertical-qr #qr.autohide:not(.focus):not(:hover) {
+  position: fixed !important;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  -webkit-transform: rotate(-90deg);
+  -webkit-transform-origin: bottom right;
+  right: 0px !important;
+  bottom: 300px !important;
+  min-width: 240px !important;
+  width: 240px !important;
+}
+:root.vertical-qr #qr.autohide:not(.focus):not(:hover) select {
+  max-width: 120px !important;
+}
+:root.vertical-qr.left-sidebar #qr.autohide:not(:hover):not(.focus) {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  left: -244px !important;
+  bottom: 50px !important;
+  right: auto !important;
+}
+/* Fade QR */
+:root.fade-qr #qr form {
+  display: block !important;
+}
+:root.fade-qr #qr.autohide:not(.focus):not(:hover) {
+  opacity: 0.2 !important;
+  transition:opacity .2s ease-in-out 1s;
 }
 /* Delete form */
 div[style='float: right;'] {
