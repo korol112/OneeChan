@@ -249,6 +249,7 @@
         "Font Size": [13, "Set the general size of text (Pixels)."],
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
+        "Show Fail-safe": [false, "Shows a OneeChan settings button towards the end of the page when the header settings button fails to render."],
         "Version Fix": [
             1, "Applies CSS fixes for different forks. Default is for seaweed forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
                 name: "Default",
@@ -860,6 +861,7 @@
 
             $SS.insertMascot();
             $SS.hideMascot.init();
+            $SS.oneeFailsafe.init();
             $SS.pages.init();
             $SS.riceInputs.init();
 
@@ -1023,13 +1025,12 @@
 
         /* OPTIONS */
         options: {
-            saveAndClose: true,
+            saveAndClose: false,
             init: function() {
                 var a = $("<span class='shortcut brackets-wrap'><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'>OneeChan</a></span>").bind("click", $SS.options.show); /* seaweedchan */
                 var b = $("<span><a id='OneeChanLink' title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a> / </span>").bind("click", $SS.options.show); /* MayhemYDG */
-                var c = $("<span id='OneeChanCont'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
-                var d = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' class='fa fa-gears' href='javascript:;'></a>] </span>").bind("click", $SS.options.show); /* fail-safe */
-                return $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) && $("#search-box").after(d) : $("#boardNavDesktop").append(c);
+                var c = $("<span id='OneeChanLink'> [<a title='OneeChan Settings' href='javascript:;'>OneeChan</a>]&nbsp;</span>").bind("click", $SS.options.show); /* loadletter */
+                return $(".fourchan-x").exists() ? $(".shortcut.brackets-wrap:last-of-type").before(a) && $("#shortcuts.brackets-wrap").append(b) : $("#boardNavDesktop").append(c);
             },
             show: function() {
                 if ($("#overlay").exists())
@@ -1493,7 +1494,7 @@
                 return $SS.init(true);
             },
             showTheme: function(tIndex) {
-                var div, overly;
+                var div, overlay;
 
                 if (typeof tIndex === "number") {
                     var bEdit = true,
@@ -2907,6 +2908,7 @@
                 $("html").optionClass("Mascot Overlaps Posts", true, "mascot-overlap");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
                 $("html").optionClass("Style Emails as Links", false, "email-color");
+                $("html").optionClass("Show Fail-safe", false, "settings-button-fail");
             }
         },
 
@@ -2915,6 +2917,19 @@
             init: function() {
                 if ($SS.Config.get("Hide Mascot in Catalog") == true && $(".catalog").exists() || $(".catalog-mode").exists()) {
                     document.getElementById('mascot').style.display = 'none';
+                }
+            }
+        },
+        oneeFailsafe: {
+            hasInit: false,
+            init: function() {
+                var onee = $("<a id='OneeChanCont' title='OneeChan Settings' href='javascript:;'></a>").bind("click", $SS.options.show); /* fail-safe */
+
+                if ($("#OneeChanCont").exists()) {
+                    return
+                } 
+                else if ($SS.Config.get("Show Fail-safe") == true && $(".fourchan-x").exists()) {
+                    return $("#delform").after(onee);
                 }
             }
         },
@@ -3598,9 +3613,7 @@
             this.name = theme.name;
             this.authorName = theme.authorName || "Anonymous";
             this.authorTrip = theme.authorTrip || "!..NoTrip..";
-            this.
-            default = theme.
-            default;
+            this.default = theme.default;
             this.replyBrder = theme.replyBrder;
             this.bgImg = new $SS.Image(theme.bgImg, theme.bgRPA);
             this.replyOp = theme.replyOp;
@@ -3636,7 +3649,7 @@
                     "<path fill='rgb(" + this.headerColor.rgb + ")' d='M25.545,23.328,17.918,15.623,25.534,8.007,27.391,9.864,29.649,1.436,21.222,3.694,23.058,5.53,15.455,13.134,7.942,5.543,9.809,3.696,1.393,1.394,3.608,9.833,5.456,8.005,12.98,15.608,5.465,23.123,3.609,21.268,1.351,29.695,9.779,27.438,7.941,25.6,15.443,18.098,23.057,25.791,21.19,27.638,29.606,29.939,27.393,21.5z'/></svg>",
                 imgContract: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.headerColor.rgb + ")' d='M25.083,18.895l-8.428-2.259l2.258,8.428l1.838-1.837l7.053,7.053l2.476-2.476l-7.053-7.053L25.083,18.895zM5.542,11.731l8.428,2.258l-2.258-8.428L9.874,7.398L3.196,0.72L0.72,3.196l6.678,6.678L5.542,11.731zM7.589,20.935l-6.87,6.869l2.476,2.476l6.869-6.869l1.858,1.857l2.258-8.428l-8.428,2.258L7.589,20.935zM23.412,10.064l6.867-6.87l-2.476-2.476l-6.868,6.869l-1.856-1.856l-2.258,8.428l8.428-2.259L23.412,10.064z'/></svg>",
-                OneeChan: "<svg viewBox='7 3 20 20' preserveAspectRatio='true' height='13' width='13' xmlns='http://www.w3.org/2000/svg'>" +
+                OneeChan: "<svg viewBox='7 7 20 20' preserveAspectRatio='true' height='14' width='14' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.headerLColor.rgb + ")' d='M4.083,14H14V4.083H4.083V14zM17,4.083V14h9.917V4.083H17zM17,26.917h9.917v-9.918H17V26.917zM4.083,26.917H14v-9.918H4.083V26.917z'/></svg>",
                 heart: "<svg viewBox='0 0 26 26' preserveAspectRatio='true' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.textColor.rgb + ")' d='M24.132,7.971c-2.203-2.205-5.916-2.098-8.25,0.235L15.5,8.588l-0.382-0.382c-2.334-2.333-6.047-2.44-8.25-0.235c-2.204,2.203-2.098,5.916,0.235,8.249l8.396,8.396l8.396-8.396C26.229,13.887,26.336,10.174,24.132,7.971z'/></svg>",
@@ -3654,7 +3667,8 @@
                     "<path fill='rgb(" + this.headerColor.rgb + ")' d='M22.335,12.833V9.999h-0.001C22.333,6.501,19.498,3.666,16,3.666S9.666,6.502,9.666,10h0v2.833H7.375V25h17.25V12.833H22.335zM11.667,10C11.667,10,11.667,10,11.667,10c0-2.39,1.944-4.334,4.333-4.334c2.391,0,4.335,1.944,4.335,4.333c0,0,0,0,0,0v2.834h-8.668V10z'/></svg>",
                 threadPinned: "<svg viewBox='0 0 30 30' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
                     "<path fill='rgb(" + this.tripColor.rgb + ")' d='M16,3.5c-4.142,0-7.5,3.358-7.5,7.5c0,4.143,7.5,18.121,7.5,18.121S23.5,15.143,23.5,11C23.5,6.858,20.143,3.5,16,3.5z M16,14.584c-1.979,0-3.584-1.604-3.584-3.584S14.021,7.416,16,7.416S19.584,9.021,19.584,11S17.979,14.584,16,14.584z'/></svg>",
-                 
+                downArrow: "<svg viewBox='7 4 29 27' preserveAspectRatio='true' height='16' width='16' xmlns='http://www.w3.org/2000/svg'>" +
+                    "<path fill='rgb(" + this.tripColor.rgb + ")' d='M8.037,11.166L14.5,22.359c0.825,1.43,2.175,1.43,3,0l6.463-11.194c0.826-1.429,0.15-2.598-1.5-2.598H9.537C7.886,8.568,7.211,9.737,8.037,11.166z'/></svg>",
             };
 
             if (theme.customCSS) {
