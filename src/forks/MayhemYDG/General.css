@@ -134,3 +134,26 @@
 #nav-links {
   margin-bottom: 12px;
 }
+/* Icons */
+.closedIcon,
+.stickyIcon {
+  color:transparent!important;
+  font-size:0!important;
+  background-color:transparent!important;
+  background-position:center!important;
+  background-repeat:no-repeat;
+  display:inline-block;
+  height:0!important;
+  padding-top:16px!important;
+  text-indent:-9999px!important;
+  vertical-align:bottom;
+  width:16px!important;
+}
+/* Thread Closed */
+.closedIcon {
+  background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadClosed + "\")!important;
+}
+/* Thread Pinned */
+.stickyIcon {
+  background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadPinned + "\")!important;
+}
