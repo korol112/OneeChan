@@ -60,7 +60,7 @@
         "Reduce Banner Opacity": [false, "Reduce the opacity of the banner for easier viewing.", "Show Banner", true, true],
         "Show Board Name": [true, "Toggle visibility of the board name."],
         "Show Reply to Thread Button": [false, "Toggle visibility of the Start a Thread / Reply to Thread button."],
-        "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus."],
+        "Show Checkboxes": [false, "Hides checkboxes and deleteform to be replaced by 4chan X menus. Refresh to apply."],
         "Show Blotter": [false, "Toggle visibility of the 4chan news blotter."],
         "Show 4chan Ads": [false, "Opts into 4chan\'s banner ads.", null, true],
         "Show Top Ad": [true, "Show the top 4chan banner ad.", "Show 4chan Ads", true, true],
@@ -95,6 +95,7 @@
         "Reduce Mascot Opacity": [false, "Reduces the opacity of the mascots until hover. Warning: Overrides pointer events."],
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
+        "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
         "Show Reply Header": [true, "Show reply header background and line border."],
         "Show File Info": [true, "Hides the filename, dimensions and size info."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
@@ -1242,7 +1243,7 @@
                 var themes = $("#themes-section", tOptions).html(""),
                     p = $("<p class='buttons-container'>");
 
-                p.append($("<a class='options-button' name=addTheme>Add", tOptions).bind("click", $SS.options.showTheme));
+                p.append($("<a class='options-button' name=addTheme>Create", tOptions).bind("click", $SS.options.showTheme));
                 p.append($("<a class='options-button' href='https://github.com/Nebukazar/OneeChan/wiki/Custom-Themes' target='_blank'>Custom Themes"));
                 p.append($("<div id='import-link'>").append($("<input type=file class='import-input' riced=true>")
                     .bind("change", function() {
@@ -2870,6 +2871,7 @@
                 $("html").optionClass("Fit Width", true, "reply-fit-width");
                 $("html").optionClass("Show Banner", false, "hide-banner");
                 $("html").optionClass("Reduce Banner Opacity", true, "banner-opacity");
+                $("html").optionClass("Show Post Info On Hover", true, "info-on-hover");
                 $("html").optionClass("Show Reply to Thread Button", false, "hide-button");
                 $("html").optionClass("Show Reply Header", true, "post-info");
                 $("html").optionClass("Show File Info", false, "show-file-info");
@@ -2925,7 +2927,7 @@
             init: function() {
                 var onee = $("<a id='OneeChanCont' title='OneeChan Settings' href='javascript:;'></a>").bind("click", $SS.options.show); /* fail-safe */
 
-                if ($("#OneeChanCont").exists()) {
+                if ($("#OneeChanCont").exists() || $("#OneeChanLink").exists()) {
                     return
                 } 
                 else if ($SS.Config.get("Show Fail-safe") == true && $(".fourchan-x").exists()) {
