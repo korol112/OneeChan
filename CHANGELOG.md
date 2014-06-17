@@ -1,3 +1,11 @@
+### v5.3.3
+*2014-06-17*
+
+- Small fixes
+
+**New:**
+- `Show Post Info On Hover`
+
 ### v5.3.2
 *2014-06-12*
 
