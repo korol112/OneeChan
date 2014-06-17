@@ -44,10 +44,12 @@
 }
 /* Menu */
 :root.reply-fit-width .post .menu-button {
-  float: right;
   position: absolute;
   left: inherit;
   right: 6px;
+}
+:root.info-on-hover .post .menu-button {
+  margin-top: -16px;
 }
  #overlay {
   z-index: 900;
@@ -95,9 +97,6 @@
 :root.threadwatcher-tree #thread-watcher>div:first-child {
   display: block;
   text-align: center;
-}
-:root.threadwatcher-tree #thread-watcher .move {
-  font-size: 13px;
 }
 :root.threadwatcher-tree #thread-watcher #menu {
   text-align: left;

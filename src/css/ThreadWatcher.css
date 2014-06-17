@@ -27,8 +27,8 @@
   display: none !important;
 }
 :root.threadwatcher-tree #thread-watcher .move {
-  font-size: 11px;
   overflow: hidden;
+  font-size: " + $SS.conf["Font Size"] + "px;
   white-space: normal;
   word-spacing: -2px;
   text-align: center;
@@ -69,7 +69,7 @@
   position: absolute;
   padding: 5px;
   margin-top: -7px;
-  font-size:" + $SS.conf["Font Size"] + "px;
+  font-size: " + $SS.conf["Font Size"] + "px;
   color: " + $SS.theme.linkColor.hex + ";
   background: " + $SS.theme.mainColor.hex + ";
   border: 1px solid " + $SS.theme.headerLColor.hex + ";
