@@ -161,6 +161,9 @@
             }, {
                 name: "Outline",
                 value: 2
+            }, {
+                name: "Separator",
+                value: 3
             }]
         ],
         "Decoration Width": [
@@ -2879,6 +2882,7 @@
                 $("html").optionClass("Borders", 3, "borders-none");
                 $("html").optionClass("Decoration Style", 1, "hl-border");
                 $("html").optionClass("Decoration Style", 2, "hl-outline");
+                $("html").optionClass("Decoration Style", 3, "hl-border-down");
                 $("html").optionClass("Sidebar Position", 1, "right-sidebar");
                 $("html").optionClass("Sidebar Position", 2, "left-sidebar");
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");

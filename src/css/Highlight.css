@@ -2,6 +2,9 @@
 :root.hl-border .post.reply {
   border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
 }
+:root.hl-border-down .post.reply {
+  border-bottom: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0) !important;
+}
 :root.hl-outline .post.reply {
   outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
 }
