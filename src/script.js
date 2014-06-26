@@ -2,7 +2,7 @@
     var defaultConfig = {
         ":: Main Rice": ["header", ""],
         "Left Margin": [
-            0, "Change the size of the left margin.", [{
+            5, "Change the size of the left margin.", [{
                 name: "Large",
                 value: 65
             }, {
@@ -23,7 +23,7 @@
             0, "Left margin custom width (pixels)", "Left Margin", 999, true
         ],
         "Right Margin": [
-            0, "Change the size of the right margin.", [{
+            5, "Change the size of the right margin.", [{
                 name: "Large",
                 value: 65
             }, {
@@ -96,7 +96,7 @@
         ":: Replies": ["header", ""],
         "Fit Width": [true, "Replies stretch to the width of the entire page."],
         "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
-        "Show Reply Header": [true, "Show reply header background and line border."],
+        "Show Reply Header": [true, "Shows reply\'s header background and line border."],
         "Show File Info": [true, "Hides the filename, dimensions and size info."],
         "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Underline QuoteLinks": [false, "Underlines quotelinks only."],
@@ -253,7 +253,7 @@
         "Font Size": [13, "Set the general size of text (Pixels)."],
         "Bitmap Font": [false, "Check this if you are using a bitmap font."],
         ":: Compatibility": ["header", ""],
-        "Show Fail-safe": [false, "Shows a OneeChan settings button towards the end of the page when the header settings button fails to render."],
+        "Show Fail-safe": [true, "Shows a OneeChan settings button towards the end of the page when the header settings button fails to render."],
         "Version Fix": [
             1, "Applies CSS fixes for different forks. Default is for seaweed forks. Make sure you enable QR and Persistent QR for maximum compatibility.", [{
                 name: "Default",
@@ -268,8 +268,8 @@
         ],
         "Themes": [],
         "Hidden Themes": [],
-        "Selected Theme": 13,
-        "NSFW Theme": 13,
+        "Selected Theme": 4,
+        "NSFW Theme": 4,
         "Selected Mascots": 1,
         "Mascots": [],
         "Hidden Mascots": []
@@ -1176,14 +1176,14 @@
                     // Reset settings
                     $("a[name=resetSettings]", tOptions).bind("click", function() {
                         var confirmReset = confirm('Your current OneeChan settings will be wiped, are you sure?');
-                        if (confirmReset) { 
+                        if (confirmReset) {
                             if ($SS.browser.webkit) {
                             Object.keys(localStorage).forEach(function(key) {
                             if (/^(?:OneeChan)/.test(key)) {
                                     localStorage.removeItem(key);
                                 }
                             })}
-                            else if ($SS.browser.gecko) {
+                            else if ($SS.browser.gecko || $SS.browser.webkit) { // this is very bad
                                 var keys = GM_listValues();
                                 for (var i=0, key=null; key=keys[i]; i++) {
                                 GM_deleteValue(key);
@@ -2914,7 +2914,7 @@
                 $("html").optionClass("Mascot Overlaps Posts", true, "mascot-overlap");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
                 $("html").optionClass("Style Emails as Links", false, "email-color");
-                $("html").optionClass("Show Fail-safe", false, "settings-button-fail");
+                $("html").optionClass("Show Fail-safe", true, "settings-button-fail");
             }
         },
 
