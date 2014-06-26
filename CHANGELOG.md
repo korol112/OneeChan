@@ -1,5 +1,5 @@
 ### v5.3.4
-*2014-06-17*
+*2014-06-26*
 
 Fix:
 - Reset Settings on Tampermonkey
