@@ -9,9 +9,9 @@ Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.c
 
 #### Install instructions
 
-- Firefox: Requires the Greasemonkey addon.
+- Firefox: Requires the Greasemonkey addon. Click the Install link above.
 
-- Chrome: Requires the Tampermonkey extension. You can also download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you're using Chromium/are not using Windows. Drag&drop into the extensions page to install.
+- Chrome: Requires the Tampermonkey extension. Click the Install link above. You can also download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you're using Chromium/are not using Windows. Drag&drop into the extensions page to install.
 
 
 #### Compatibility with 4chan X forks and others:
@@ -33,6 +33,8 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 - Check if it's not a 4chan X issue first, OneeChan mostly deals with stylesheets not site functionality
 
 - Something doesn't work let me know in the [Issues](https://github.com/Nebukazar/OneeChan/issues) page
+
+- Please refer to the [Wiki](https://github.com/Nebukazar/OneeChan/wiki).
 
 
 #### Known Issues
