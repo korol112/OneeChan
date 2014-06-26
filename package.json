@@ -1,12 +1,13 @@
 {
   "name": "OneeChan",
-  "version": "5.3.3",
+  "version": "5.3.4",
   "description": "Customizable rice and themes for 4chan X.",
   "meta": {
     "name": "OneeChan",
     "repo": "https://github.com/Nebukazar/OneeChan/",
     "page": "https://github.com/Nebukazar/OneeChan/",
     "downloads": "https://nebukazar.github.io/OneeChan/builds/",
+    "appid": "cnbankbnhjiakpmcjbecinckfbceeacf",
     "buildsPath": "builds/",
     "mainBranch": "master",
     "matches": [
@@ -18,9 +19,9 @@
       "userjs": "OneeChan.user.js"
     },
     "min": {
-      "chrome": "29",
-      "firefox": "26",
-      "greasemonkey": "1.14"
+      "chrome": "30",
+      "firefox": "28",
+      "greasemonkey": "1.15"
     }
   },
   "devDependencies": {

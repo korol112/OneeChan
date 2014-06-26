@@ -1,3 +1,16 @@
+### v5.3.4
+*2014-06-17*
+
+Fix:
+- Reset Settings on Tampermonkey
+
+Add:
+- `Separator` option to Highlighting options
+
+Change:
+- `Show Post Info on Hover` so that it's easier to reach sauce
+- You/Own posts highlighting style (disable in 4chan X as always)
+
 ### v5.3.3
 *2014-06-17*
 
