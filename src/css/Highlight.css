@@ -8,9 +8,11 @@
 :root.hl-outline .post.reply {
   outline: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.highlightColor.rgb + ",1.0);
 }
-:root.highlight-own .yourPost > .reply, 
 :root.highlight-you .quotesYou > .reply {
-  border-left: " + $SS.conf["Width Decoration"] + "px " + $SS.conf["Highlight Style"] + " rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-left: " + $SS.conf["Width Decoration"] + "px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+}
+:root.highlight-own .yourPost > .reply {
+  border-left: " + $SS.conf["Width Decoration"] + "px dotted rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
 }
 /* Targeted replies */
 .reply:target {
