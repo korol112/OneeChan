@@ -570,13 +570,13 @@ table.flashListing .highlightPost {
   transition: opacity .3s ease-in 0s;
 }
 /* Post Info on Hover */
-:root.info-on-hover .file .fileText {
+:root.info-on-hover .postContainer .fileText {
   opacity: 0; 
   height: 0;
   transition: opacity .3s ease-out 0s;
   pointer-events: none;
 }
-:root.info-on-hover .file:hover .fileText {
+:root.info-on-hover .postContainer:hover .fileText {
   opacity: 1;
   height: auto;
   transition: opacity .3s ease-in 0s;
