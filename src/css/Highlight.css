@@ -12,7 +12,7 @@
   border-left: " + $SS.conf["Width Decoration"] + "px solid rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
 }
 :root.highlight-own .yourPost > .reply {
-  border-left: " + $SS.conf["Width Decoration"] + "px dotted rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
+  border-left: " + $SS.conf["Width Decoration"] + "px dashed rgba(" + $SS.theme.tripColor.rgb + ",1.0) !important;
 }
 /* Targeted replies */
 .reply:target {
