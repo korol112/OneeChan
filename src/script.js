@@ -167,7 +167,7 @@
             }]
         ],
         "Decoration Width": [
-            3, "Changes decoration width of highlighted posts.", [{
+            1, "Changes decoration width of highlighted posts.", [{
                 name: "Large",
                 value: 6
             }, {
