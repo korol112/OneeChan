@@ -181,7 +181,7 @@ input[type=checkbox]:checked+.riceCheck::before {
   content: '';
   display: block;
   height: 8px;
-  margin: 0px;
+  margin: 1px;
   width: 8px;
 }
 input[type=checkbox]:checked::before,
