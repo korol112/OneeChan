@@ -87,6 +87,10 @@
  .captcha-input.field {
   width:300px;
 }
+/* Catalog */
+.thread-info {
+  z-index: 4;
+}
 /* Thread Watcher */
 :root.threadwatcher-tree #thread-watcher {
   padding: 0px !important;
