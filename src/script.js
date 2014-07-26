@@ -2607,7 +2607,7 @@
             }, {
                 img: "https://i.minus.com/iEUQuwYOAisYj.png",
                 "default": true,
-                name: "Asuka Langley Soryu"
+                name: "Asuka Shikinami Langley"
             }, {
                 img: "https://i.minus.com/iSZ06ZxrcqAKq.png",
                 "default": true,
@@ -2761,7 +2761,7 @@
                 "default": true,
                 name: "Remilia Scarlet"
             }, {
-                img: "https://i.minus.com/ioPJlYguBIGqK.png",
+                img: "https://i.minus.com/jb2Csry9nAEuKB.png",
                 "default": true,
                 name: "Rei Ayanami",
                 width: "290px"
