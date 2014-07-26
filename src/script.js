@@ -2932,7 +2932,7 @@
                 var onee = $("<a id='OneeChanCont' title='OneeChan Settings' href='javascript:;'></a>").bind("click", $SS.options.show); /* fail-safe */
 
                 if ($("#OneeChanCont").exists() || $("#OneeChanLink").exists()) {
-                    return
+                    return;
                 } 
                 else if ($SS.Config.get("Show Fail-safe") == true && $(".fourchan-x").exists()) {
                     return $("#delform").after(onee);
