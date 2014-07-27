@@ -87,10 +87,6 @@
  .captcha-input.field {
   width:300px;
 }
-/* Catalog */
-.thread-info {
-  z-index: 4;
-}
 /* Thread Watcher */
 :root.threadwatcher-tree #thread-watcher {
   padding: 0px !important;
@@ -133,6 +129,9 @@
   text-align: justify;
   margin-left: 5px;
   margin-right: 5px;
+}
+.thread-info {
+  z-index: 4;
 }
 #nav-links {
   margin-bottom: 12px;

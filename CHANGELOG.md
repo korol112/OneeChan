@@ -1,3 +1,8 @@
+### v5.3.7
+*2014-07-27*
+
+- Fix Github error inserting itself into the code
+
 ### v5.3.6
 *2014-07-22*
 
