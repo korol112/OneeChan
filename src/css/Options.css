@@ -315,7 +315,7 @@ select[name='Font Family']>option {
 }
 /* Overlays */
 #overlay {
-  z-index: 12 !important;
+  z-index: 99 !important;
 }
 #overlay2 {
   background:rgba(0,0,0,.5);
