@@ -88,7 +88,6 @@
             }], true
         ],
         "SS-like Sidebar": [true, "Darkens the Sidebar and adds a border like 4chan Style Script."],
-        "Expanded Images Cover QR": [true, "Lets expanded images overlap the quick reply if the sidebar is enabled."],
         ":: Mascots": ["header", ""],
         "Hide Mascot in Catalog": [false, "Hides the mascot when viewing the catalog."],
         "Mascot Overlaps Posts": [true, "Mascots will render above the posts."],
@@ -2888,7 +2887,6 @@
                 $("html").optionClass("Recolor Even Replies", true, "recolor-even");
                 $("html").optionClass("Backlink Icons", true, "backlink-icon");
                 $("html").optionClass("Backlinks on Bottom", true, "backlink-bottom");
-                $("html").optionClass("Expanded Images Cover QR", true, "expand-cover");
                 $("html").optionClass("Autohide Style", 2, "vertical-qr");
                 $("html").optionClass("Autohide Style", 3, "fade-qr");
                 $("html").optionClass("Transparent QR", true, "qr-opacity");
