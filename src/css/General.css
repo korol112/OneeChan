@@ -30,12 +30,6 @@ body {
 .fileThumb img {
   border-radius: 2px;
 }
-:root.expand-cover #qr {
-  z-index: 11 !important;
-}
-:root.expand-cover .expanded-image {
-  z-index: 9 !important;
-}
 :root.force-indent .op {
   margin-left: -12px;
 }
@@ -474,7 +468,6 @@ table.flashListing .highlightPost {
 #mascot img, 
 #mascotprev img {
   position:fixed;
-  z-index:2;
   right: 0;
   bottom: 0;
 }
@@ -497,20 +490,9 @@ table.flashListing .highlightPost {
 #mascot.previewing img {
   display: none;
 }
-#delform {
-  position: relative;
-  z-index: 3;
-}
-:root.mascot-overlap #mascot,
-:root.mascot-overlap #mascot img {
-  z-index: 4 !important;
-}
 :root.fixed.bottom-header:not(.autohide) #mascot img,
 :root.fixed.bottom-header:not(.autohide) #mascotprev img {
   padding-bottom: 26px;
-}
-:root:not(.left-sidebar):not(.right-sidebar) #delform {
-  z-index: 3;
 }
 :root.left-sidebar #mascot img,
 :root.left-sidebar #mascotprev img {

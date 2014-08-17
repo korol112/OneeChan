@@ -37,8 +37,8 @@ div.post div.file .fileThumb {
   padding-bottom: 3em;
 }
 div.post {
-margin: 4px 0;
-overflow: hidden;
+  margin: 4px 0;
+  overflow: hidden;
 }
 :root:not(.reply-fit-width) #delform div.reply:not([hidden]) {
   display: table !important;
@@ -50,7 +50,6 @@ div.thread {
   margin: 0;
   clear: both;
   padding-bottom: 10px;
-  z-index: 3;
 }
 table.flashListing {
   border-spacing: 1px;
