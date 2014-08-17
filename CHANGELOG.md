@@ -1,3 +1,11 @@
+### v5.3.8
+*2014-07-29*
+
+- Fix issue #28
+
+- Remove `Mascot Overlaps Posts`
+- Remove `Expanded Images Cover QR`
+
 ### v5.3.7
 *2014-07-27*
 
@@ -11,6 +19,8 @@
 
 ### v5.3.5
 *2014-06-26*
+
+- Idem
 
 ### v5.3.4
 *2014-06-26*
