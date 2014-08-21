@@ -223,9 +223,6 @@ input[type=checkbox]:checked+.riceCheck::before {
 .globalMessage, h2, h3 {
   margin: auto;
 }
-#thread-watcher {
-  position: fixed !important;
-}
 /* QR link */
 .qr-link {
   border-radius: 3px;
@@ -329,7 +326,7 @@ input[type=checkbox]:checked+.riceCheck::before {
 }
 :root.fade-qr #qr.autohide:not(.focus):not(:hover) {
   opacity: 0.2 !important;
-  transition: opacity .2s ease-in-out 1s;
+  transition:opacity .2s ease-in-out 1s;
 }
 /* Delete form */
 div[style='float: right;'] {

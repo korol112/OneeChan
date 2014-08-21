@@ -17,14 +17,11 @@ textarea,
   color: " + $SS.theme.textColor.hex + " !important;
 }
 /* Names */
-.nameBlock:not(.capcodeMod)>.name,
+.nameBlock>.name,
 .com,
 .post-author,
 :root.email-color a.useremail .name {
   color: " + $SS.theme.nameColor.hex + " !important;
-}
-.nameBlock.capcodeMod {
-  color: #800080 !important;
 }
 /* Tripcodes */
 .nameBlock>.postertrip,
@@ -164,7 +161,7 @@ textarea,
 }
 input[type=checkbox],
 .riceCheck {
-  background: rgb\(" + $SS.theme.inputColor.shiftRGB(25) + ") !important;
+  background: rgb\(" + $SS.theme.inputColor.shiftRGB(20) + ") !important;
 }
 input:not(.jsColor):hover,
 .riceCheck:hover,
@@ -191,10 +188,12 @@ hr {
   border-width: 0 1px 1px 0;
   border-style: solid;
 }
-:root.borders-all .reply {
+:root.borders-all .reply,
+:root.borders-all:root.threadwatcher-tree #thread-watcher {
   border-width: 1px !important;
 }
-:root.borders-none .reply {
+:root.borders-none .reply,
+:root.borders-none:root.threadwatcher-tree #thread-watcher {
   border: none;
 }
 :root.rounded-corners .reply,
