@@ -11,7 +11,7 @@ Maximum rice for 4chan X. Originally developed by [seaweedchan](https://github.c
 
 - Firefox: Requires the Greasemonkey addon. Click the Install link above.
 
-- Chrome: Requires the Tampermonkey extension. Click the Install link above. You can also download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you're using Chromium/are not using Windows. Drag&drop into the extensions page to install.
+- Chrome: Requires the Tampermonkey extension. Click the Install link above. You can also download a [.crx here](https://nebukazar.github.io/OneeChan/builds/OneeChan.crx) if you're using Chromium or are not using Windows. Drag&drop into the extensions page to install.
 
 
 #### Compatibility with 4chan X forks and others:
@@ -39,8 +39,7 @@ Make sure you select your fork version in `Compatibility`. Enabling Quick Reply 
 
 #### Known Issues
 
-- OneeChan's settings icon sometimes doesn't render on Chrome (this is related to [popstate](https://developer.mozilla.org/en-US/docs/Web/Reference/Events/popstate))
-- **Fix:** Opening a thread with 300+ replies will force it to render.
+- OneeChan's settings icon sometimes doesn't render on Chrome
 
 
 #### See also:
