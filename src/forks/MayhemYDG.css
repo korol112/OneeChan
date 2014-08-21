@@ -87,34 +87,6 @@
  .captcha-input.field {
   width:300px;
 }
-/* Thread Watcher */
-:root.threadwatcher-tree #thread-watcher {
-  padding: 0px !important;
-}
-:root.top-header:root.threadwatcher-tree #thread-watcher>div:first-child {
-  padding-top: 24px;
-}
-:root.threadwatcher-tree #thread-watcher>div:first-child {
-  display: block;
-  text-align: center;
-}
-:root.threadwatcher-tree #thread-watcher #menu {
-  text-align: left;
-}
-/* Right Sidebar */
-:root.right-sidebar:root.threadwatcher-tree.fourchan-x body {
-  padding-left: 60px;
-}
-:root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::before {
-  margin-left: 32px;
-}
-/* Left Sidebar */
-:root.left-sidebar:root.threadwatcher-tree.fourchan-x body {
-  padding-right: 62px;
-}
-:root.left-sidebar:root.threadwatcher-tree #watched-threads a:nth-of-type(even):hover::before {
-  margin-left: -24px;
-}
 /* Bottom Controls */
 .bottom-header .bottomCtrl.desktop {
   float: right;

@@ -94,8 +94,6 @@ table.flashListing {
 /* Thread Watcher */
 #watcher {
   z-index: 20;
-}
-:root.threadwatcher-fixed #watcher {
   position: fixed;
 }
 #watcher > .move {
