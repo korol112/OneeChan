@@ -117,6 +117,9 @@ table {
 .topad {
   margin-bottom: 20px !important;
 }
+#qf-box {
+    width: 120px;
+}
 /* Bottom Controls */
 .bottomCtrl.desktop{
   float: right;
