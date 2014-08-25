@@ -51,9 +51,6 @@
 :root.info-on-hover .post .menu-button {
   margin-top: -16px;
 }
- #overlay {
-  z-index: 900;
-}
  /* Quick Reply */
  #qr > div {
   min-width: 240px !important;
