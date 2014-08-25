@@ -72,3 +72,14 @@ img[alt=Closed] {
 img[alt=Sticky] {
   background-image:url(\"data:image/svg+xml," + $SS.theme.icons.threadPinned + "\")!important;
 }
+/* ExLinks Icon */
+.exlinksOptionsLink.entry {
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+:root.left-sidebar .exlinksOptionsLink.entry {
+  left: 2px !important;
+}
+:root.right-sidebar .exlinksOptionsLink.entry {
+  right: 2px !important;
+}
