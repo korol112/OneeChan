@@ -1,9 +1,14 @@
+### v5.3.10
+*2014-08-25*
+
+- Remove `Style Emails as Links`
+- Exlinks Icon small fix
+
 ### v5.3.9
 *2014-08-19*
 
 - Small changes
 - Mod names will now appear in purple
-
 - Removed TW options in preparation for the new 4chan X TW (v1.8.10)
 - TW will still be fixed position
 
