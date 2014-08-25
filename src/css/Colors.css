@@ -19,8 +19,7 @@ textarea,
 /* Names */
 .nameBlock:not(.capcodeMod)>.name,
 .com,
-.post-author,
-:root.email-color a.useremail .name {
+.post-author {
   color: " + $SS.theme.nameColor.hex + " !important;
 }
 .nameBlock.capcodeMod {
@@ -28,7 +27,6 @@ textarea,
 }
 /* Tripcodes */
 .nameBlock>.postertrip,
-:root.email-color a.useremail .postertrip,
 .post-tripcode,
 .tag {
   color: " + $SS.theme.tripColor.hex + " !important;

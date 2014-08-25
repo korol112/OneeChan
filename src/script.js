@@ -84,7 +84,6 @@
         "Show Post Info On Hover": [false, "Shows post number and file info on hover only."],
         "Show Reply Header": [true, "Shows reply\'s header background and line border."],
         "Show File Info": [true, "Hides the filename, dimensions and size info."],
-        "Style Emails as Links": [true, "Makes names and tripcodes that have emails change to the theme\'s link color."],
         "Underline QuoteLinks": [false, "Underlines quotelinks only."],
         "Indent OP": [false, "Indents the OP instead of touching the screen."],
         "Allow Wrapping Around OP": [false, "Allow for replies to wrap around the OP instead of being forced onto their own line."],
@@ -1377,7 +1376,7 @@
                 return $("#overlay").remove();
             },
             keydown: function(e) {
-                if (e.ctrlKey && e.keyCode === 79) {
+                if (e.ctrlKey && e.keyCode === 97) {
                     e.preventDefault();
                     e.stopPropagation();
                     $SS.options.show();
@@ -2895,7 +2894,6 @@
                 $("html").optionClass("Reduce Ad Opacity", true, "ad-opacity");
                 $("html").optionClass("Reduce Mascot Opacity", true, "mascot-opacity");
                 $("html").optionClass("Reduce Thumbnail Opacity", true, "thumb-opacity");
-                $("html").optionClass("Style Emails as Links", false, "email-color");
                 $("html").optionClass("Show Fail-safe", true, "settings-button-fail");
             }
         },
